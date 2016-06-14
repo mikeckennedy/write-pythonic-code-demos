@@ -18,24 +18,19 @@ print("query: {}".format(query))
 print("post:  {}".format(post))
 
 # Non-pythonic procedural way
+# TODO:
 m1 = {}
-for k in query:
-    m1[k] = query[k]
-for k in post:
-    m1[k] = post[k]
-for k in route:
-    m1[k] = route[k]
 
 # Classic pythonic way:
-m2 = query.copy()
-m2.update(post)
-m2.update(route)
+# TODO:
+m2 = {}
 
 # Via dictionary comprehensions:
-m3 = {k: v for d in [query, post, route] for k, v in d.items()}
+# TODO:
+m3 = {}
 
 # Python 3.5+ pythonic way, warning crashes on Python <= 3.4:
-m4 = {**query, **post, **route}
+m4 = {}
 
 print(m1)
 print(m2)
@@ -43,3 +38,12 @@ print(m3)
 print(m4)
 
 print("Are the same? " + 'yes' if m1 == m2 and m2 == m3 and m3 == m4 else 'no')
+
+
+
+
+
+
+
+#  m3 = {k: v for d in [query, post, route] for k, v in d.items()}
+#  m4 = {**query, **post, **route}
