@@ -12,7 +12,7 @@ def main():
     print("Creating data...", end=' ')
     sys.stdout.flush()
 
-    data_list = []
+    data_list = []  # 500,000 DataPoint items
     random.seed(0)
     for d_id in range(500000):
         x = random.randint(0, 1000)
@@ -24,7 +24,7 @@ def main():
     print("done.")
     sys.stdout.flush()
 
-    # #############################
+    # Reordering data for random access
     print("Reordering data for random access ...", end=' ')
     sys.stdout.flush()
 
@@ -32,11 +32,11 @@ def main():
 
     print("done.")
 
-    # Create a list of random IDs to locate without duplication
-    interesting_ids = list({random.randint(0, len(data_list)) for _ in range(0, 100)})
+    # Create a set of random IDs to locate without duplication
+    interesting_ids = {random.randint(0, len(data_list)) for _ in range(0, 100)}
     print("Creating {} interesting IDs to seek.".format(len(interesting_ids)))
 
-    # #############################
+    # Locating data in list
     print("Locating data in list...", end=' ')
     sys.stdout.flush()
 
@@ -60,20 +60,25 @@ def main():
     # let's try this with a dictionary...
     # 1. Create dictionary via comprehension, key = id
 
-    # locate the data in dictionary
+    t0 = datetime.datetime.now()
+    data_dict = {d.id: d for d in data_list}
 
-    # t0 = datetime.datetime.now()
-    #
-    # t1 = datetime.datetime.now()
-    # dt_dict = (t1 - t0).total_seconds()
-    #
-    # print("done.")
-    # sys.stdout.flush()
-    #
-    # print("dt: {} sec".format(dt_dict))
-    # print(interesting_points)
-    # print()
-    # print("Speedup from dict: {:,.0f}x".format(round(dt_list / dt_dict)))
+    # 2. locate the data in dictionary
+    interesting_points.clear()
+    for d_id in interesting_ids:
+        d = data_dict[d_id]
+        interesting_points.append(d)
+
+    t1 = datetime.datetime.now()
+    dt_dict = (t1 - t0).total_seconds()
+
+    print("done.")
+    sys.stdout.flush()
+
+    print("dt: {} sec".format(dt_dict))
+    print(interesting_points)
+    print()
+    print("Speedup from dict: {:,.0f}x".format(round(dt_list / dt_dict)))
 
 
 def find_point_by_id_in_list(data_list, i):
