@@ -52,34 +52,28 @@ def main():
     print("done.")
     sys.stdout.flush()
 
-    print("DT: {} sec".format(dt_list))
+    print("dt: {} sec".format(dt_list))
     print(interesting_points)
 
     # #############################
-    print("Creating dictionary...", end='')
-    data_lookup = {d.id: d for d in data_list}
-    print("done.")
-    sys.stdout.flush()
 
-    print("Locating data in dictionary...", end=' ')
-    sys.stdout.flush()
+    # let's try this with a dictionary...
+    # 1. Create dictionary via comprehension, key = id
 
-    t0 = datetime.datetime.now()
-    interesting_points = []
-    for i in interesting_ids:
-        pt = data_lookup[i]
-        interesting_points.append(pt)
+    # locate the data in dictionary
 
-    t1 = datetime.datetime.now()
-    dt_dict = (t1 - t0).total_seconds()
-
-    print("done.")
-    sys.stdout.flush()
-
-    print("DT: {} sec".format(dt_dict))
-    print(interesting_points)
-    print()
-    print("Speedup from dict: {:,.0f}x".format(round(dt_list / dt_dict)))
+    # t0 = datetime.datetime.now()
+    #
+    # t1 = datetime.datetime.now()
+    # dt_dict = (t1 - t0).total_seconds()
+    #
+    # print("done.")
+    # sys.stdout.flush()
+    #
+    # print("dt: {} sec".format(dt_dict))
+    # print(interesting_points)
+    # print()
+    # print("Speedup from dict: {:,.0f}x".format(round(dt_list / dt_dict)))
 
 
 def find_point_by_id_in_list(data_list, i):
