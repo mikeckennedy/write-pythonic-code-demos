@@ -1,5 +1,5 @@
 # noinspection PyProtectedMember
-from ch_03_dictionaries._03_slice_support import session_factory, Measurement
+from ch_04_collections._03_slice_support import session_factory, Measurement
 
 
 def fibonacci(limit):
