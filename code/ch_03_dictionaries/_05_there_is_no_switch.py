@@ -27,13 +27,25 @@ class Moves(Enum):
             return None
 
         text = text.strip().lower()
+        if text == 'w':
+            return Moves.West
+        if text == 's':
+            return Moves.South
+        if text == 'e':
+            return Moves.East
+        if text == 'n':
+            return Moves.North
 
-        moves_lookup = {
-            'w': Moves.West, 'e': Moves.East, 's': Moves.South, 'n': Moves.North,
-            'nw': Moves.NorthWest, 'ne': Moves.NorthEast, 'sw': Moves.SouthWest, 'se': Moves.SouthEast
-        }
-        # NOTE: Could also add methods for the keys and call them...
-        return moves_lookup.get(text)
+        if text == 'sw':
+            return Moves.SouthWest
+        if text == 'nw':
+            return Moves.NorthWest
+        if text == 'se':
+            return Moves.SouthEast
+        if text == 'ne':
+            return Moves.NorthEast
+
+        return None
 
 
 class Character:
@@ -41,14 +53,7 @@ class Character:
         self.name = name
 
     def move(self, direction: Moves):
-        moves_lookup = {
-            Moves.West: lambda: print("{} moves west carefully.".format(self.name)),
-            Moves.East: lambda: print("{} moves east quickly.".format(self.name)),
-            Moves.South: lambda: print("{} runs downward.".format(self.name)),
-            Moves.North: lambda: print("{} runs up.".format(self.name)),
-        }
-        method = moves_lookup.get(direction, lambda: print("{} can't run that way.".format(self.name)))
-        method()
+        print("{} moves {}".format(self.name, direction))
 
 
 if __name__ == '__main__':
