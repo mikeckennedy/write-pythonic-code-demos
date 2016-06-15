@@ -27,25 +27,11 @@ class Moves(Enum):
             return None
 
         text = text.strip().lower()
-        if text == 'w':
-            return Moves.West
-        if text == 's':
-            return Moves.South
-        if text == 'e':
-            return Moves.East
-        if text == 'n':
-            return Moves.North
-
-        if text == 'sw':
-            return Moves.SouthWest
-        if text == 'nw':
-            return Moves.NorthWest
-        if text == 'se':
-            return Moves.SouthEast
-        if text == 'ne':
-            return Moves.NorthEast
-
-        return None
+        parse_dict = {
+            'w': Moves.West, 's': Moves.South, 'e': Moves.East, 'n': Moves.North,
+            'nw': Moves.NorthWest, 'ne': Moves.NorthEast, 'sw': Moves.SouthWest, 'se': Moves.SouthEast
+        }
+        return parse_dict.get(text)
 
 
 class Character:
@@ -53,7 +39,15 @@ class Character:
         self.name = name
 
     def move(self, direction: Moves):
-        print("{} moves {}".format(self.name, direction))
+        action_dict = {
+            Moves.North: lambda: print("{} moves north with a special hesitation!".format(self.name)),
+            Moves.South: lambda: print("{} is going south for winter!".format(self.name))
+        }
+
+        action = action_dict.get(
+            direction,
+            lambda: print("{} moves quickly to {}".format(self.name, direction)))
+        action()
 
 
 if __name__ == '__main__':
