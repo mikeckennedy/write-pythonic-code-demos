@@ -15,19 +15,20 @@ measurements = [
     Measurement(str(uuid.uuid4()), 3, 3, 90)
 ]
 
-# set comprehension
+# generator expression
 high_values = (
     m.value
     for m in measurements
     if m.value >= 70
 )
 
-# Crash: TypeError: object of type 'generator' has no len()
+# crash! no len()
 # print(len(high_values))
 
-# could do this, but expensive!
-# print(len(list(high_values)))
+# could use a list, but expensive!
+# lst = list(high_values)
+# print(len(lst))
 
-# Most efficient, idiomatic to generators
+# pythonic counting!
 count = sum(1 for _ in high_values)
 print(count)
