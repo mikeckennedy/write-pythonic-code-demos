@@ -1,5 +1,6 @@
 def mode(*args):
     if not args:
-        return 0
+        print("Mode set to DEFAULT")
+        return
 
-    return args[0]
+    print("Mode set to ADVANCED")
