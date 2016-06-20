@@ -1,13 +1,12 @@
-# there is no really decent use of this
-# don't use else, it's not worth it.
-
 print("Running through the while: ", end='')
 count = 0
 while count < 5:
     print('.', end='')
     count += 1
-
+else:
+    print("In the else clause of the whole loop.")
 print()
+
 print("Breaking out of the while: ", end='')
 count = 0
 while count < 5:
@@ -15,5 +14,6 @@ while count < 5:
     count += 1
     if count > 3:
         break
-
+else:
+    print("In the else clause of the early break loop.")
 print()
