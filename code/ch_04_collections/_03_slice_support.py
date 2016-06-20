@@ -14,10 +14,19 @@ class Measurement(SqlAlchemyBase):
 
     id = sqlalchemy.Column(sqlalchemy.Integer,
                            primary_key=True, autoincrement=True)
-
     x = sqlalchemy.Column(sqlalchemy.Integer)
     y = sqlalchemy.Column(sqlalchemy.Integer)
     value = sqlalchemy.Column(sqlalchemy.Float)
+
+
+
+
+
+
+
+
+
+
 
 
 # run this code only once per process assuming 1 database
