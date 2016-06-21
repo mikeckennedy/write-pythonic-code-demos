@@ -12,4 +12,16 @@
       <primary-key columns="id"/>
     </table>
   </data-source>
+  <data-source name="demo_db" uuid="35b5cf00-25b0-486c-ad0e-a4924f786a9c">
+    <database-info product="SQLite" version="3.8.11" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="Measurement" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="x" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="y" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="value" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <primary-key columns="id"/>
+    </table>
+  </data-source>
 </component>

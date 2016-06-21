@@ -2,5 +2,6 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="slicing_db" uuid="8bb4bd1d-6254-49eb-8c86-6e28d7023c1b" />
+    <data-source name="demo_db" uuid="35b5cf00-25b0-486c-ad0e-a4924f786a9c" />
   </component>
 </project>
