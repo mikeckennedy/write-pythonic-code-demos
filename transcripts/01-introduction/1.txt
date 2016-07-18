@@ -80,4 +80,5 @@
 4:17 it's easier to onboard new Python developers into your team
 4:20 if you are writing idiomatic code, 
 4:22 because if they already know Python 
-4:24 it's much easier for them to 4:26 your large project. 
+4:24 it's much easier for them to 
+4:26 your large project. 
