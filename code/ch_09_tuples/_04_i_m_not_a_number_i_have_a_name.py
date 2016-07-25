@@ -12,7 +12,7 @@ def main():
         print("id={}, rating={}, position=({}, {})".format(
             d.id, d.rating, d.x, d.y))
 
-        _, _, x, y = d
+        _, x, y, _ = d
         print(x, y)
 
 
