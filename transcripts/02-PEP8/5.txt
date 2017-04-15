@@ -49,11 +49,11 @@
 2:24 notice I renamed other_method, here to be Javascripty style
 2:28 with the capital M and not the underscore,
 2:31 you hover over it PyCharm will say
-2:34 "No, no, no, you are naming your functions wrong."
+2:34 "no, no, no, you are naming your functions wrong."
 2:36 It'll even let us hit Alt+Enter and give us some options about fixing this up,
 2:41 it doesn't quite understand how to rename it for us
 2:44 but at least it gives us the option to go over here and do a rename.
-2:47 Now this is not this "renaming in place", but this is a refactor rename
+2:47 Now this is not this renaming in place, but this is a refactor rename
 2:49 across the entire project, so if we had hundreds of files, docstrings,
 2:53 that sort of stuff, this would fix all of those.
 2:57 It'll show us where it's going to change,

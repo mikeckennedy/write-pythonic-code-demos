@@ -12,7 +12,7 @@
 0:33 So what we should do is give it some docstrings,
 0:35 and docstrings are just a string by itself on the first line of the method,
 0:40 or module if you're documenting the module or class if you're documenting the class.
-0:44 So we can just say "triple quote"
+0:44 So we can just say triple quote
 0:46 and then I hit enter and PyCharm will actually look at the method and help us out,
 0:49 so it knows it returns a value
 0:52 and it knows it has three parameters called a1, a2 and a3,
