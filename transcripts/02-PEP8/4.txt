@@ -25,7 +25,7 @@
 1:17 I will say a2 is the second item to compare and a3 is actually
 1:20 whether or not it should be reversed which again, doesn't mean anything.
 1:24 We'll say 1 or 2. So if we write this we can come down here
-1:27 now and I say some_method, and look at it I could hit F1 or if I was in repl
+1:27 now and I say some_method, and look at it I could hit F1 or if I was in REPL
 1:31 I can type "help some_method" and I would see this-
 1:36 some method returns the larger of 1 or 2, a1, first item to compare,
 1:41 a2 second item to compare, a3 should reverse, 1 or 2.
