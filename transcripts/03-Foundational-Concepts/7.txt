@@ -19,12 +19,12 @@
 0:55 First one uses a little support module here,
 0:57 we are going to ask is the download url set,
 0:59 if it is, then we are going to check the network status
-1:02 and then we are going to make sure that the dns is working
+1:02 and then we are going to make sure that the DNS is working
 1:04 then finally we are going to check that we have permission to access the file
 1:06 and if all those things are true, then we are going to try to download it.
 1:11 Otherwise, we are going to say well, this one goes back here
 1:14 so it looks like no access
-1:15 this one here, no dns,
+1:15 this one here, no DNS,
 1:17 this one here PyCharm even has little like tiny lines
 1:21 that are probably hard to see but I can follow back up,
 1:23 no network and then finally this one is bad url.
@@ -43,8 +43,8 @@
 2:09 of course now that we are up here we want to return early,
 2:13 we'll say "if not check the network" then we want to say "no network".
 2:19 And return, and again, unindent, it's better, again,
-2:24 "if not check dns", do something and then return
-2:28 we'll print out that there is no dns
+2:24 "if not check DNS", do something and then return
+2:28 we'll print out that there is no DNS
 2:32 and then we'll unindent and finally we'll do this "if not this, return",
 2:41 and then if all the guarding clauses pass
 2:43 then write at the very edge of our method, not indented at all

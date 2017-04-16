@@ -1,7 +1,7 @@
  0:01 The first area I want to cover around dictionaries
-0:04 is using dictionaries for performance. 
+0:03 is using dictionaries for performance. 
 0:06 So when you have a collection of data, 
-0:08 the most  natural choice the thing Python developers reach for first 
+0:08 the most  natural choice, the thing Python developers reach for first, 
 0:12 has got to be a list. 
 0:14 It's super common, super useful and very flexible.
 0:17 Let's look at two different algorithms 
@@ -12,8 +12,8 @@
 0:28 but here is the basic way it works. 
 0:31 So we start out with a list of data, here you can see in our example 
 0:34 we are going to be using half of million items, 
-0:37 so we are calling a data_list and it's going to contain some rich objects 
-0:40 with multiple values or measurements details aren't actually affected. 
+0:37 so we are calling a data list and it's going to contain some rich objects 
+0:40 with multiple values or measurements - details aren't actually affected. 
 0:46 Then, suppose for some reason we have done some computation 
 0:48 and we've come up with a hundred pieces of data 
 0:51 we would like to go look up in our list, 
@@ -25,11 +25,11 @@
 1:10 and it just walks through the list, it compares the id 
 1:13 it's looking for against the ids that it finds in the list, 
 1:15 as soon as it finds the match, it returns that one, 
-1:17 it's assuming to be unique and then it appends it to this interesting points. 
+1:17 it's assuming to be unique and then it appends it to this interesting_points. 
 1:21 So this is one version of the algorithm.
 1:24 The other one is well, maybe we could do a little bit better 
 1:27 if we actually used a dictionary. 
-1:29 And then we could index the key for the dictionary could be the id. 
+1:29 And then we could index - the key for the dictionary could be the id. 
 1:32 So if we wrote it like this, here we have a dictionary of half a million of items, 
 1:37 again the same dynamically discovered 100 interesting points, 
 1:42 and instead of doing this lookup by walking through the items, 
@@ -41,8 +41,8 @@
 2:01 if we are going to do this a 100 times, we have half a million items, right, 
 2:04 it's much more complicated to generate a dictionary with half a million items 
 2:08 than it is a list. 
-2:11 So let's see this in action and see what the verdict is. 
-2:13 So here we have our data point, our data point is a named tuple, 
+2:10 So let's see this in action and see what the verdict is. 
+2:14 So here we have our data point, our data point is a named tuple, 
 2:18 it could have been a custom class but named tuple is sufficient 
 2:21 and it has five values, id, an x y for two dimensional coordinates, 
 2:26 a temperature and a quality on the measurement of the temperature. 
@@ -52,7 +52,7 @@
 2:36 In PyCharm you can highlight these and hit command period 
 2:37 and turn them into little collapsible regions, 
 2:40 so I did that so that you can focus on the algorithm and not the little details. 
-2:44 Here we have our data list that we are going to work with, 
+2:44 Here we have our data_list that we are going to work with, 
 2:47 and we are going to use a random seed of zeros 
 2:50 so we always do exactly the same thing, but randomly, 
 2:53 so that we have perfectly repeatable results 
@@ -64,7 +64,7 @@
 3:08 since we are using auto incrementing ids, 
 3:12 next we are going to create our set of interesting ids 
 3:14 that we are going to go search through our list, 
-3:17 and then later through our dictionary. 
+3:18 and then later through our dictionary. 
 3:19 Really we would use some kind of algorithm 
 3:21 and we would find interesting items we need to go look up, 
 3:23 but in this case we are just going to randomly do it, 
@@ -87,8 +87,8 @@
 4:19 but now we have the set of approximately 100 ids, 
 4:22 assuming that there is no conflicts or duplication there, 
 4:27 and next thing we are going to do is we are going to come along here, 
-4:32 we are going to start a little timer figure at the end what the total seconds pass were,
-4:35 and during that time we want to go and actually pull out the interesting points 
+4:29 we are going to start a little timer figure at the end what the total seconds pass were,
+4:34 and during that time we want to go and actually pull out the interesting points 
 4:38 that correspond to the interesting ids.
 4:40 So we are going to go for each interesting id, 
 4:42 remember, it's about a 100, we are going to say find the point in the list like so, 
@@ -106,8 +106,8 @@
 5:26 All right, so let's take this algorithm here and adapt it for our dictionary. 
 5:31 So I've got a little place holder to sort of drop in the timing and so on, 
 5:34 you don't have to watch me type that, 
-5:36 so the first thing we want to do is create a dictionary,
-5:38 before we had data list, now we are going to have data dict, 
+5:35 so the first thing we want to do is create a dictionary,
+5:38 before we had data_list, now we are going to have data_dict, 
 5:40 we can create this using a dictionary comprehension, 
 5:43 so that would be a very Pythonic thing to do 
 5:45 and we want to map for each item in the dictionary the id to the actual object. 
@@ -115,29 +115,28 @@
 5:53 but the difference is we have a key colon value for the dictionaries 
 5:57 where we just have the value for sets. 
 5:59 You kind of have to write this in reverse, 
-6:02 I am going to name the elements we are going to look at d,
-6:04 so I am going to say d.id, maps the d for d in data list, right, 
+6:00 I am going to name the elements we are going to look at "d",
+6:03 so I am going to say "d.id", maps the "d for d in data_list", right, 
 6:11 so this is going to create a dictionary of all half a million items 
 6:13 and mapping the id to the actual value. 
 6:16 So now, let's start a little timer, 
 6:18 and next we want to locate the items in the dictionary, 
-6:21 so again, we'll say interesting points, let's clear that; 
-6:24 for id, we call it d.id so it doesn't conflict with the id built in, 
+6:21 so again, we'll say interesting_points, let's clear that; 
+6:25 for id, we call it d.id so it doesn't conflict with the id built in, 
 6:31 so for d.id in interesting ids we want to do a lookup, 
-6:35 we'll say the data element is now we have a dictionary 
-6:38 and we can look up things by id so that is super easy, 
-6:41 we just say like so, assuming that there is none of the id 
+6:35 we'll say "the data element is", now we have a dictionary 
+6:38 and we can look up things by ids, so that is super easy, 
+6:41 we just say it like so, assuming that there is none of the id 
 6:44 that is missing, something like that 
-6:46 and then we'll just say interesting points.append d. 
-6:49 .
+6:45 and then we'll just say interesting_points.append(d)
 6:53 Oops, almost made a mistake there, 
-6:55 let's say d.id not the built in, that of course won't work.
+6:55 let's say "d.id" not the built in, that of course won't work.
 6:58 All right, so let's run it again and see how it works, 
 7:00 so we are going to run, it's still going to run the other slow version, 
 7:02 I'll skip that in the video, 
 7:05 wow,  look at that, 8 seconds, and this is 0.000069 seconds. 
 7:13 So that's less than 1 millisecond, by a wide margin.
-7:16 That is a non trivial speed up, let's see how much of a speed up that is, 
+7:16 That is a non-trivial speed up, let's see how much of a speed up that is, 
 7:21 then the other thing to consider as well, 
 7:24 maybe the speed up was huge 
 7:26 but the cost of computing the dictionary was 
