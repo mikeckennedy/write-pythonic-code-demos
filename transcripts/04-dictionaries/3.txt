@@ -31,7 +31,7 @@
 1:43 And, we'll do the same thing for let's say
 1:46 the next thing we are going to do is the post,
 1:50 like that, and finally, we'll do it for the route.
-1:55 Ok, so if we run it, we should get a dictionary because the route has higher priority,
+1:55 OK, so if we run it, we should get a dictionary because the route has higher priority,
 1:59 with id 27, title Fast apps, render_fast is True and then that data in it.
 2:04 Let's run it, all right, id 271, like we expected, Jef, Fast apps, perfect,
 2:11 so it looks like you combined it well,
@@ -46,7 +46,7 @@
 2:37 and then I would also like to overwrite this with the route.
 2:41 So now if I run it we should have the exactly the same output
 2:44 but a little safer, less fiddly.
-2:48 Ok, you can see these are the same dictionary,
+2:48 OK, you can see these are the same dictionary,
 2:50 now notice there is nothing about dictionaries that are ordered,
 2:53 so they are going to be out of order but they are the same value,
 2:56 down here this no, I wrote some code that checks
@@ -62,7 +62,7 @@
 3:35 we'll say "for k,v in d.items"
 3:42 So here you can see exactly the same dictionary, matching ordering,
 3:45 let's do a little formatting on that.
-3:48 Ok, so we are looping over all the dictionaries
+3:48 OK, so we are looping over all the dictionaries
 3:50 and for each dictionary we are looping over,
 3:53 we are looping over and point out the key
 3:56 and the value from the items and then we are creating the dictionary from that.

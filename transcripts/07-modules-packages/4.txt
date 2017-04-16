@@ -15,7 +15,7 @@
 0:43 which works with all versions of Python. 
 0:45 So I'll go and use that here but they work exactly the same. 
 0:48 So I want to create a directory here that's going to contain my Python environment 
-0:52 so I'll say virtual- let's make sure we have the right one first, virtual env, ok,
+0:52 so I'll say virtual- let's make sure we have the right one first, virtual env, OK,
 0:57 this is going to be the one for Python 3.5, so good, 
 1:01 so I'm going to say this, and I'm going to give it a folder, 
 1:04 let's just say sample web env so we know it's environment, not the web app itself. 
@@ -30,12 +30,12 @@
 1:44 now our prompt changes and more importantly, 
 1:47 if we ask the same question which pip, now it's this one, 
 1:50 if we ask which Python, it's this one. 
-1:54 Ok, so we're ready to use that, let's say pip list to see what we have installed, 
+1:54 OK, so we're ready to use that, let's say pip list to see what we have installed, 
 1:57 we just have those 3 that were installed there so we could go install 
 2:01 something like I could say pip install requests, and it's gone and download it, 
 2:10 now if I ask what's installed, I just have this. 
 2:13 So I can have version 2.10.0 of request regardless of
 2:16 whatever else is installed, upgraded, downgraded, in the rest of my OS. 
 2:21 All right, let's go and upgrade pip. 
-2:27 Ok, so here is our sample environment, 
+2:27 OK, so here is our sample environment, 
 2:31 we'll be using this int he next section. 

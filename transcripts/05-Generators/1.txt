@@ -30,7 +30,7 @@
 1:34 "this is not going to work", but let's go ahead and give it a try,
 1:35 just to see what the error is.
 1:38 Boom, ShoppingCart object is not iterable.
-1:41 Ok, so we'd like to write this code but how do we do it?
+1:41 OK, so we'd like to write this code but how do we do it?
 1:44 the ability to add iteration to a type is based on the Python data model
 1:47 which all the dunder methods comprise.
 1:50 So we can come up here and add this particular one,
@@ -61,7 +61,7 @@
 3:26 and this would do basically the same thing,
 3:29 it returns the generator rather than list but that's fine.
 3:33 So take your pick, we'll talk more about yield later.
-3:36 Ok, we saw that in order to add iteration to our shopping cart,
+3:36 OK, we saw that in order to add iteration to our shopping cart,
 3:40 we just need to add a __iter__ method here
 3:44 rather than just exposing the underline self.items
 3:47 we are actually exposing a sorted version of it as a generator.

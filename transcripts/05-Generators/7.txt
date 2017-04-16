@@ -22,11 +22,11 @@
 1:09 if even if there is a million items here, we only hold one in memory ever,
 1:13 well if we do this, we kind of undo that,
 1:17 we now have one million of them in memory but let's just see that it works,
-1:20 ta da, 4, ok, 4, that's cool,
+1:20 ta da, 4, OK, 4, that's cool,
 1:25 so we can use a combination of some really cool things,
 1:29 so if I had something like, let me just do something simple here,
 1:32 I'll say some and say given any set of numbers I could add them up,
-1:36 so those 3 numbers should have 7, we should see 7 down here, perfect, ok,
+1:36 so those 3 numbers should have 7, we should see 7 down here, perfect, OK,
 1:42 so we can use some to give it some kind of collection here, let me separate these
 1:50 so we can kind of isolate them, count here and we'll say "count equals this", right,
 1:55 so we could add this up using some, we could leverage this,

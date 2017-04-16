@@ -67,7 +67,7 @@
 3:41 and this is an input call so it's going to block.
 3:43 The reason it blocks is I want to process to stay alive
 3:47 so we can go look at its memory graph before it exits.
-3:50 Ok, so you just hit enter to exit; first, we are going to run this for tuples.
+3:50 OK, so you just hit enter to exit; first, we are going to run this for tuples.
 3:55 Here you can see it took about half a second,
 3:58 paste it over here so that we can see what the relative performance was,
 4:03 and let's run process explorer which lets us look down here at the details.
@@ -82,7 +82,7 @@
 4:34 of our named tuple that we created up here above,
 4:37 like so, using our collections.name tuple.
 4:44 All right, let's run and see how it works.
-4:47 Ok, well, that is slower, let's go ahead and copy that
+4:47 OK, well, that is slower, let's go ahead and copy that
 4:50 and put it in our little document here, so it's about three times slower,
 4:54 as you would expect, it's doing quite a bit more work to parse those and so on,
 4:59 let's look at the memory here, the memory is about the same,

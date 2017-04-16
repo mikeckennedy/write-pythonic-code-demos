@@ -6,14 +6,14 @@
 0:13 given whatever values those variables have.
 0:16 If you are coming from some languages like say CSharp or Javascript,
 0:20 you may try to go do something like this,
-0:22 you might say, Hi, so if we try to run this, it's actually going to crush,
+0:22 you might say, Hi, so if we try to run this, it's actually going to crash,
 0:27 you can see PyCharm is even printing that out,
 0:30 it says there is something wrong with this age
 0:32 and this string concatenation here,
-0:34 boom, crush, cannot convert integer to string implicitly.
+0:34 boom, crash, cannot convert integer to string implicitly.
 0:37 So this version is obviously not Pythonic, right,
 0:40 the deal is Python is not going to implicitly convert that
-0:44 to a string for us so we could say crush, don't do this.
+0:44 to a string for us so we could say crash, don't do this.
 0:48 There is some other ways to do this we could come down here
 0:51 and say if it's not going to implicitly convert this to a string, we can do that.
 0:55 Now, this actually works.
@@ -34,7 +34,7 @@
 1:53 For example, you have to very carefully know what the type is,
 1:55 so I could do my %d with age because that was a number,
 1:59 but if it happens to be that it's just a string that represents a number,
-2:03 or could be converted to a number, well, again, a crush.
+2:03 or could be converted to a number, well, again, a crash.
 2:07 So there is a new more modern style that works in Python 2 and in Python 3,
 2:11 I am going to decree this style to be Ptyhonic,
 2:14 so if we take the same code and I'm going to come here and say
@@ -48,7 +48,7 @@
 2:39 it didn't even matter if it's an object, right,
 2:41 anything you want can go in there
 2:43 and you'll get the best string representation that you are going to get.
-2:46 Ok, so that's nice, really like that, but of course,
+2:46 OK, so that's nice, really like that, but of course,
 2:49 with this style we do get more flexibility here,
 2:53 I didn't put numbers in here but you can say things like
 2:56 I would actually like the second, this is zero based,

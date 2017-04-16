@@ -22,7 +22,7 @@
 1:14 but basically we are saying can define this function up here 
 1:17 and in the case where __name__ is main, run this.
 1:22 We'll just print out __name__ really quick, so we'll print this. 
-1:27 We run it, ok it is __main__, let's go over here, this one,
+1:27 We run it, OK it is __main__, let's go over here, this one,
 1:32 and we'll say print to the same thing, print __name__. 
 1:35 So the name of this is this great long support module thing 
 1:39 so we are going to run it, well, 
@@ -48,10 +48,10 @@
 2:48 we said we wanted to ask a question, 
 2:50 while true we'll say age=input how old are you, like so, 
 2:56 and then we'll convert that to an int, and let's go over here and say age=0, 
-3:01 let's say while age<=0, ok, what happens here if I go and run this, 
+3:01 let's say while age<=0, OK, what happens here if I go and run this, 
 3:07 I would like to see I'm going to import this and just use this variable, so let's try, 
 3:12 let's try to run this one, 
-3:16 ok, so it tells us what the library- wait a minute, 
+3:16 OK, so it tells us what the library- wait a minute, 
 3:19 why are we getting how old are you, let's say 0, 7, oh, 
 3:25 so that ran and then our code ran, let's make this a little more obvious,
 3:30 let's go up here and say print about to import support lib, I'll say done importing, 

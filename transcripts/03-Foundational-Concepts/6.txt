@@ -34,7 +34,7 @@
 1:49 so maybe I'll leave this one off.
 1:52 Now, we also know that this is going to throw an exception
 1:54 so this returns actually unreachable PyCharm told us that,
-1:58 ok so let's try again;
+1:58 OK so let's try again;
 2:00 are you sure you want to format your main hard drive?
 2:02 No. Exit code 1.
 2:05 Do you want to format your hard drive - oh please do, exit code 0.

@@ -26,7 +26,7 @@
 1:44 when I drag it across like that, watch what happens, 
 1:46 this is I'll never get tired of seeing this, 
 1:49 so if I type select it's going to start to think oh, 
-1:51 maybe you are writing a database query, not yet, if I say * from, now it has ok,
+1:51 maybe you are writing a database query, not yet, if I say * from, now it has OK,
 1:56 we have two of these databases active so select * from 
 2:01 and now notice how I got syntax highlighting inside the string 
 2:04 and now as I hit space I actually get completion on the column, 

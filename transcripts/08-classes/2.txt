@@ -45,7 +45,7 @@
 2:16 Notice here we are reading the name and the age
 2:18 but we just as well could we are going to say py.name=py.name.upper, 
 2:25 something like that,
-2:27 so now we have Slide so we are actually changing the type, ok
+2:27 so now we have Slide so we are actually changing the type, OK
 2:29 and maybe I'll change this print statement order as well 
 2:32 here we go, Slide and Slide, capital.
 2:34 So what if we don't want this to be possible, 
@@ -65,7 +65,7 @@
 3:14 and the only reason it thinks the name is there is because we are doing this line, 
 3:17 if I take this line away, there is no name, 
 3:20 and it thought that line was creating the thing called __name__ which it would have, 
-3:23 if we set it, you can see those don't show up, ok, 
+3:23 if we set it, you can see those don't show up, OK, 
 3:26 so now let's run it and see what happens.
 3:29 Boom, pet snake has no thing called __name__ 
 3:33 and yet if I hide this, it does seem to have __name__ so what is going on here?
@@ -86,7 +86,7 @@
 4:33 This is how you do private fields within classes in Python, 
 4:36 here is how you do protected ones. 
 4:38 And of course, doing neither of those, makes it just a normal type.
-4:41 Ok, so here is our pet snake in a graphic. 
+4:41 OK, so here is our pet snake in a graphic. 
 4:45 We saw if we wanted the age and the name to be completely private, 
 4:49 we use double underscores, 
 4:51 if we want to have a protected variable that we want to strongly encourage people 

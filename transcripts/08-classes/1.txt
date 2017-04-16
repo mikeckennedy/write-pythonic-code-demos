@@ -8,15 +8,15 @@
 0:26 So we can come over here and this is very non Pythonic
 0:30 so don't do this, we can come over here and we can say 
 0:35 set name and give it a name here, and say self.name=name. 
-0:38 Ok, that's great and we could do the same thing for age
+0:38 OK, that's great and we could do the same thing for age
 0:46 so now we can set the name and we can set the age. 
 0:50 Now, there is nothing technically wrong with this code, 
 0:53 we shouldn't do this but technically it's not wrong, 
 0:55 these are just warnings saying don't do what we are doing here
-0:58 because it'snot Pythonic, ok, 
+0:58 because it'snot Pythonic, OK, 
 1:00 so but we can come over here and say cow.set name 
 1:02 and let's call it Betsy, and we could set its age and how old is this cow- 7.
-1:09 Ok, so let's run this, make sure everything hangs together, we have a pet.
+1:09 OK, so let's run this, make sure everything hangs together, we have a pet.
 1:14 Now this little string over right here, 
 1:17 this is not the best description of our not so Pythonic cow, 
 1:21 because we could say hey, this is pet, it's name is Betsy, it's age is 7, 
@@ -37,7 +37,7 @@
 2:28 how are you suppose to know that you've got to do this, right? 
 2:31 This is really a terrible way to create classes, let's go over here and turn, 
 2:36 we'll get rid of all of these, we'll just comment those out. 
-2:39 Forget this happiness bit for a minute, that was just playing around, ok, 
+2:39 Forget this happiness bit for a minute, that was just playing around, OK, 
 2:43 so how should we do it, of course, we probably want to pass this to the initializer, 
 2:48 if we did want to have the ability to set a name and set an age, 
 2:51 we could leave this here and say self.name=none, and age=none, 
@@ -80,7 +80,7 @@
 5:12 so here is how we actually wrote our query to do this,
 5:15 I want to create a query(measurement), filtering(measurement.value > .9), 
 5:19 order_by(measurement.value.desc()) things like that. 
-5:23 Ok, so this is another very common way
+5:23 OK, so this is another very common way
 5:26 to define fields of our class that I think is Pythonic, 
 5:30 if you want them to be type level, if you want them to be only instance level, 
 5:34 this is the way to do it. Here we have our not so Pythonic pet, 

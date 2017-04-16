@@ -41,7 +41,7 @@
 2:34 wow that is code such and such. 
 2:38 All right, so hopefully we don't end up in that case, but you never know. 
 2:41 Now let's go down here and actually get the data, 
-2:44 so we made this Request and everything was ok, 
+2:44 so we made this Request and everything was OK, 
 2:46 we'll say that the data is going to be response.json, 
 2:51 so that's going to actually finish downloading all the text and the response, 
 2:54 convert it from json into a dictionary so this is going to be like a movie lookup. 

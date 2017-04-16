@@ -29,7 +29,7 @@
 1:27 So we'll say 2 and that would give us just the item index 2
 1:30 or the third item up to, now for slices,
 1:33 it does not include the value put here so you want to put one higher,
-1:38 let's just verify this, ok so if we count by index 0, 1, 2 so then 2 is here,
+1:38 let's just verify this, OK so if we count by index 0, 1, 2 so then 2 is here,
 1:44 3, 4, 5, 6 seventh index item is 21, so we did get exactly
 1:50 what we were looking for using 2 to 8.
 1:53 We can do more interesting stuff, we can also go and get the n
@@ -58,7 +58,7 @@
 3:13 OK and it stores this into a local slicing_db.sqlite file and it connects to it,
 3:20 we are going to import this session factory here
 3:22 to actually create a connection to the database.
-3:24 Now, if we look at the database, ok there is nothing over here, right now,
+3:24 Now, if we look at the database, OK there is nothing over here, right now,
 3:28 but if we go to our project and we drop this in here,
 3:33 you can see we have all this data
 3:35 and the part that we are going to look at is this value,
@@ -71,7 +71,7 @@
 3:58 we'll create a query here, we'll say "session.query of Measurement",
 4:07 and we want to say "filter(Measurement.value) is greater than .9",
 4:12 we are going to order by Measurement.value.desc().
-4:17 Ok, so this is great, maybe we could just come over here
+4:17 OK, so this is great, maybe we could just come over here
 4:21 and do a ".all" to get this back as a list
 4:25 and then I could just print out the query,
 4:27 I am not sure it's really a query but whatever, if we run this,

@@ -18,7 +18,7 @@
 0:56 to simulate running it on another machine, 
 1:00 let me go to that virtual environment we created before and I'll just activate it, 
 1:02 so I'll say .user/screencaster/python_environments 
-1:05 this is what I created I'll say activate, ok the prompt changes, 
+1:05 this is what I created I'll say activate, OK the prompt changes, 
 1:08 now if I say pip list you'll see I don't have all the things we need, 
 1:13 I do have requests but I don't have records or pass lib, 
 1:17 let me see what happens if I try to run that program. 
@@ -48,7 +48,7 @@
 2:44 and it sees you using some external package, 
 2:46 that is not listed in your setup install requirements 
 2:49 it'll actually automatically put them there for you. 
-2:51 Ok, so now if we say pip list, this looks like a much better chance,
+2:51 OK, so now if we say pip list, this looks like a much better chance,
 2:56 let's try running our little app again, we should just see 200 
 2:59 as it talks to Google and gets good response code, server says, 200. 
 3:05 So that's the requirement.txt file add all of your requirements to it, 

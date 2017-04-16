@@ -21,12 +21,12 @@
 1:08 we could go through like this, we could write a loop,
 1:10 first we could create a list to gather the measurements,
 1:12 the high values, we loop over them, we do some kind of test and we add them up.
-1:17 All right, so that's ok, but it's not great.
+1:17 All right, so that's OK, but it's not great.
 1:20 However, let's just look at the rest of the app really quickly before we are done,
 1:23 we are going to come up with this, these numbers in a variety of ways,
 1:26 we want to print them all out here,
 1:28 so if we just run it you can see here is the ones we got through the loop,
-1:31 so I am calling this c-style but it's really any procedural programming way
+1:31 so I am calling this C-style but it's really any procedural programming way
 1:36 and of course this blocks while this runs,
 1:38 now we can come down here we can take this code
 1:41 and we can do something a little bit different,
@@ -87,7 +87,7 @@
 5:01 but instead of saying "key:value" we just put an item here,
 5:05 and if we use curly braces, and one value - not a key colon value - that becomes a set.
 5:11 And of course, the set is distinct items,
-5:14 so here is a wide variety of ways to replace standard c-style
+5:14 so here is a wide variety of ways to replace standard C-style
 5:19 looping and gathering behavior into lists,
 5:25 replace it with the generators,
 5:27 replace it with dictionaries and replace it with sets,

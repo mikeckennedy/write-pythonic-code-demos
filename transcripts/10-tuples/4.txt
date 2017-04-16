@@ -21,7 +21,7 @@
 1:08 and the last two got maybe those represent the position 
 1:11 and we know that doesn't look right because these are like floating point 
 1:14 and that's like and integer so maybe actually this is a 3, what was that, that was 1,
-1:19 yeah, yeah, ok, so that's right, so this is what we wanted, 0, 3, 2, 1,
+1:19 yeah, yeah, OK, so that's right, so this is what we wanted, 0, 3, 2, 1,
 1:25 what if I wanted to add an item, a thing, another element to this tuple, 
 1:30 how easy this is going to be to maintain, to review,
 1:34 to bring on new people, and so on, 

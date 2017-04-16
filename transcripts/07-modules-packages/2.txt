@@ -12,7 +12,7 @@
 0:32 so sys. we know where this version info is coming from, 
 0:36 and remember, name spaces, those are one honking great idea, 
 0:42 let's do more of those. 
-0:44 Ok, cool, so we are doing more of those here, now sometimes, 
+0:44 OK, cool, so we are doing more of those here, now sometimes, 
 0:47 you don't want to have to say the name space or the module name here, 
 0:50 and especially this really long like SQLAlchemy.orm.ext.declaration. 
 0:56 this is maybe a little bit long, but sys, sys is great. 
@@ -43,7 +43,7 @@
 2:38 that really didn't do anything, 
 2:41 but under one condition it prints mode set to default or mode set to advanced. 
 2:44 So when we say mode down here, this is actually the mode we want to use, 
-2:47 so I can come over here and say ok, cool, 
+2:47 so I can come over here and say OK, cool, 
 2:50 so I'll say from we want to import mode. 
 2:55 Now, PyCharm just because of this weird naming convention I had here, 
 2:59 thinks this is a private thing, 
@@ -56,7 +56,7 @@
 3:29 So our mode is set to advanced. 
 3:31 The none is coming from, let me actually just this doesn't return the value 
 3:34 in that case we wrote. 
-3:35 Ok, so that's the way it worked, 
+3:35 OK, so that's the way it worked, 
 3:37 but suppose instead of doing this Pythonic style of importing without the name space, 
 3:41 I said you know, I just don't want to worry about it, let me,
 3:44 I want to have a bunch, let's just get them all, so we can go like this.

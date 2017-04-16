@@ -22,7 +22,7 @@
 1:08 not five times or ten times but something like a hundred thousand times. 
 1:11 So if you are thinking oh my gosh, this is going to be a lot of work, 
 1:14 that's one way to think about it, the other one could be oh,
-1:17 there is a really great library for exactly that thing called pass lib, go grab that, ok. 
+1:17 there is a really great library for exactly that thing called pass lib, go grab that, OK. 
 1:21 So when we look at these two packages yes, 
 1:24 it's great that you know about them, 
 1:27 but the most important takeaway is not the details of the two packages 

@@ -23,17 +23,17 @@
 1:13 nw is North-West and so on.
 1:15 Now we'll see if we can actually improve on this as well
 1:18 but that's not the point of this conversation,
-1:21 ok, so we are going to run our code
+1:21 OK, so we are going to run our code
 1:23 and it's going to ask for which direction we want to move
 1:25 North, South, East, West and so on
 1:26 and we'll use that parse method you just saw.
 1:28 If it's something it doesn't understand
 1:30 it returns None and as we already discussed
-1:32 we check if it is None then we bale or print it out
+1:32 we check if it is None then we bail or print it out
 1:37 so just you can see what the parse did as and
 1:39 and then here is this code that we have before.
 1:42 So, let's first run this to make sure it works,
-1:44 ok, which direction you want to move,
+1:44 OK, which direction you want to move,
 1:45 let's go South-West, move South-West was parsed,
 1:49 hey that's a diagonal move;
 1:50 we'll try another one, let's try North. North, that's a direct move,
@@ -58,7 +58,7 @@
 3:07 So if we move North, it's a direct move,
 3:10 if we move South-East that's a diagonal move.
 3:14 Let's just try, let's take West, boom, direct move.
-3:17 Ok, so that's pretty sleek, right?
+3:17 OK, so that's pretty sleek, right?
 3:19 So when we have a single variable
 3:21 and we want to test it against multiple conditions, use this "in" keyword,
 3:25 now this is extremely readable, but in fact,

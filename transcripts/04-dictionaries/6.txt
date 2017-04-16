@@ -85,7 +85,7 @@
 4:42 but we can also give it the default action so that
 4:45 if there is no direction method we get this default one
 4:48 and then we can just call action.
-4:50 Like so, ok, let's run this.
+4:50 Like so, OK, let's run this.
 4:53 What directions do we have to move? We could say North,
 4:55 we should see "Chippy moves North with a special hesitation",
 4:59 awesome, let's go South, "Chippy is going South for the winter!"

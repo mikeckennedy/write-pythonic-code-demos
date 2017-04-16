@@ -44,7 +44,7 @@
 2:15 Similarly, same thing for rating, and it's not just so we can
 2:21 detect it in this case let's print out, "Oh, we didn't find the rating...",
 2:25 all right, let's run and see how that works.
-2:28 Ok, safety first, we checked yes,
+2:28 OK, safety first, we checked yes,
 2:32 it was true that year was in there so we want its value printed out,
 2:36 we asked if rating was in there, no it wasn't
 2:38 and so oh we didn't find the rating, is what we found out here.
@@ -118,7 +118,7 @@
 6:31 So, we started out with this dictionary,
 6:33 and we said let's just try to get the year and rating from it like so,
 6:36 year was totally fine, but rating, not so fine, remember we got the crash,
-6:41 KeyError 'rating', we said ok, well let's try it this way,
+6:41 KeyError 'rating', we said OK, well let's try it this way,
 6:43 let's use .get and we'd like to specify an alternative value
 6:47 so for year we said the alternative value is going to be zero, and then in this case,
 6:52 we are going to say if you have no rating, please provide negative one.
