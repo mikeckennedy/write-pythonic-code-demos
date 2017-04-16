@@ -44,7 +44,7 @@
 2:30 this is kind of- well odd, so it works fine,
 2:34 but it separates the implementation from where we are using it,
 2:38 and if the implementation is really simple,
-2:40 it can clutter up your name space with all sorts of little functions
+2:40 it can clutter up your namespace with all sorts of little functions
 2:44 and it can move where you are using them from where you are defining them
 2:48 so it's a little harder to understand what's going on.
 2:50 Let's take this basically the same idea here,

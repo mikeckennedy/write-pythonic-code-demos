@@ -95,7 +95,7 @@
 4:55 and grab the variable called age and put it in the string, without format.
 4:58 So if we had just an f right here,
 5:00 then Python itself would actually pull name and age
-5:03 out of whatever name space it happens to be in.
+5:03 out of whatever namespace it happens to be in.
 5:07 Now you can see this is an error because it doesn't work,
 5:10 in Python 3.5, but that's coming
 5:12 in the next release of Python which is awesome.
