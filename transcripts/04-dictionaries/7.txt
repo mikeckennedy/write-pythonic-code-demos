@@ -18,7 +18,7 @@
 1:05 so import json, spell correctly, we'll come down here,
 1:08 let's put this down at the bottom for a minute,
 1:10 we'll come over here and we'll say "movie_data ==" we just say "json."
-1:18 Now notice there is a load which actually takes
+1:18 Now notice there is a "load", which actually takes
 1:21 a file pointer and a "loads", which loads from the string,
 1:24 so we'll say movie_json, so let's just print this out here.
 1:28 So we'll do something similar, we'll print the type of movie_data
@@ -40,7 +40,7 @@
 2:38 save it to a file system, we now have a string and it's actually the JSON text here.
 2:43 So we used the JSON module to make this transformation
 2:46 between JSON and dictionaries,
-2:49 "loads" for strings, load for file pointers,
+2:49 "loads" for strings, "load" for file pointers,
 2:51 and then dumps for string, dump for file pointers.
 2:56 So to review in a graphic, here we have import json so we can use that module,
 3:00 we have string which presumably comes off the internet
