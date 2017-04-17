@@ -24,6 +24,6 @@
 1:28 "xrange" is your friend, now you get basically the equivalent of Python 3 "range".
 1:35 Great, so if you really want to step through numbers,
 1:38 just use range, that gives you something that's iterable
-1:41 and you use that in a "for in" loop.
+1:41 and you use that in a "for...in" loop.
 1:42 Yeah, so in some sense there is a way to do a numerical "for" loop,
 1:46 it's just not a language construct, it's an idiom.

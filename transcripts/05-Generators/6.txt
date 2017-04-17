@@ -101,7 +101,7 @@
 5:59 we can do the same thing with loops inline using generator expressions.
 6:03 So, it's much of the same mechanics but the execution is vastly different
 6:08 so we say parenthesis for generator and then the value we want to get
-6:12 and then we loop over the item with the "for in" loop
+6:12 and then we loop over the item with the "for...in" loop
 6:15 and then we do a test with an if clause, there you have it,
 6:18 these generators are super useful, study them,
 6:21 you use them in a lot of places.

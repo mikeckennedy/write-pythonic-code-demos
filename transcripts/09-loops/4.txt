@@ -1,6 +1,6 @@
 0:01 One peculiar feature of Python loops is that they have an "else" block,
 0:06 first of all, do you know that the "while" loop
-0:08 and the "for in" loop have "else" clauses that you can attach to them?
+0:08 and the "for...in" loop have "else" clauses that you can attach to them?
 0:12 Second, can you remember the order in which these happen,
 0:15 what triggers the "else" block to run versus it not running? Let's have a look,
 0:20 so here we have two "while" loops, one "while" loop runs to completion;

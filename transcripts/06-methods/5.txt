@@ -60,7 +60,7 @@
 3:09 We'll see some more Pythonic ways to deal with this as well,
 3:12 some other functional techniques we can use.
 3:15 So, specifying default values here, lets us perform what in languages
-3:19 like CSharp and C++ often are done through signature overloading
+3:19 like C# and C++ often are done through signature overloading
 3:24 and having multiple methods that are distinguished by signature.
 3:28 However, there is a warning here,
 3:30 so for these default values there are some extremely serious gotchas

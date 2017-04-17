@@ -2,7 +2,7 @@
 0:04 You'll see that there is much more collections philosophy underlying them.
 0:07 Let's start with the basics.
 0:09 There is no numerical loop in Python,
-0:11 there is no "for" loop, like C++, CSharp, Java, Javascript,
+0:11 there is no "for" loop, like C++, C#, Java, Javascript,
 0:16 they have this way of walking through a number and incrementing it
 0:19 usually to pull items out of an array, so I imagined what would that look like in Python
 0:23 if we had a numerical "for" loop, something like: "this for i = 0; i < len(data); i++ "

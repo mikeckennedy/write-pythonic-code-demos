@@ -4,7 +4,7 @@
 0:07 a name and an age, Michael and 43.
 0:10 We'd like to create the string "Hi, I'm Michael and I am 43 years old",
 0:13 given whatever values those variables have.
-0:16 If you are coming from some languages like say CSharp or Javascript,
+0:16 If you are coming from some languages like say C# or Javascript,
 0:20 you may try to go do something like this,
 0:22 you might say, Hi, so if we try to run this, it's actually going to crash,
 0:27 you can see PyCharm is even printing that out,
