@@ -9,7 +9,7 @@
 0:25 Now if we run this you'll see they should be swapped, 
 0:27 great, 7, 11, 11, 7, but this is non Pythonic. 
 0:34 And let's even teach PyCharm, hey, that's a word. 
-0:37 Ok, so if we are going to do this in a Pythonic way, we are going to use tuples, 
+0:37 OK, so if we are going to do this in a Pythonic way, we are going to use tuples, 
 0:42 and it turns out you can do it in a beautiful concise one liner 
 0:45 by temporarily creating a tuple and then unpacking 
 0:48 it into the same variables but in reverse, so we can say y, x=x, y. 

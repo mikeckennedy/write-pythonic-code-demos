@@ -48,7 +48,7 @@
 2:37 we saw that lambda expressions let us write small concise functions 
 2:41 to be passed around as arguments, 
 2:44 we talked about how using return values is errors from functions 
-2:47 while sometimes ok is generally as a rule of thumb frowned upon, 
+2:47 while sometimes OK is generally as a rule of thumb frowned upon, 
 2:51 and we should use errors and exception handling 
 2:54 rather than return types to indicate failure, 
 2:57 we talked about different ways to add polymorphism or overloading to functions, 

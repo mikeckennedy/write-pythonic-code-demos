@@ -12,7 +12,7 @@
 0:30 it checks to see if the database was available and if it's not available,
 0:34 it returns None which we know is False.
 0:36 Otherwise, it's going to actually do a search against our database
-0:40 and return a list of account IDs.
+0:40 and return a list of account ids.
 0:42 However, there might not be any matching results
 0:45 in which case that list could be empty,
 0:47 so you might be tempted to say if not accounts,

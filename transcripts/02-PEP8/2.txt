@@ -57,10 +57,10 @@
 3:03 So we have our better set of imports,
 3:06 import sys, import os, import multiprocessing,
 3:09 and these of course are going to allow us to use module name.symbol name
-3:14 so os.path for example in this sort of name space style,
+3:14 so os.path for example in this sort of namespace style,
 3:17 and that's really nice to know where the particular symbol
 3:21 that you are working with like path, where it came from.
-3:23 If you don't want to use that name space style,
+3:23 If you don't want to use that namespace style,
 3:25 you can use the final import we have here, from os import path,
 3:29 change mod and change owner.
 3:31 PEP 8 also have some guidance on the order and grouping of your imports.

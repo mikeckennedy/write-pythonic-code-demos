@@ -14,7 +14,7 @@
 0:52 so we'll write something like this, in the else clause of the whole loop, 
 0:56 and down here we'll say else, in the else clause of the early break loop, 
 1:00 which one is going to run? Let's find out. 
-1:06 Ok, so if we run through the entire loop, 
+1:06 OK, so if we run through the entire loop, 
 1:09 and we go all the way to the end, this becomes false, and then else we run this. 
 1:15 On the other hand, if we go through here 
 1:17 and we never go to a case where this is no longer true 
