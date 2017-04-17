@@ -6,7 +6,7 @@
 0:16 passing a pointer by reference, 
 0:19 we  just have passing the pointer which lets us work with the values. 
 0:22 Some languages you can do things like this, you can say int & val 1 int & val 2, 
-0:29 that would be like C++, and say C# you might say like this, out or ref or in out, 
+0:29 that would be like C++, and say CSharp you might say like this, out or ref or in out, 
 0:37 things like this, we could even if this was pass by value 
 0:41 we could even pass a pointer and then let it change, 
 0:44 there is lots of things that some languages let us do, 
