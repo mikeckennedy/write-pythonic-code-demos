@@ -107,7 +107,7 @@
 5:46 so here is a nice Pythonic way to test a single variable
 5:50 against multiple values in Python.
 5:53 So this is probably the most natural way to write this code
-5:56 coming from somewhere like C++, Java, CSharp and so on,
+5:56 coming from somewhere like C++, Java, C# and so on,
 5:59 however, in Python we can use this set and the n operator
 6:04 to make this much readable,
 6:07 now if we want to see all the cases,

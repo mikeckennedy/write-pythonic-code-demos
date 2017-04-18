@@ -3,7 +3,7 @@
 0:06 All of these concepts are extremely central to this idea of Pythonic code,
 0:10 many of them are very unique to Python actually.
 0:13 The first item we are going to look at is iteration.
-0:16 We saw that Python does not have a numerical "for loop",
+0:16 We saw that Python does not have a numerical "for" loop,
 0:19 there is no "for(i=0; ;i++)" style loop, you literally work with sequences,
 0:24 you iterate over collections and so on.
 0:26 There is many built in types that work that way

@@ -31,7 +31,7 @@
 1:36 Next up, we are going to look at classes and objects.
 1:40 Object oriented programming in Python is a key cornerstone concept,
 1:44 even though it may play a slightly less important role
-1:47 than languages like Java and CSharp,
+1:47 than languages like Java and C#,
 1:50 still, classes are really important
 1:52 and there is a lot of idiomatic conventions around working with classes,
 1:55 we'll focus on that in this section.
