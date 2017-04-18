@@ -65,3 +65,4 @@ target/
 .idea/modules.xml
 .idea/pythonic-demos.iml
 .idea/vcs.xml
+.DS_Store
