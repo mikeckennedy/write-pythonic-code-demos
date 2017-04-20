@@ -18,8 +18,8 @@
 1:06 up here you can see this has just bin/python,
 1:09 which is Python 2, what we'll get at the bottom is no longer a generator, it's a list,
 1:13 so if you put 10 million here instead of using the generator
-1:16 with the yield slowly create this it actually generates a list of 10 million items.
-1:21 All at once. And then, lets you loop over it, not amazing right,
+1:16 with the yield slowly create this, it actually generates a list of 10 million items.
+1:21 All at once. And then, lets you loop over it. Not amazing, right?
 1:24 but in Python 3 this is no problem, if you want to do this in Python 2,
 1:28 "xrange" is your friend, now you get basically the equivalent of Python 3 "range".
 1:35 Great, so if you really want to step through numbers,

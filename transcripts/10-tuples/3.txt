@@ -27,7 +27,7 @@
 1:27 that we are going to get the right values. 49 and 18.52
 1:31 Those are right values, but the code, not so right,
 1:34 so let's take this and have a good version.
-1:37 Keep that one down here we'll make this one to be Pythonic,
+1:37 Keep that one down here, we'll make this one to be Pythonic,
 1:40 we'll just call it out_params, and we are going to do something entirely different.
 1:43 We are going to get rid of all the stuff, this link, all this junk,
 1:46 watch how much simpler this gets.
@@ -38,7 +38,7 @@
 2:00 So we can come down here and we can return a tuple and we can say that
 2:04 just say "r1, r2", that defines a tuple, that's one thing, we'll return that.
 2:09 That's a little bit like what we were doing before with our list,
-2:12 so we could like say return a list but the thing that's cool
+2:12 so we could like say "return a list" but the thing that's cool
 2:16 is the tuple unpacking lets us get at that value really easy,
 2:20 so we can come over here and we can say we would like to call this function
 2:22 out_params with the value 7, we'd like to capture the values, remember,

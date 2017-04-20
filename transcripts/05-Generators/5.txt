@@ -1,6 +1,6 @@
 0:01 So we've seen how powerful and amazing
 0:03 the yield keyword is to build these generators.
-0:05 In Python 3 there is actually a new feature that makes working with generators
+0:05 In Python 3, there is actually a new feature that makes working with generators
 0:09 as well as recursive functions even better.
 0:14 So over here we have some code and what it's going to do is
 0:18 it's going to go to some root directory
@@ -10,21 +10,21 @@
 0:28 and we want to just process through those,
 0:31 so I've written this function called get_files() and I give it a root directory,
 0:35 and it returns using yield the generator that we can iterate over and print them out.
-0:40 So this is pretty straight forward, we are going to go to a directory,
-0:44 this will be the top level directory, and we'll say for each item I'd like to look at it,
+0:40 So this is pretty straightforward, we are going to go to a directory,
+0:44 this will be the top level directory, and we'll say "for each item I'd like to look at it",
 0:48 let's build up it's full path and ask: "is it a file,
 0:50 or is it a directory?", so if it's s file we'll say "yeah,
 0:54 I found one of the files in this directory,
 0:56 here go loop over this", but if it is itself a directory,
 1:00 well let's just hold off on that for a minute.
-1:03 So here if I run it you can see on my Mac I have this .ds store thing
+1:03 So here if I run it you can see on my Mac I have this .DS_store thing
 1:07 and then I have this txt file and then that's that.
 1:11 So not many files. But it turns out there is subdirectories in here
 1:14 and maybe I want to look inside them
 1:16 if I had a function that could look inside a folder,
 1:19 and tell you what was in it, tell you the files that are in it,
-1:22 that would be awesome, I could use that right;
-1:24 well, what do I have right here, boom,
+1:22 that would be awesome, I could use that, right?
+1:24 Well, what do I have right here, boom,
 1:27 so what we can do is we can use a concept called recursion
 1:29 and if you are used to recursion this makes perfect sense,
 1:32 but if you are not, it's quite interesting and sort of mind bending,
@@ -44,11 +44,11 @@
 2:22 there is quite a few files that were in subdirectories here. Lovely.
 2:25 And notice we actually are printing the directory as well,
 2:28 I'll turn that off for a minute. So those are just the files.
-2:33 So like I said, this is straight up recursion, and this is kind of not so great,
+2:33 So like I said, this is straight up recursion, and this is kind of not-so-great,
 2:38 we'd like to just say hey here are a bunch of items in a generator
 2:43 and I would like to make all of those items part of my sequence, so in Python 3,
-2:47 we can do this, we can say instead of just yield we can say yield from get files
-2:53 and full item and this is basically replacing that loop above
+2:47 we can do this, we can say instead of just yield we can say "yield from get_files"
+2:53 and full_item and this is basically replacing that loop above
 2:57 so we can do it in kind of a inline sequence way, let's try it again,
 3:00 we should get exactly the same output,
 3:03 boom, we do,

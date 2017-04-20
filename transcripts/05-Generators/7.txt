@@ -6,15 +6,15 @@
 0:16 let's go look at that in PyCharm to see why.
 0:19 So this is basically the same code that we used to talk
 0:22 about generator expressions in the first place, this time,
-0:25 this is set actually, fix that, so here we have our high values,
+0:25 this is set actually, fixed that, so here we have our high values,
 0:29 now if I try to print out the "len" of them, get the length,
 0:33 you can see PyCharm is already trying to tell me I am going down a bad path,
 0:36 but let's see what happens anyway.
 0:39 Boom, object or type generator has no length,
 0:42 what might be wrong with getting the length,
 0:44 well it could be infinite, and it might take forever to determine that,
-0:47 but most importantly this is not going to work, all right,
-0:50 so we are not going to do that because it crashes,
+0:47 but most importantly this is not going to work, all right?
+0:50 So we are not going to do that because it crashes,
 0:53 we could do something like this, we could say "create a list and pass into it
 0:58 the high values in them", if you pass a collection here,
 1:00 it will iterate overall the items and put it in the list and then I could print "len of list".
@@ -25,11 +25,11 @@
 1:20 ta da, 4, OK, 4, that's cool,
 1:25 so we can use a combination of some really cool things,
 1:29 so if I had something like, let me just do something simple here,
-1:32 I'll say some and say given any set of numbers I could add them up,
+1:32 I'll say "sum" and say given any set of numbers, I could add them up,
 1:36 so those 3 numbers should have 7, we should see 7 down here, perfect, OK,
-1:42 so we can use some to give it some kind of collection here, let me separate these
+1:42 so we can use sum to give it some kind of collection here, let me separate these,
 1:50 so we can kind of isolate them, count here and we'll say "count equals this", right,
-1:55 so we could add this up using some, we could leverage this,
+1:55 so we could add this up using sum, we could leverage this,
 1:58 along with another chained comprehension,
 2:02 so what do I want to put in here,
 2:04 for every item I see in here I would like to add one,
@@ -62,8 +62,8 @@
 3:38 it loads everything in a memory all at once,
 3:40 so we can use this cool combination of the sum method
 3:44 and a chained generator expression,
-3:47 so the chained generator expression is give me one
-3:50 for every time you find an item in high measurements,
+3:47 so the chained generator expression is "give me one
+3:50 for every time you find an item in high measurements",
 3:52 which is itself a generator, and then if we sum up that set,
 3:55 we actually get the number of items in the generator.
 3:58 Remember, just be really careful it's used up after this,

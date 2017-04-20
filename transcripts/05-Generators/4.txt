@@ -1,7 +1,7 @@
 0:01 Here is a function called classic_fibonacci
 0:03 and what you do is you pass a limit to it
 0:05 and it will compute all the Fibonacci numbers up to that limit.
-0:09 Notice we have a list called nums and it does all the work,
+0:09 Notice we have a list called "nums" and it does all the work,
 0:12 fills this list up and once it's finally done, it gives you all the numbers.
 0:16 Well, what if you want the first million Fibonacci,
 0:20 what if you need the first 5 million Fibonacci numbers,
@@ -12,9 +12,9 @@
 0:34 and the second one is a prime number
 0:37 the third one is the cube of the first one in the sequence,
 0:41 who knows when that is, you are just looking through
-0:43 and you are going to decide, oh, now it matches, now I have got enough of these.
+0:43 and you are going to decide "oh, now it matches, now I have got enough of these".
 0:47 What if you were looking through this
-0:49 and you said I am going to ask for 5 million Fibonacci numbers
+0:49 and you said "I am going to ask for 5 million Fibonacci numbers"
 0:52 and it was really the 5 millionth and first, right, maybe you just gave up.
 0:57 So we are going to look at a different way to write exactly the same code
 1:00 that doesn't have these limitations,
@@ -42,8 +42,8 @@
 2:03 right now, and then, we are going through them and processing
 2:07 you can "m" is the various values here.
 2:11 So that's fine for small numbers, but what like I said,
-2:15 in the beginning, what if we don't know what the upper bound is,
-2:17 or what if we have to put a really huge number here,
+2:15 in the beginning, what if we don't know what the upper bound is?
+2:17 Or what if we have to put a really huge number here,
 2:22 what do you think happens to the memory consumption as that number grows,
 2:25 obviously we have to gather all the numbers that preceded it
 2:29 and hold them in memory all at once and then you get the answer.
@@ -56,19 +56,19 @@
 2:51 instead of having this limit, we would like to work on the infinite series,
 2:56 now if I just run this code, two things will happen,
 2:59 first of all it's going to crash in a hurry, even if for some reason it wouldn't crash,
-3:04 if we had like infinite memory, it will still never return, right,
-3:07 it's just going to keep adding this infinite series
+3:04 if we had like infinite memory, it will still never return, right?
+3:07 It's just going to keep adding this infinite series
 3:10 but of course it's going to run out of memory.
 3:12 So in Python, we can do something both cleaner and better here,
 3:15 so what we can do is we can use this yield keyword,
 3:18 and yield is like return but instead of returning from the method,
-3:21 it just says hey I want to create a collection or a sequence
+3:21 it just says "hey, I want to create a collection or a sequence
 3:25 and here is one of the items,
-3:26 and here is one of the items, so we'll yield current.
+3:26 and here is one of the items", so we'll yield "current".
 3:29 So, that's cool, so that's going to actually generate - continue to yield the items,
-3:34 you might wonder well, how we ever get a value out of it, so let's go find out.
+3:34 you might wonder well, how we ever get a value out of it? So let's go find out.
 3:41 So we are going to do this, now if I run this, it won't crash or anything,
-3:44 it will just keep spitting up numbers scrolling to the right until it kind of goes crazy,
+3:44 it will just keep spitting up numbers, scrolling to the right until it kind of goes crazy,
 3:49 so this is an infinite sequence but as a consumer of the infinite sequence,
 3:56 I can decide "OK, I've had enough".
 3:58 So what I will say here is let's say "if m is greater than 100",
@@ -91,7 +91,7 @@
 4:52 it's more like on demand as you pull items out of it it will compute them,
 4:56 so only as much as you pull, you have to pay in terms of computation.
 5:00 The other really cool benefit is nowhere are we adding this to a list
-5:03 so nowhere are we using basically nowhere are we storing
+5:03 so nowhere are we using, basically nowhere are we storing
 5:07 more than one item at memory at a time so memory is not a problem in this situation.
 5:11 So these generators are really cool and all you have to do is use the yield keyword.
 5:17 If you compared against classic_fibonacci,
@@ -100,10 +100,10 @@
 5:25 it's actually shorter and once you get your mind around yield,
 5:28 it's actually easier to understand.
 5:31 So that's cool, we can also take down here,
-5:34 we can create a something like an even_generator
+5:34 we can create a something like an even_generator()
 5:39 and if I were to pass some kind of set here, some kind of number generator like this,
-5:45 I could say "for n in numbers, if n % 2==0"
-5:52 our standard even test, we will say yield n.
+5:45 I could say "for n in numbers, if n % 2 == 0"
+5:52 our standard even test, we will say "yield n".
 5:56 So given any set of numbers,
 5:58 whether this is a list or a generator, it doesn't matter, it doesn't care,
 6:02 it's going to pull the even ones out and then down here,
@@ -117,7 +117,7 @@
 6:34 from the Fibonacci set and remember,
 6:36 this is an infinite sequence because we are starting out
 6:40 with the innermost bit,
-6:41 an infinite sequence which itself is a generator
+6:42 an infinite sequence, which itself is a generator
 6:45 that will take as many items are there and pass them back.
 6:49 But because we don't actually do the work on this part until we pull on it,
 6:53 and we don't do the work on this part until we pull on it, it goes something like this,

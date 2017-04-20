@@ -16,26 +16,26 @@
 0:53 and the selection part will be done by that function
 0:56 whereas the gathering and looping part will be done here.
 1:00 So let's look at this idea in Python.
-1:02 So, down below we have our find_special_numbers just like you saw in the slides,
-1:06 and I've written this other function called check for odd, right,
-1:10 you can see it's doing the standard modular check for odd numbers;
+1:02 So, down below we have our find_special_numbers, just like you saw in the slides,
+1:06 and I've written this other function called check_for_odd, right,
+1:10 you can see it's doing the standard modular check_for_odd numbers;
 1:13 so we can come up here, we can combine these two things together, like so,
-1:19 we can say "for n in find_special_numbers" and this takes some kind of selector,
-1:26 so I can say check for odd.
+1:19 we can say "for n in find_special_numbers" and this takes some kind of a selector,
+1:26 so I can say check_for_odd.
 1:29 Now, PyCharm automatically tries to call this function,
 1:31 but I don't want to call it, I want to just pass it, all right,
 1:34 we'll see that is I take this and I actually print out this here,
 1:39 maybe I'll even do the type for you, do the type and then the actual value of it,
 1:45 we'll see that this comes out as a type of function
 1:47 and a particular function pointer to a particular type of function.
-1:51 So just like any reference we can pass it here maybe we want the first 50 numbers,
+1:51 So just like any reference, we can pass it here maybe we want the first 50 numbers,
 1:57 we'll just print those out.
 1:59 And let's print them all in one line so that you can see them,
 2:02 so we use a separator of comma to just comma-separate these values,
 2:05 so let's run this.
 2:07 Perfect, so you can see we've got our prime numbers here,
 2:09 including the first 50 prime numbers that we were looking for.
-2:13 And also see what we printed out our type of check for odd,
+2:13 And also see what we printed out our type of check_for_odd,
 2:17 we've got the type as a function
 2:18 and it's a particular function "check_for_odd at that address".
 2:21 So that's cool too.
@@ -60,21 +60,21 @@
 3:22 now this obviously is not the right syntax,
 3:25 given this, I don't know, this value goes here
 3:30 and just sort of passes this little bit of code,
-3:33 so in Python the way we say - we are defining a lambdas
+3:33 so in Python the way we say - we are defining lambdas
 3:35 you say lambda and then the arguments, the parameters,
 3:38 and you say colon is your separator as you normally would,
 3:41 every lambda has a little expression of value it creates and it returns
 3:45 so you don't say the return value, so there,
-3:48 this is our lambda expression, now if we run ti it should work.
+3:48 this is our lambda expression, now if we run it, it should work.
 3:52 Perfect, here are divisible by 6 numbers,
-3:55 so it works, but PyCharm here is saying, you know, not so much,
-3:58 PEP 8 says don't define lambdas outside of their actual use as pointers
+3:55 so it works, but PyCharm here is saying: "you know, not so much,
+3:58 PEP 8 says don't define lambdas outside of their actual use as pointers",
 4:04 rather we should do a little miniature "def" here,
 4:07 so let's inline this as it's kind of meant to be used.
 4:10 There,
 4:11 so we can just take our lambda expression and pass it as a parameter,
 4:14 and that's what lambdas are for, you can create these little expressions
-4:17 that you can chain together pass this parameters and so on.
+4:17 that you can chain together pass these parameters and so on.
 4:20 So we should get exactly the same behavior if we run it.
 4:23 And we do. Cool, so if we have to just come up with these little bits of code, here
 4:30 and pass them around, lambdas are beautiful for this, let's look at another example.
@@ -82,7 +82,7 @@
 4:39 I'd like to have them sorted in a way that regular people would say
 4:44 "yes, those words are sorted alphabetically."
 4:46 So one way you might say "let's give it a shot" is
-4:49 we could just come over here and say "words.sort".
+4:49 we could just come over here and say "words.sort()".
 4:52 Now, whether I use sort or I could say sort it,
 4:55 these will generate sorted list that I can then go and work with,
 4:59 the difference is this changes the underline list of words
@@ -108,7 +108,7 @@
 6:06 so let's do this, let's say lower any time you want to compare word,
 6:11 do not compare the actual word, compare the lower case version,
 6:14 we could use upper and so on. Let's try it.
-6:17 Now look at that, that looks sorted, doesn't it.
+6:17 Now look at that, that looks sorted, doesn't it?
 6:20 And look how incredibly easy this is, "key=lambda w: w.lower()"
 6:26 That shows you some of the power of lambda expressions in Python.
 6:30 Let's look at that in a graphic.
@@ -116,9 +116,9 @@
 6:34 we also saw the same situation applies to built-ins like lists and so on,
 6:38 so we want to pass some kind of selector and we could write a special method
 6:41 somewhere using "def method name da da da" and pass it
-6:44 but if it's a small little test it makes much more sense to do this
+6:44 but if it's a small little test, it makes much more sense to do this
 6:48 as an inline lambda expression, like so.
-6:52 So we just write "lambda, arguments, goes to return value" basically.
-6:56 If there is no arguments, you just say lambda:
+6:52 So we just write "lambda, arguments, goes to, return value" basically.
+6:56 If there is no arguments, you just say "lambda:",
 6:58 you get multiple parameters like any other method as well.
 7:01 Using lambda expressions is a very Pythonic thing to do.

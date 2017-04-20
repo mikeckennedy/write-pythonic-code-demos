@@ -1,7 +1,7 @@
 0:01 Let's talk about the Python idioms on classes and objects.
 0:04 And let's start in the construction of classes, how do you build them up,
 0:07 how do you add fields and to a lesser degree when we get farther along, methods.
-0:13 So here I have a class defined called NotSoPythonicPet().
+0:13 So here I have a class defined called NotSoPythonicPet.
 0:16 And we are going to do several non-Pythonic things to it
 0:19 but let's start up by giving this pet a way to set a name and to set an age
 0:23 so that we can ask it, hey pet, what is your name, what is your age.
@@ -48,12 +48,12 @@
 3:21 this is a terrible way to write code, so don't do this.
 3:24 And if you feel you must do something like this,
 3:27 at least initialize these to somewhere empty.
-3:29 But I am going to go ahead and say let's not do this,
-3:32 let's instead, I'll leave this commented out for you, for the code you download,
-3:36 let's instead say you have to supply a name and age to create this class,
+3:29 But I am going to go ahead and say "let's not do this",
+3:32 let's instead... I'll leave this commented out for you, for the code you download,
+3:36 let's instead say "you have to supply a name and age to create this class",
 3:40 to create an object of this class,
 3:42 and we come down here to say "self.name = name" or in PyCharm you just hit Alt+Enter,
-3:47 and it will do that for you, and alt enter and it will do that for you,
+3:47 and it will do that for you, and Alt+Enter and it will do that for you,
 3:52 and it does it of course, the way we are recommending.
 3:56 But now, we've got to supply a name and an age
 3:58 or it's going to crash as you can see, and Betsy's back.
@@ -75,17 +75,17 @@
 5:00 This is an instance level property,
 5:02 you can think that this is kind of a static level type of thing,
 5:05 as a static field from other languages if you will,
-5:08 so over here, if we write it like this we get to write code like this,
+5:08 so over here, if we write it like this, we get to write code like this,
 5:12 so here is how we actually wrote our query to do this,
 5:15 I want to create a "query(Measurement)", "filtering(Measurement.value > .9)",
-5:19 order_by(measurement.value.desc()) things like that.
+5:19 order_by(measurement.value.desc()), things like that.
 5:23 OK, so this is another very common way
 5:26 to define fields of our class that I think is Pythonic,
 5:30 if you want them to be type level, if you want them to be only instance level,
 5:34 this is the way to do it.
 5:37 Here we have our NotSoPythonicPet,
 5:40 and it's doing a couple of things right and a couple of things wrong.
-5:43 First of all it has a "self.age = age", "self.name = name", in the __init__ that's good,
+5:43 First of all it has a "self.age = age", "self.name = name", in the __init__, that's good,
 5:49 but when we call "get_name" it happens to set another field,
 5:53 another attribute that only exists after you call "get_name"
 5:57 that turns out to be a really bad idea.

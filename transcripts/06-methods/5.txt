@@ -24,7 +24,7 @@
 1:03 Of course we can specify all the details and say "Good afternoon Mark" twice.
 1:07 How do we go about this in Python?
 1:09 Well, we use default values.
-1:11 First of all it's not going to love it the way it is,
+1:11 First of all, it's not going to love it the way it is,
 1:13 you can see PyCharm's indicating issues and if we'd run it you will find them,
 1:17 the first part worked just fine, "Good morning Jeff" and then did that 3 times,
 1:21 the little error snuck in between there, and then it said "Good day Michael"
@@ -34,10 +34,10 @@
 1:31 So we can actually go up here and instead of having different signatures,
 1:34 we can have default values, so if we'd like to have default greeting
 1:38 we can come over here and we can say, right in line, "Hello".
-1:41 So if we wanted to say Hello- name,
+1:42 So if we wanted to say Hello- name,
 1:45 if you don't specify it, then we can do it this way.
-1:48 Now, this would almost fix this line except, for we still need to deal with times
-1:51 and the default values have to go after all the non-default values so let's set this to 1,
+1:48 Now, this would almost fix this line, except for we still need to deal with times
+1:51 and the default values have to go after all the non-default values, so let's set this to 1,
 1:56 that seemed reasonable; now, this actually fixes all of these errors, let's go.
 2:01 Perfect, look, if this one here "Hello Mark",
 2:05 this one said "Good afternoon Mark" one time,
@@ -49,8 +49,8 @@
 2:30 So we can put these in any order we want using keyword arguments
 2:33 and we get "Yo Michael" 4 times.
 2:37 More importantly, this lets us two things like skip over,
-2:40 let me keep this here for you, more importantly his lets us skip over
-2:45 some of the default values so here I can say name is Michael,
+2:41 let me keep this here for you, more importantly his lets us skip over
+2:45 some of the default values, so here I can say name is Michael,
 2:48 skip over greeting and use its default "Hello" and then let's just say 2 times here.
 2:53 So they should say "Hello Michael" 2 times at the end.
 2:56 "Hello Michael", 2 times at the end.

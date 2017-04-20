@@ -1,7 +1,7 @@
 0:01 Python is often referred to as a programming language and ecosystem
 0:04 with batteries included, and on one level
 0:06 that means it has a really rich standard library.
-0:08 Things like the JSON module that's built in and so on.
+0:08 Things like the JSON module that's built-in and so on.
 0:11 It also means looking at the larger ecosystem
 0:14 all the 80 000 packages on PyPi, things like that,
 0:18 so in this section we are going to focus
@@ -14,7 +14,7 @@
 0:41 right, "json.dumps", here a is 1 and boom, we have JSON,
 0:46 but we could also import all sorts of things,
 0:49 we could go to PyPi install some packages and import them
-0:52 for example I could "import requests" because I've installed that somewhere,
+0:52 for example I could "import requests", because I've installed that somewhere,
 0:56 to capture this idea of how amazing packages are,
 0:59 we have this concept of "import antigravity",
 1:02 so what happens if I import antigravity? Well something pretty awesome,
