@@ -1,11 +1,11 @@
 0:01 All right, this next tip or technique I want to show you
 0:03 might almost be considered anti-Pythonic.
 0:06 Let's look at the Zen of Python and see what it says.
-0:09 So, recall the Zen of Python says special cases
-0:11 aren't special enough to break the rules,
+0:09 So, recall the Zen of Python says "special cases
+0:11 aren't special enough to break the rules",
 0:13 so that leads to a really clean and simple and easy to understand language,
 0:18 often with one way to do things instead of three or four, that's awesome.
-0:22 However, it also says  practicality betas purity,
+0:22 However, it also says "practicality beats purity",
 0:26 so let me give you a heavy dose of practicality involving dictionaries,
 0:29 and memory in Python.
 0:32 So here is the server memory process for the web servers
@@ -34,22 +34,22 @@
 1:42 we are going to have a thing called an ImmutableThingTuple,
 1:45 we are using this name tuple to create it, has values a, b, c and d,
 1:49 we are going to have a regular class,
-1:51 a plain little class that has four values "a, b, c and d",
+1:51 a plain little class that has four values a, b, c and d,
 1:55 storing those on its instance, and we are going to use slots
-1:58 with this what we are calling an immutable thing, it's a little bit wrong,
+1:58 with this what - we are calling an immutable thing, it's a little bit wrong,
 2:03 it's immutable and that it can't have new attributes
-2:05 but the values a, b, c and d those can change.
+2:05 but the values a, b, c and d, those can change.
 2:09 By adding the slots here, what we are going to do is, remember,
 2:12 every normal object has a dictionary backing store,
 2:17 and so if I look at "self.__dict__", you would see
 2:22 that it had four entries, a, b, c and d
 2:25 and the values would be whatever the values of a, b, c and d were passed in.
 2:30 Each instance of mutable thing has its own separate copy
-2:33 of the dictionary which means it has its own separate copy of the keys as well.
+2:33 of the dictionary, which means it has its own separate copy of the keys as well.
 2:38 On the other hand, this one when you define slots, it says look,
 2:41 this type holds four and exactly four things with this name
 2:44 and we can put the storage of those slots into the type,
-2:50 which is a singleton instead of two the instance variables
+2:50 which is a singleton, instead of two the instance variables
 2:53 which they are maybe millions.
 2:56 So, let's look at the code below where we created a bunch of these
 2:58 and we look at the memory pressure and behavior of the different items.
@@ -67,26 +67,26 @@
 3:41 and this is an input call so it's going to block.
 3:43 The reason it blocks is I want to process to stay alive
 3:47 so we can go look at its memory graph before it exits.
-3:50 OK, so you just hit enter to exit; first, we are going to run this for tuples.
+3:50 OK, so you just hit Enter to exit; first, we are going to run this for tuples.
 3:55 Here you can see it took about half a second,
 3:58 paste it over here so that we can see what the relative performance was,
-4:03 and let's run process explorer which lets us look down here at the details.
+4:03 and let's run process explorer, which lets us look down here at the details.
 4:07 So here is Python, you can see,
 4:09 if we open this up we've got a performance graph,
 4:12 right now it's using a 145.7 MB in private bytes.
-4:18 So we'll note that here. Let's run name tuples.
+4:18 So we'll note that here. Let's run named tuples.
 4:21 So it's an interesting question to ask,
 4:24 if these absolute bare minimum tuples that can't expand,
 4:29 don't have names, things like that,
 4:31 how do they compare both in performance and memory
 4:34 of our named tuple that we created up here above,
-4:37 like so, using our collections.name tuple.
+4:39 like so, using our collections.name tuple.
 4:44 All right, let's run and see how it works.
 4:47 OK, well, that is slower, let's go ahead and copy that
 4:50 and put it in our little document here, so it's about three times slower,
 4:54 as you would expect, it's doing quite a bit more work to parse those and so on,
 4:59 let's look at the memory here, the memory is about the same,
-5:02 143.3 Mb, so no big deal.
+5:02 143.3 MB, so no big deal.
 5:06 Let's move down the line here and run it for a standard class,
 5:10 so this one is probably going to have the least good performance
 5:13 from a memory perspective, because remember,
@@ -100,7 +100,7 @@
 5:43 we would expect it to take more time,
 5:45 it's doing comparable stuff to what those two were taking.
 5:48 However, the memory story should be pretty interesting, let's see what it is,
-5:51 how close is it going to be say to the class versus the name tuple
+5:51 how close is it going to be say to the class versus the named tuple
 5:55 versus the regular tuple.
 6:00 All right, let's let it go and see what happens.
 6:04 Timewise, faster than name tuples, that's cool,
@@ -113,10 +113,10 @@
 6:36 and we save 101 MB so that's a huge improvement,
 6:41 now let's go look back our type here.
 6:44 Remember, regular tuples are very useful but they are very inflexible,
-6:47 they would not be a good stand in for a class, most of the time.
+6:47 they would not be a good stand-in for a class, most of the time.
 6:52 Named tuples are better, at least they have names for their properties.
 6:55 So like if I had one here, a, b, c and d and so on, that's cool, but again,
-7:02 they can't have methods and what not,
+7:02 they can't have methods and whatnot,
 7:05 on the far other end of the spectrum,
 7:07 we have regular custom classes that are extremely rich,
 7:11 properties, methods, inheritance, overloads and so on,
@@ -132,11 +132,11 @@
 7:41 it's suppose to work in this nice flexible dynamic way,
 7:44 but understanding how the memory works in these types,
 7:48 and the ability to take control over that and change it,
-7:52 when you need it, when you can say I can put this one line here,
+7:52 when you need it, when you can say "I can put this one line here",
 7:55 and we need to save 9 GB of RAM on our server,
 7:59 we can do way more processing or manage for your servers,
 8:01 that's a huge win, and it may be worth it.
-8:04 So, this may or may not be Pythonic I'll leave that up to you
+8:05 So, this may or may not be Pythonic, I'll leave that up to you
 8:08 but I thought it was interesting to put it in here into this dictionary section
 8:11 because it makes a big difference
 8:13 and on one hand you say "what you are doing

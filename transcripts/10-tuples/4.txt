@@ -4,7 +4,7 @@
 0:11 "main", which is going to print out some data
 0:13 and it's going to get that data from this get_data_tricky version,
 0:16 you probably wouldn't call your function tricky but you know,
-0:20 just to highlight it for the course, right.
+0:20 just to highlight it for the course, right?
 0:21 So you can see it returns a list of tuples, here we have some incrementing numbers,
 0:27 so maybe this is an id, we have 3 values here in the middle,
 0:33 so those must represent something important, we'll see, not totally sure what that is.
@@ -26,9 +26,9 @@
 1:30 How easy this is going to be to maintain, to review,
 1:34 to bring on new people, and so on,
 1:37 this is not a good way to work, so let's talk about a better kind of tuple.
-1:41 so let's import collections, and let's define something called a rating.
+1:41 so let's import collections, and let's define something called a Rating.
 1:47 Now this is like defining a class or something like that, like a custom type,
-1:52 but we can do it in a very concise short way, using "collections.name" tuples.
+1:52 but we can do it in a very concise short way, using "collections.namedtuple"s.
 1:58 So what you put here is the name, the type name,
 2:01 and then you can put the fields separated by commas,
 2:04 so maybe we want to call this id, rating, "x" and "y", something like that.
@@ -38,7 +38,7 @@
 2:23 just like the way you initialize a class, or something like that,
 2:26 here we are going to initialize our rating and it takes an id
 2:30 and a rating and then "x" and then "y".
-2:32 Actually, it looks like I have that wrong so let's put it like this,
+2:32 Actually, it looks like I have that wrong, so let's put it like this,
 2:35 or I would have to reorder my data but let's say it goes like this.
 2:38 Now, let's comment out this tricky version, here we go,
 2:41 the data from the better and we'll hide this,

@@ -9,7 +9,7 @@
 0:27 and it's using 3 packages,
 0:28 now these would be interspersed throughout your app of course, right,
 0:31 but in this case, we just have them listed here.
-0:35 So we are using request to download some the homepage in Google,
+0:35 So we are using a request to download some the homepage in Google,
 0:38 show the status code, imagine somewhere else using records for SQL,
 0:42 over here we are using user accounts and correct hashing with passlib and so on.
 0:47 So if I run this in PyCharm, on my system, it works great,
@@ -37,12 +37,12 @@
 2:03 so if I copy this and I come back over to my
 2:06 "other system" where I have, remember,
 2:10 I am using this pip from here,
-2:13 if I say "pip install -r" for requirements file and I give it that,
+2:12 if I say "pip install -r" for requirements file and I give it that,
 2:19 it's going to look at all the requirements we've specified, download them,
 2:26 and make sure the system is ready to roll.
 2:29 As long as I have kept that requirements file,
 2:31 up to date with what my app actually uses, we're good.
-2:35 And PyCharm if we are working in certain types of environments
+2:35 And PyCharm if we are working in certain types of environments,
 2:38 actually is really good about managing that for us,
 2:41 if it sees you work inside of a package like say a pyramid web app,
 2:44 and it sees you using some external package,

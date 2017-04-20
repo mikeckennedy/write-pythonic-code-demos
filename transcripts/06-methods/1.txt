@@ -1,6 +1,6 @@
 0:01 Our next category of Pythonic concepts and tips
 0:03 is going to be around functions and methods.
-0:06 Python is a multi paradigm programming language,
+0:06 Python is a multi-paradigm programming language,
 0:09 we can write procedural code,
 0:10 we could write object-oriented code,
 0:12 we could write functional code and with things like decorators

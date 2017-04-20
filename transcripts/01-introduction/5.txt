@@ -3,7 +3,7 @@
 0:06 So, this course is built with Python 3 in mind.
 0:10 If you don't have Python 3 installed,
 0:12 you can get it for your operating system at python.org/downloads,
-0:15 or you can home brew or apt get install it.
+0:15 or you can "Homebrew" or "apt get install" it.
 0:17 That said, most of the topics will actually be quite similar
 0:21 between Python 2 and Python 3,
 0:23 so we'll talk about Python 2 whenever there are significant differences.
@@ -20,8 +20,8 @@
 1:02 a lot of the PyPi packages were not updated and so on,
 1:05 now if we look at today Python 3 has default as much more common
 1:08 than it has been but more importantly,
-1:12 if you look just four years into the future, not far at all,
-1:14 you will see that Python 2 is end of life,
+1:11 if you look just four years into the future, not far at all,
+1:14 you will see that Python 2 is "end of life",
 1:17 there will be no more support for Python 2 in less than four years.
 1:20 And that means, whoever has projects, written in Python 2
 1:23 have to not just start upgrading them,
@@ -36,4 +36,4 @@
 1:49 going forward it's all about Python 3."
 1:51 So, that's why this course itself is based on Python 3,
 1:54 even though like I said,
-1:56 differences are quite minor for the topics we are covering.
+1:55 differences are quite minor for the topics we are covering.

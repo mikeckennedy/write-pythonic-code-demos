@@ -3,13 +3,13 @@
 0:06 we saw Python 3.3 added "yield from" to work with recursive generators
 0:11 and things like that - combining generators,
 0:14 those were all functions, so we were able to transform
-0:18 the way the function worked but what about loops,
-0:21 what about things that are smaller,
+0:18 the way the function worked but what about loops?
+0:21 What about things that are smaller,
 0:23 little bits of code like what we have on the screen here,
 0:26 we've got some kind of iterable set called measurements,
 0:29 we want to loop over it and we want to find all the ones that have some value over 70,
 0:33 we want to gather those up, so just like the drawbacks
-0:37 our Fibonacci sequence we already pass the limit had before,
+0:37 our Fibonacci sequence where we pass the limit had before,
 0:41 this loop has similar problem, but the yield keyword won't help us,
 0:45 so let's see what will.
 0:47 So here we have some code, we've created a named tuple,
@@ -29,7 +29,7 @@
 1:31 so I am calling this C-style but it's really any procedural programming way
 1:36 and of course this blocks while this runs,
 1:38 now we can come down here we can take this code
-1:41 and we can do something a little bit different,
+1:40 and we can do something a little bit different,
 1:42 we can create what's called a list comprehension,
 1:46 the result is going to be exactly the same,
 1:48 the execution also will be basically exactly the same,
@@ -50,11 +50,11 @@
 2:33 the benefit here is this can be passed as part of an expression,
 2:37 whereas this is like separate code suite that you have to stop and then run,
 2:41 you couldn't like pass this as an argument to a method,
-2:47 but like I say: This you can, you can compose them and so on.
+2:47 but like I say: "This you can, you can compose them and so on."
 2:51 So let's see the results are the same, of course they are, excellent,
 2:54 so this executes and turns into a list but we talked about the generators,
 2:59 that let us only pull out the items as we pull or we iterate over the generator.
-3:05 So that's really cool, now we can do basically the same thing over here
+3:05 So that's really cool, now we can do basically the same thing over here,
 3:10 if you have square braces that means a list comprehension execute and return a list.
 3:14 If you have parenthesis but you put basically the same thing inside,
 3:18 you create a generator that you can then iterate over,
@@ -62,7 +62,7 @@
 3:25 So, if we just try to print out high measurements gen,
 3:29 you'll see that we actually just get a generator,
 3:31 not a bunch of values because they hasn't actually executed, hasn't pulled on it.
-3:36 So, in order to actually display the results we do this wrap it in a list,
+3:36 So, in order to actually display the results we do this, wrap it in a list,
 3:40 make it generate something that we can then print and then there it is,
 3:44 these list comprehensions are cool, there is other types of comprehensions as well,
 3:49 all right, the generators, the yield, and that's most interesting I suppose,
@@ -74,8 +74,8 @@
 4:13 Now if I run that, you can see here is the id value and id,
 4:17 here is some crazy id value is 73,
 4:20 but it is these values that you can look them up now
-4:23 by key not super helpful when you have 4 values or 5 whatever that is,
-4:27 but if you had hundreds of thousands we saw how amazing that could be,
+4:23 by key, not super helpful when you have 4 values or 5 whatever that is,
+4:27 but if you had hundreds of thousands, we saw how amazing that could be,
 4:31 so this actually generates a dictionary because it's "key:value" for item in some set.
 4:37 Well, for item in some collection.
 4:39 Now we can also create just the distinct values
@@ -85,7 +85,7 @@
 4:52 the ideal structure for that would be set.
 4:56 So we can use almost the same syntax as the dictionary comprehension here,
 5:01 but instead of saying "key:value" we just put an item here,
-5:05 and if we use curly braces, and one value - not a key colon value - that becomes a set.
+5:05 and if we use curly braces, and one value - not a "key:value" - that becomes a set.
 5:11 And of course, the set is distinct items,
 5:14 so here is a wide variety of ways to replace standard C-style
 5:19 looping and gathering behavior into lists,
@@ -94,7 +94,7 @@
 5:31 all of these constructs are highly Pythonic and used often
 5:35 especially when you are creating these pipelines and passing one to the next.
 5:40 All right, let's look at the core concept here, as a graphic.
-5:43 So we saw we have our direct loop style or c-procedural style code create a list,
+5:43 So we saw we have our direct loop style or C-procedural style code create a list,
 5:48 loop over a bunch of items, if they match some test we add them to our list.
 5:52 But, just like taking this type of algorithm and replacing it with yield
 5:56 worked really well in a function,
@@ -102,6 +102,6 @@
 6:03 So, it's much of the same mechanics but the execution is vastly different
 6:08 so we say parenthesis for generator and then the value we want to get
 6:12 and then we loop over the item with the "for...in" loop
-6:15 and then we do a test with an if clause, there you have it,
+6:15 and then we do a test with an "if" clause, there you have it,
 6:18 these generators are super useful, study them,
 6:21 you use them in a lot of places.

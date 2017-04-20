@@ -10,7 +10,7 @@
 0:34 There is an amazing set of lego blocks out there
 0:36 all you have to do is know to reach for them.
 0:38 So if you find yourself thinking "hm, how am I going to
-0:42 implement this bit?" of whatever subsystem you are working on in Python,
+0:41 implement this bit?" of whatever subsystem you are working on in Python,
 0:45 stop and do a little research first.
 0:47 For example, if you are going to work with user accounts,
 0:50 and you need to store user names and passwords,
@@ -33,7 +33,7 @@
 1:43 there is 82 000+ packages there, so about 300 new unique packages a day,
 1:49 and the power of what's available here really is the main reason
 1:53 why Python is popular.
-1:54 Another really important place to look for Python libraries and tools is of course github.
+1:54 Another really important place to look for Python libraries and tools is of course GitHub.
 2:00 So there is this really cool site called GitHut.info, let's check that out quickly.
 2:05 So here you can see, these are all the popular languages on GitHub,
 2:10 and here is their active repositories, the total number of pushes, number of forks,

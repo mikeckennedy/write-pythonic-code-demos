@@ -40,7 +40,7 @@
 2:04 is they are not using loops correctly,
 2:07 so we'll talk about when and how you should use loops
 2:10 and we'll even talk about the controversial else clause
-2:12 for for in and while loops.
+2:12 for "for...in" and "while" loops.
 2:14 Next, we'll talk about tuples.
 2:16 Tuples are smallish, read-only collections
 2:18 that let you package up related possibly heterogeneous data
@@ -59,10 +59,10 @@
 2:57 and add amazing powers to your application.
 3:00 People who are new to Python often skip this step
 3:03 and they look at something they have to do and are just like
-3:07 OK I think I can implement it in these 20 lines of code.
+3:07 OK I think "I can implement it in these 20 lines of code".
 3:10 It's very likely that there is already a package out there
 3:14 that you can use to do this,
-3:16 so we are going to study two packages one for http
+3:16 so we are going to study two packages one for HTTP
 3:18 and one for database access to really bring home this point of look to PyPi
 3:24 and look to open source first before you start writing your own algorithms.
 3:28 Of course, over time, we may add more topics than what are described here,

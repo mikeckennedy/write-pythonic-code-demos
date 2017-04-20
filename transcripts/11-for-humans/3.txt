@@ -19,7 +19,7 @@
 1:12 so we'll say "import records", and the way we get started is
 1:16 we create a database and we give it the connection string, like so,
 1:21 and then we say "db.query()" over here and we just give it some SQL.
-1:27 Remember the tagline, just write SQL, so we are going to come over here
+1:27 Remember the tagline, "just write SQL", so we are going to come over here
 1:30 and we are going to do a query, now what I am going to write
 1:33 would normally just be a string, this is SQL embedded in Python,
 1:37 so there is no less support for whatever that means anyway,
@@ -49,7 +49,7 @@
 3:17 at what's available when you are working with Python apps,
 3:20 there is so much out there, one of the biggest challenges is actually finding it,
 3:24 hopefully, you are inspired to look around by some of these examples.
-3:28 All right so the final takeaway of this whole section is
-3:31 it is Pythonic to leverage PyPi and open source
+3:28 All right so the final takeaway of this whole section is:
+3:31 "It is Pythonic to leverage PyPi and open source
 3:34 more than it is to implement the coolest clever algorithm on your own code,
-3:39 and keep it private.
+3:39 and keep it private."

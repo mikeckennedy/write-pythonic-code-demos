@@ -5,7 +5,7 @@
 0:11 there is no "for" loop, like C++, C#, Java, Javascript,
 0:16 they have this way of walking through a number and incrementing it
 0:19 usually to pull items out of an array, so I imagined what would that look like in Python
-0:23 if we had a numerical "for" loop, something like: "this for i = 0; i < len(data); i++ "
+0:23 if we had a numerical "for" loop, something like: "this for i = 0; i less than len(data); i++ "
 0:29 we are going to go work with items.
 0:30 Well, that doesn't exist. Sometimes,
 0:34 people try to work their way around it using the loops

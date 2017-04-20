@@ -11,11 +11,11 @@
 0:37 So, there is nothing special about that, but let's see about the "else" clause here,
 0:41 so let's say "for all loops" we can say "else", so "do the loop, else",
 0:48 we'll just put a message to know that it ran or didn't in the "else" clause,
-0:52 so we'll write something like this, in the "else" clause of the whole loop,
+0:52 so we'll write something like this, "in the else clause of the whole loop",
 0:56 and down here we'll say "else", in the "else" clause of the early break loop,
 1:00 which one is going to run? Let's find out.
 1:06 OK, so if we run through the entire loop,
-1:09 and we go all the way to the end, this becomes False, and then "else... we run this".
+1:09 and we go all the way to the end, this becomes False, and then "else", we run this.
 1:15 On the other hand, if we go through here
 1:17 and we never go to a case where this is no longer True
 1:20 but we break out early instead, we don't run the "else" clause.

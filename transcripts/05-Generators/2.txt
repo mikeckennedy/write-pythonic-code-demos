@@ -21,10 +21,10 @@
 0:57 and then we'll do out "if" test, we'll say "if n is in nums_list"
 1:04 and then maybe say a list here, keep the same order,
 1:07 otherwise we'll say "not in list".
-1:10 All right, so the test here is "n in nums list", all right,
+1:10 All right, so the test here is "n in nums_list", all right,
 1:14 so this actually goes through and it searches the elements in it
 1:16 and it does a comparison not on index but by value,
-1:20 and then it'll tell you yes or no it's here,
+1:20 and then it'll tell you "yes or no it's here",
 1:22 then we could do the same thing as you'll see for the set
 1:25 and we could also do it for the dictionary.
 1:30 All right, let's run it and figure it out,
@@ -35,13 +35,13 @@
 1:48 So, "if item in container", this even works for strings,
 1:54 so if we had some text here like "Why did the multithreaded chicken cross the street?"
 1:59 do you know? Well it depends on when you ask it,
-2:03 you'll always get a different answer,
+2:02 you'll always get a different answer,
 2:04 this time we are going to get "Other side to the get".
-2:08 So I could ask a question word, so here we'll say
+2:08 So I could ask a question "word", so here we'll say
 2:14 something, we'll do this not the tertiary way, we can say something like this,
-2:17 "if word in text: print" such and such is in such and such,
+2:17 "if word in text: print such and such is in such and such",
 2:29 there, so we could say ask user for a word, they type it in,
-2:32 we can do the same in test for a string, let's try,
+2:32 we can do the same "in" test for a string, let's try,
 2:36 first look for 7 which should not be there, now I'll look for chicken,
 2:42 chicken is in the "Why did the multithreaded chicken cross the street",
 2:45 let's try it again, this time we'll enter 2 and here we'll put a cat.
@@ -54,5 +54,5 @@
 3:06 I want the thing with key 2 but as we saw in other examples,
 3:09 this could give us a KeyError, if it's not there,
 3:11 so we might want to do this sort of check first style
-3:14 so we could say if 2 is in the dictionary,
+3:14 so we could say "if 2 is in the dictionary",
 3:17 then we can safely access it because we know it's not going to KeyError.

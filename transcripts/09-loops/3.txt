@@ -1,6 +1,6 @@
 0:01 So in some sense we saw that range gives us a kind of a numerical "for" loop
 0:04 and that lets us walk through numbers from some starting point
-0:08 to some ending point evenly incrementing them, continuously by the same amount.
+0:08 to some ending point, evenly incrementing them, continuously by the same amount.
 0:12 If you actually want to get items out of a collection,
 0:15 if you are going to emulate that original "for" loop
 0:17 where you say "I am going to get the index
@@ -24,7 +24,7 @@
 1:08 first the index and then the value for that part,
 1:11 to the loop, so we can unpack that in two variables right here,
 1:14 index and value and then we can do whatever we are going to do,
-1:17 here we said something like this: we'll print out the index and the value,
+1:17 here we said something like this: "we'll print out the index and the value",
 1:23 there you have it, if we are going to make this sort of ordered list style,
 1:26 you might put a "+1" here, item 1 goes to 1, item 2 is 7, item 3 is 11.
 1:31 There, that's the Pythonic way to do numerical "for" loops.

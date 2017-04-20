@@ -23,11 +23,11 @@
 1:13 if you have a class and the class has a get value and set value,
 1:17 because in Java that is typically the way you do encapsulation,
 1:20 and people bring those classes in this code over and migrate it to Python,
-1:24 they might still have this weird getter setter type of code.
+1:24 they might still have this weird getter/setter type of code.
 1:28 And that would look completely bizzare in Python
 1:31 because we have properties for example.
 1:33 So we are going to look at this idea of Pythonic code,
-1:36 now it's pretty easy to understand but it turns out to be fairly hard to make concrete,
+1:36 now, it's pretty easy to understand but it turns out to be fairly hard to make concrete,
 1:40 you'll see a lot of blog posts and things of people trying to put structure
 1:44 or examples behind this concept of Pythonic code.
 1:48 We are going to go through over 50 examples of things I consider Pythonic
