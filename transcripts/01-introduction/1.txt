@@ -20,7 +20,7 @@
 1:04 In Python there is often a more concise, more natural way of doing things,
 1:09 and when you look at code that came over from Java,
 1:11 we'll just take a really simple example-
-1:13 if you have a class and the class has a get value and set value,
+1:13 if you have a class and the class has a getValue() and setValue(),
 1:17 because in Java that is typically the way you do encapsulation,
 1:20 and people bring those classes in this code over and migrate it to Python,
 1:24 they might still have this weird getter/setter type of code.
