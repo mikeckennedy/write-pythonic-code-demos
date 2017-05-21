@@ -1,7 +1,7 @@
 0:01 Are you ready to start looking at some Pythonic examples and writing some code?
 0:04 I sure am, we are going to start by focusing on PEP 8.
 0:07 And some of the very basic structured ways
-0:10  in which you are supposed to write Python code,
+0:10 in which you are supposed to write Python code,
 0:12 and then we'll quickly move beyond that
 0:15 to more the patterns and techniques
 0:17 that we are going to talk about for the rest of class.

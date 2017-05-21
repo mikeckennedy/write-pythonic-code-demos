@@ -1,7 +1,7 @@
 0:01 The first PEP 8 recommendation that we are going to look at
 0:03 is around importing modules and packages.
 0:05 So let's switch over here to PyCharm and have a look at some not-so-great code.
-0:09 You can see on line seven here, we are importing collections,
+0:09 You can see on line 7 here, we are importing collections,
 0:12 the recommendation from PEP 8 is that all module level imports
 0:16 should go at the top, unless there is some sort of function level import
 0:19 you are doing kind of unusual, conditional things.
@@ -10,17 +10,17 @@
 0:27 a module level import is not at the top of the file."
 0:29 So we can take this and put it at the top of the file, now everything is happy.
 0:34 So let's look at few other things we can do,
-0:37 we could say "from os import change directory, change flags and change owner."
+0:37 we could say "from os import chdir, chflags, chown"
 0:44 This is a good way to import a bunch of items
 0:47 from os and not have to state their name,
 0:49 we could do this a different way, using what's called a wildcard import,
-0:53 we could say from os import *,
+0:53 we could say "from os import *"
 0:55 now that would import the three listed above,
 0:58 but it would also import every symbol defined in os.
 1:01 Now what's wrong with this?
 1:03 Imagine up here I imported another module,
-1:05 from my module import path, so if I write this code,
-1:10 line four and line six, path is not going to be what you think it is,
+1:05 "from my_module import path" so if I write this code,
+1:10 line 4 and line 6, path is not going to be what you think it is,
 1:14 because we are importing path here
 1:16 but then we are importing every symbol from os
 1:18 using what is called the wildcard import,
@@ -33,9 +33,9 @@
 1:38 then that part will go away.
 1:40 But of course, because we are importing the same thing twice
 1:42 basically it's also saying, I'll move that.
-1:45 Here we go, so now it says "you are using change dir, change owner but not change flags",
-1:49 down below it's using "change owner".
-1:52 All right, now "change flags", if I do something with that, it also lights up.
+1:45 Here we go, so now it says "you are using chdir, chown but not chflags",
+1:49 down below it's using "chown".
+1:52 All right, now "chflags", if I do something with that, it also lights up.
 1:56 All right, so there was never a problem with that import,
 1:59 that was just PyCharm trying to tell us "hey, look out,
 2:01 you are actually not using that import."
@@ -47,7 +47,7 @@
 2:19 so it's very clear line by line what you depend on here,
 2:24 so we could fix this by saying, let me just put a "no:", something like that,
 2:28 and we could of course fix this, like so, "import os", "import multiprocessing".
-2:35 So this would be the recommended way to write what was on line four.
+2:35 So this would be the recommended way to write what was on line 4.
 2:39 So let's look at that import guidance a little more clearly.
 2:43 Here we have at the top two bad styles of imports,
 2:47 first line: "import sys, os, multiprocessing", on a single line;
@@ -62,7 +62,7 @@
 3:21 that you are working with, like "path", where it came from.
 3:23 If you don't want to use that namespace style,
 3:25 you can use the final import we have here, "from os import path,
-3:29 change mod and change owner".
+3:29 chmod, chown".
 3:31 PEP 8 also have some guidance on the order and grouping of your imports.
 3:36 It says the standard library imports should go at the top,
 3:39 related third party imports should go in a little section below that
