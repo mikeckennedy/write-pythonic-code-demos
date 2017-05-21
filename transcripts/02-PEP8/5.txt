@@ -5,7 +5,7 @@
 0:11 I just want to give you one of my core programming guidelines around naming,
 0:14 and that is: Names should be descriptive.
 0:17 Let's imagine you are writing a function.
-0:19 If you write the function and then you start to  put a comment
+0:19 If you write the function and then you start to put a comment
 0:22 at the top to describe what that function does,
 0:24 I encourage you to stop and think about just making the concise statement
 0:29 about what that comment is the name of the function.
@@ -42,7 +42,7 @@
 2:02 functions and methods lower case, again,
 2:05 possibly separated with underscores.
 2:07 And if you happen to create your own exception type,
-2:09 here we might want to raise a RepositoryError and it derives from the exception class,
+2:09 here we might want to raise a RepositoryError and it derives from the Exception class,
 2:14 when you have exceptions they should always be named in error,
 2:18 so "SomethingError". Here we have RepositoryError.
 2:22 As you have seen in other cases, PyCharm will help us here,

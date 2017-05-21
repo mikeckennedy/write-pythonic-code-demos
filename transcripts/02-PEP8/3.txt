@@ -1,12 +1,12 @@
 0:01 Next up, code layout. Let's see what PEP 8 has to say about it.
 0:03 The most important part about code layout that PEP 8 talks about is indentation.
-0:08 So, imagine we have a method called some_method(),
+0:08 So, imagine we have a method called some_method()
 0:12 it says that you should indent four spaces,
 0:14 and PyCharm of course, as you've seen, knows PEP 8
 0:17 and indents four spaces for us automatically, so: one, two, three, four, there we are.
 0:22 And, we can write something so we could define a variable, hit Enter,
 0:25 like an "if" statement,
-0:28 so something like "if x is greater than two", enter;
+0:28 so something like "if x > 2:", enter;
 0:30 Python does not like us to use tabs,
 0:33 PEP 8 recommends we use spaces and every indent is four spaces,
 0:36 but it even looks like if I hit tab and delete tab and delete,
