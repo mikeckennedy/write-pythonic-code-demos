@@ -1,6 +1,6 @@
 def find_accounts(search_text):
     # perform search...
-    if not db_is_availble:
+    if not db_is_available:
         return None
 
     # returns a list of account IDs
