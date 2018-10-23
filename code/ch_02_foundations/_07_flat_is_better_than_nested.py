@@ -1,5 +1,5 @@
 # noinspection PyProtectedMember
-import ch_02_foundations._07_flat_support_file as s
+import _07_flat_support_file as s
 
 
 def main():
