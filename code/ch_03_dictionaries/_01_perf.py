@@ -33,7 +33,7 @@ def main():
     print("done.")
 
     # Create a set of random IDs to locate without duplication
-    interesting_ids = {random.randint(0, len(data_list)) for _ in range(0, 100)}
+    interesting_ids = {random.randint(0, len(data_list)-1) for _ in range(0, 100)}
     print("Creating {} interesting IDs to seek.".format(len(interesting_ids)))
 
     # Locating data in list
