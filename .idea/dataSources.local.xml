@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="slicing_db" uuid="8bb4bd1d-6254-49eb-8c86-6e28d7023c1b" />
-    <data-source name="demo_db" uuid="35b5cf00-25b0-486c-ad0e-a4924f786a9c" />
+    <data-source name="slicing_db" uuid="8bb4bd1d-6254-49eb-8c86-6e28d7023c1b">
+      <database-info product="SQLite" version="3.8.11" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" family="SQLITE" exact-version="3.8.11" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <introspection-schemas>*:</introspection-schemas>
+    </data-source>
+    <data-source name="demo_db" uuid="35b5cf00-25b0-486c-ad0e-a4924f786a9c">
+      <database-info product="SQLite" version="3.8.11" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" family="SQLITE" exact-version="3.8.11" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <introspection-schemas>*:</introspection-schemas>
+    </data-source>
   </component>
 </project>

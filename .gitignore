@@ -66,3 +66,8 @@ target/
 .idea/pythonic-demos.iml
 .idea/vcs.xml
 .DS_Store
+.env
+.idea/workspace.xml
+.idea/dataSources/35b5cf00-25b0-486c-ad0e-a4924f786a9c.xml
+.idea/dataSources/8bb4bd1d-6254-49eb-8c86-6e28d7023c1b.xml
+.idea/inspectionProfiles/Project_Default.xml
