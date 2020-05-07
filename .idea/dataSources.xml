@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1982540970">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
     <data-source source="LOCAL" name="slicing_db" uuid="8bb4bd1d-6254-49eb-8c86-6e28d7023c1b">
-      <driver-ref>sqlite.xerial</driver-ref>
+      <driver-ref>1eba50fe-c223-4fd0-b2c8-4fb12b6c32bb</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>SQLite</remarks>
@@ -18,7 +18,7 @@
       </libraries>
     </data-source>
     <data-source source="LOCAL" name="demo_db" uuid="35b5cf00-25b0-486c-ad0e-a4924f786a9c">
-      <driver-ref>sqlite.xerial</driver-ref>
+      <driver-ref>1eba50fe-c223-4fd0-b2c8-4fb12b6c32bb</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>SQLite</remarks>

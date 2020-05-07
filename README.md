@@ -33,7 +33,7 @@ https://talkpython.fm/pythonic
 
 ## What is Pythonic code and why does it matter?
 
-One of the special concepts in Python is the idea of writing idiomatic code that is most aligned with the language features and ideals. In Python, we call this idiomatic code Pythonic. When you write Pythonic code, you are leveraging over 25 years of experience of many thousands of developers. You are writing code that is expected and tune in the CPython runtime. Most importantly perhaps, you are writing code that is easily read and understood by your follow and senior Python developers.
+One of the special concepts in Python is the idea of writing idiomatic code that is most aligned with the language features and ideals. In Python, we call this idiomatic code Pythonic. When you write Pythonic code, you are leveraging over 25 years of experience of many thousands of developers. You are writing code that is expected and tune in the CPython runtime. Most importantly perhaps, you are writing code that is easily read and understood by your fellow and senior Python developers.
 
 If you are building an open source product, it will be easier for other contributors to join in if your code is Pythonic. If you are running a software team, it will be easier to onboard Python developers new to your company.
 
