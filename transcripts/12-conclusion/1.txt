@@ -1,9 +1,0 @@
-0:01 Congratulations, you've made it to the end of the course.
-0:04 You've completed over 50 examples contrasting non-Pythonic code
-0:07 with idiomatic Pythonic code.
-0:11 I hope you've learned a ton,
-0:13 I hope you have a new appreciation for some of the idioms built into Python,
-0:17 why we use them, what their advantages are
-0:19 and how you can apply them to your apps.
-0:21 The ones you've already built
-0:22 and the ones that you are going to build in the future.

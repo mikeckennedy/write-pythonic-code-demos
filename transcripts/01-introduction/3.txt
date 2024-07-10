@@ -1,7 +1,0 @@
-0:01 We are going to write a lot of code in this course.
-0:02 And you want to download it and play with it
-0:04 and experiment with it and so on
-0:06 so of course I am going to put this into a GitHub repository,
-0:09 here you can see github.com/mikeckennedy/write-pythonic-code-demos
-0:14 so I recommend that you go out there
-0:16 and star this so you have it as a reference.

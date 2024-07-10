@@ -1,8 +1,0 @@
-0:01 Are you brand new to Python?
-0:02 Well this course assumes that you have some basic knowledge
-0:04 on how to create functions, classes, loops, those types of things,
-0:07 and we focus really on the best way to do those.
-0:09 So if you are brand new to Python,
-0:11 I recommend you check out my course
-0:13 Python Jumpstart By Building Ten Applications
-0:14 and you can find that at talkpython.fm/course
