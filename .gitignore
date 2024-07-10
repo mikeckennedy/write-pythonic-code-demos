@@ -58,6 +58,11 @@ docs/_build/
 # PyBuilder
 target/
 
+# editors
+.idea/
+.vscode/
+.fleet/
+
 #Ipython Notebook
 .ipynb_checkpoints
 .idea/encodings.xml
