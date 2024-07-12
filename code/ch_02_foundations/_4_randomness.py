@@ -6,3 +6,6 @@ letters = "abcdefghijklmnopqrstuvwxyz1234567890"
 index = random.randint(0, len(letters) - 1)
 item = letters[index]
 print(item)
+
+# Pythonic way
+print(random.choice(letters))
