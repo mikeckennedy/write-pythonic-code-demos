@@ -1,12 +1,14 @@
-db_is_available = False
+db_is_available = True
 
 
 def main():
     accounts = find_accounts('python')
-    print("Accounts found: ")
-    for a in accounts:
-        print(a)
-
+    if accounts is not None:
+        print("Accounts found: ")
+        for a in accounts:
+            print(a)
+    else:
+        print("Error: DB not available")
 
 def find_accounts(search_text):
     # perform search...
