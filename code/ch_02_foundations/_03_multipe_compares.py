@@ -12,8 +12,14 @@ def main():
 
         print(m)
 
-        # ******** less pythonic ********
-        if m == Moves.North or m == Moves.South or m == Moves.West or m == Moves.East:
+        # # ******** less pythonic ********
+        # if m == Moves.North or m == Moves.South or m == Moves.West or m == Moves.East:
+        #     print("That's a direct move.")
+        # else:
+        #     print("That's a diagonal move")
+
+        # ******** Pythonic ********
+        if m in {Moves.North, Moves.South, Moves.West, Moves.East}:
             print("That's a direct move.")
         else:
             print("That's a diagonal move.")
