@@ -18,7 +18,9 @@ def find_accounts(search_text):
 
 
 def db_search(search_text):
-    return [1, 11]
+    if search_text:
+        return [1, 11]
+    return []
 
 
 if __name__ == '__main__':
