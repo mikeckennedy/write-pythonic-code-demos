@@ -1,11 +1,10 @@
 # ###############################
-# Truthiness of an element:
+# Truthiness of symbols:
 # ###############################
 
 
 def print_truthiness(exp):
     print(("TRUE" if exp else "FALSE") + f" <-- {exp}")
-
 
 # bools
 
@@ -15,11 +14,4 @@ def print_truthiness(exp):
 
 # None-ness
 
-
 # custom types
-class TruthableClass:
-    def __init__(self):
-        self.data = []
-
-    def add(self, item):
-        self.data.append(item)
