@@ -1,52 +1,33 @@
-import datetime
-from enum import Enum
+from enum import StrEnum
 
 
 def main():
-    d_text = input("Which direction [n,s,w,e,nw,ne,sw,se]? ")
-    m = Moves.parse(d_text)
+    while True:
+        d_text = input("Which direction [n,s,w,e,nw,ne,sw,se]? ")
+        m = Moves.parse(d_text)
 
-    if m is None:
-        print("That's not a move!")
-        return
+        if m is None:
+            print("That's not a move, goodbye!")
+            break
 
-    print(m)
+        print(m)
 
-    # ******** less pythonic ********
-    # if m == Moves.North or m == Moves.South or m == Moves.West or m == Moves.East:
-    #     print("That's a direct move.")
-    # else:
-    #     print("That's a diagonal move.")
-
-    # ******** more pythonic ********
-    if m in {Moves.North, Moves.South, Moves.West, Moves.East}:
-        print("That's a direct move.")
-    else:
-        print("That's a diagonal move.")
-
-        # direct_moves = {Moves.North, Moves.South, Moves.West, Moves.East}
-        # t0 = datetime.datetime.now()
-        # speed: .2 sec for multiple tests
-        #        2.3 sec for basic slow in
-        #        .3 sec for cached direct moves in
-        # for _ in range(0, 1000000):
-        #     # b = m == Moves.North or m == Moves.South or m == Moves.West or m == Moves.East
-        #     b = m in direct_moves
-        #     # b = m in {Moves.North, Moves.South, Moves.West, Moves.East}
-        # t1 = datetime.datetime.now()
-        # dt = t1 - t0
-        # print("Time delta: {:,} sec".format(dt.total_seconds()))
+        # ******** less pythonic ********
+        if m == Moves.North or m == Moves.South or m == Moves.West or m == Moves.East:
+            print("That's a direct move.")
+        else:
+            print("That's a diagonal move.")
 
 
-class Moves(Enum):
-    West = 1
-    North = 2
-    East = 3
-    South = 4
-    NorthEast = 5
-    SouthEast = 6
-    NorthWest = 7
-    SouthWest = 8
+class Moves(StrEnum):
+    West = "West"
+    North = "North"
+    East = "East"
+    South = "South"
+    NorthEast = "NorthEast"
+    SouthEast = "SouthEast"
+    NorthWest = "NorthWest"
+    SouthWest = "SouthWest"
 
     @staticmethod
     def parse(text: str):
@@ -77,8 +58,3 @@ class Moves(Enum):
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
