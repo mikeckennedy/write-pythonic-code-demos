@@ -53,7 +53,7 @@ def main():
     sys.stdout.flush()
 
     print("dt: {} sec".format(dt_list))
-    print(interesting_points)
+    print(f'Found {len(interesting_points):,} points')
 
     # #############################
 
@@ -76,7 +76,7 @@ def main():
     sys.stdout.flush()
 
     print("dt: {} sec".format(dt_dict))
-    print(interesting_points)
+    print(f'Found {len(interesting_points):,} points')
     print()
     print("Speedup from dict: {:,.0f}x".format(round(dt_list / dt_dict)))
 
