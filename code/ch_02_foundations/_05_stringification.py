@@ -20,6 +20,6 @@ data = {'day': 'Saturday', 'office': 'Home office', 'other': 'UNUSED'}
 # print: On Saturday I was working in my Home office!
 print("On {day} I was working in my {office}!".format(**data))
 
-# In Python 3.6+
+# This is the way: f-strings in Python 3.6+
 print(f"Hi, I'm {name}, and I'm {age} years old.")
 
