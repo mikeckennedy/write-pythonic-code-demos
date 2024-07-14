@@ -13,9 +13,7 @@ class NotSoPythonicPet:
     #     self.age = age
 
     def __str__(self):
-        return "A pet whose name is {} and age is {}.".format(
-            self.name, self.age
-        )
+        return f"A pet whose name is {self.name} and age is {self.age}."
 
 
 cow = NotSoPythonicPet('betsy', 7)

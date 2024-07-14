@@ -4,7 +4,7 @@ class Sample:
         print("simple")
 
     def simple(self, details):
-        print("Simple with details: {}".format(details))
+        print(f"Simple with details: {details}")
 
 s = Sample()
 s.simple("Some details")

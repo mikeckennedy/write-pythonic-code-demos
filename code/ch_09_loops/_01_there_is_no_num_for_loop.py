@@ -12,11 +12,11 @@ data = [1, 7, 11]
 # NOT pythonic: faking it with a while
 i = 0
 while i < len(data):
-    print("Now i is {}".format(i))
-    print("The value is {}".format(data[i]))
+    print(f"Now i is {i}")
+    print(f"The value is {data[i]}")
     i += 1
 print()
 
 # don't be that person
 for item in data:
-    print("The value is {}".format(item))
+    print(f"The value is {item}")

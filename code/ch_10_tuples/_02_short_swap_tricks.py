@@ -1,7 +1,7 @@
 x = 7
 y = 11
 
-print("x={}, y={}".format(x, y))
+print(f"x={x}, y={y}")
 
 # swap: nonpythonic
 # temp = x
@@ -10,4 +10,4 @@ print("x={}, y={}".format(x, y))
 
 y, x = x, y
 
-print("x={}, y={}".format(x, y))
+print(f"x={x}, y={y}")

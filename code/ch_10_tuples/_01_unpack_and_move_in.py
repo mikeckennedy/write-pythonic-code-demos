@@ -16,7 +16,7 @@ t = 7, "cat", 11
 
 # show them
 n, a, _ = t
-print("n={}, a={}".format(n, a))
+print(f"n={n}, a={a}")
 
 # can also assign on a single line:
 x, y = 1, 2
@@ -24,4 +24,4 @@ print(x, y)
 
 # You'll find this often in loops (remember numerical for-in loops):
 for idx, item in enumerate(['hat', 'cat', 'mat', 'that']):
-    print("{} -> {}".format(idx, item))
+    print(f"{idx} -> {item}")

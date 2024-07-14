@@ -2,7 +2,7 @@
 def display_greeting(name, greeting='Hello', times=1):
     times = max(1, times)
     for _ in range(0, times):
-        print("{} {}!".format(greeting, name))
+        print(f"{greeting} {name}!")
 
 display_greeting("Jeff", 'Good morning', 3)
 display_greeting("Michael", "G'day", 1)

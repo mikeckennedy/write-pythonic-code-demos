@@ -13,9 +13,9 @@ query = {'id': 1, 'render_fast': True}
 post = {'email': 'j@j.com', 'name': 'Jeff'}
 
 print("Individual dictionaries: ")
-print("route: {}".format(route))
-print("query: {}".format(query))
-print("post:  {}".format(post))
+print(f"route: {route}")
+print(f"query: {query}")
+print(f"post:  {post}")
 
 # Non-pythonic procedural way
 m1 = {}

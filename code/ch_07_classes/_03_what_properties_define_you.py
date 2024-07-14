@@ -12,7 +12,7 @@ class NotSoPythonicPet:
 
 print("Here is my pet cow:")
 cow = NotSoPythonicPet("Betsy", 4)
-print("She is named {} and {} years old.".format(cow.get_name(), cow.get_age()))
+print(f"She is named {cow.get_name()} and {cow.get_age()} years old.")
 print()
 
 
@@ -37,13 +37,13 @@ class PetSnake:
 
     @age.setter
     def age(self, value):
-        print("---> Setting age to {}".format(value))
+        print(f"---> Setting age to {value}")
         self.__age = value
 
 
 print("Here is my pet snake:")
 py = PetSnake("Slide", 6)
-print("She is named {} and {} years old.".format(py.name, py.age))
+print(f"She is named {py.name} and {py.age} years old.")
 py.age = 7
-print("She is named {} and {} years old.".format(py.name, py.age))
+print(f"She is named {py.name} and {py.age} years old.")
 print(py.is_protected)

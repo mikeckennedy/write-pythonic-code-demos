@@ -28,4 +28,4 @@ cart.add_item(CartItem("iPhone", 699))
 
 print("Items in your cart.")
 for item in cart:
-    print(" * {} ${}".format(item.name, item.price))
+    print(f" * {item.name} ${item.price}")

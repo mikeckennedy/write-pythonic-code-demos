@@ -8,7 +8,7 @@ class AClass:
 
 var = "A Variable"
 
-print("Support library name: {}".format(__name__))
+print(f"Support library name: {__name__}")
 
 if __name__ == '__main__':
     age = 0

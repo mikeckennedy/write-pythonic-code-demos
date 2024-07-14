@@ -12,7 +12,7 @@ try:
     print(data['year'])
     print(data['rating'])
 except Exception as x:
-    print("Oops! {}".format(x))
+    print(f"Oops! {x}")
 
 
 print()

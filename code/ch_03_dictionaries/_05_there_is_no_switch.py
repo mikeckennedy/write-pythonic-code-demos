@@ -5,7 +5,7 @@ def main():
     d_text = input("Which direction [n,s,w,e,nw,ne,sw,se]? ")
     m = Moves.parse(d_text)
 
-    print("You chose: {}".format(m))
+    print(f"You chose: {m}")
 
     squirrel = Character("Chippy")
     squirrel.move(m)
@@ -40,13 +40,13 @@ class Character:
 
     def move(self, direction: Moves):
         action_dict = {
-            Moves.North: lambda: print("{} moves north with a special hesitation!".format(self.name)),
-            Moves.South: lambda: print("{} is going south for winter!".format(self.name))
+            Moves.North: lambda: print(f"{self.name} moves north with a special hesitation!"),
+            Moves.South: lambda: print(f"{self.name} is going south for winter!")
         }
 
         action = action_dict.get(
             direction,
-            lambda: print("{} moves quickly to {}".format(self.name, direction)))
+            lambda: print(f"{self.name} moves quickly to {direction}"))
         action()
 
 

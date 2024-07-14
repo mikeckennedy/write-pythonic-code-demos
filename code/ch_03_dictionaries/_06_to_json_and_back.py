@@ -12,7 +12,7 @@ movie_json = """
 movie_data = json.loads(movie_json)
 print(type(movie_data), movie_data)
 
-print("The title is {}".format(movie_data.get('Title')))
+print(f"The title is {movie_data.get('Title')}")
 
 movie_json_text_2 = json.dumps(movie_data)
 print(type(movie_json_text_2), movie_json_text_2)

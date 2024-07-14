@@ -9,8 +9,7 @@ def main():
     #         d[0], d[3], d[2], d[1]))
 
     for d in get_data_better():
-        print("id={}, rating={}, position=({}, {})".format(
-            d.id, d.rating, d.x, d.y))
+        print(f"id={d.id}, rating={d.rating}, position=({d.x}, {d.y})")
 
         _, x, y, _ = d
         print(x, y)

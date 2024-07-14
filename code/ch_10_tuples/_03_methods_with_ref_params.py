@@ -4,11 +4,11 @@ import math
 def main():
     args = list()
     out_params_bad(7, args)
-    print("Return values (bad):   {} & {:.2f}".format(args[0], args[1]))
+    print(f"Return values (bad):   {args[0]} & {args[1]:.2f}")
 
     # can we do better?
     v1, v2 = out_params(7)
-    print("Return values (good):  {} & {:.2f}".format(v1, v2))
+    print(f"Return values (good):  {v1} & {v2:.2f}")
 
 
 # pythonic!

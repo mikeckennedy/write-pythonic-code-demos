@@ -8,4 +8,4 @@
 data = [1, 7, 11]
 
 for idx, value in enumerate(data):
-    print(" {} --> {}".format(idx+1, value))
+    print(f" {idx + 1} --> {value}")

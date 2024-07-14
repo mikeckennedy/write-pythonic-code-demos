@@ -62,7 +62,7 @@ for n in range(count):
 
 t1 = datetime.datetime.now()
 
-input("Finished, waiting... done in {:,} s".format((t1 - t0).total_seconds()))
+input(f"Finished, waiting... done in {(t1 - t0).total_seconds():,} s")
 
 # Sample output on OS X + Python 3
 # Hardware: Macbook Pro 2013 edition

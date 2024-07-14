@@ -20,27 +20,27 @@ def run_with_checks():
         return
 
     data = s.download_file()
-    print("downloaded data -> {}".format(data))
+    print(f"downloaded data -> {data}")
 
 
 def run_with_handling():
     try:
         data = s.download_file()
-        print("downloaded data -> {}".format(data))
+        print(f"downloaded data -> {data}")
     except Exception as x:
-        print("Cannot download: {} -> {}".format(type(x), x))
+        print(f"Cannot download: {type(x)} -> {x}")
 
 
 def run_with_handling_separate_errors():
     try:
         data = s.download_file()
-        print("downloaded data -> {}".format(data))
+        print(f"downloaded data -> {data}")
     except PermissionError:
         print("Cannot download, you don't have permission...")
     except ConnectionError as ce:
-        print("Cannot download, problem with network: {}".format(ce))
+        print(f"Cannot download, problem with network: {ce}")
     except Exception as x:
-        print("Cannot download: {} -> {}".format(type(x), x))
+        print(f"Cannot download: {type(x)} -> {x}")
 
 
 if __name__ == '__main__':

@@ -34,7 +34,7 @@ def main():
 
     # Create a set of random IDs to locate without duplication
     interesting_ids = {random.randint(0, len(data_list)-1) for _ in range(0, 100)}
-    print("Creating {} interesting IDs to seek.".format(len(interesting_ids)))
+    print(f"Creating {len(interesting_ids)} interesting IDs to seek.")
 
     # Locating data in list
     print("Locating data in list...", end=' ')
@@ -52,7 +52,7 @@ def main():
     print("done.")
     sys.stdout.flush()
 
-    print("dt: {} sec".format(dt_list))
+    print(f"dt: {dt_list} sec")
     print(f'Found {len(interesting_points):,} points')
 
     # #############################
@@ -75,10 +75,10 @@ def main():
     print("done.")
     sys.stdout.flush()
 
-    print("dt: {} sec".format(dt_dict))
+    print(f"dt: {dt_dict} sec")
     print(f'Found {len(interesting_points):,} points')
     print()
-    print("Speedup from dict: {:,.0f}x".format(round(dt_list / dt_dict)))
+    print(f"Speedup from dict: {round(dt_list / dt_dict):,.0f}x")
 
 
 def find_point_by_id_in_list(data_list, i):
