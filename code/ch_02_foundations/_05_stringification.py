@@ -3,7 +3,8 @@ age = 50
 
 # Create the string "Hi, I'm Michael, and I'm 50 years old."
 
-# crash: print("Hi, I'm " + name + ", and I'm " + age + " years old.")
+# crashes, never do this:
+# print("Hi, I'm " + name + ", and I'm " + age + " years old.")
 
 # works, but not pythonic
 print("Hi, I'm " + name + ", and I'm " + str(age) + " years old.")
