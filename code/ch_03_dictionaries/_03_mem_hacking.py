@@ -38,15 +38,15 @@ class ImmutableThing:
 print("Uncomment just 1 of these 4 loops below")
 print("after the program pauses on input, check the process memory")
 
-count = 1000000
+count = 1_000_000
 data = []
 
 t0 = datetime.datetime.now()
 
 # Loop 1: Tuples
-# print("tuple")
-# for n in range(count):
-#     data.append((1 + n, 2 + n, 3 + n, 4 + n))
+print("tuple")
+for n in range(count):
+    data.append((1 + n, 2 + n, 3 + n, 4 + n))
 
 # Loop 2: Named tuple
 # print("named tuple")
