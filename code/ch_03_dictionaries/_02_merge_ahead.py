@@ -3,7 +3,7 @@
 #
 # Overview:
 # Often we have multiple dictionaries and want to combine
-# them. For example, in Pyramid, we have separate dictionaries
+# them. For example, in Flask, we have separate dictionaries
 # that hold query string data, route data, and POST data. Merging
 # these makes access form data easier. That's just one example.
 #
@@ -33,12 +33,16 @@ m2.update(post)
 m2.update(route)
 
 # Via dictionary comprehensions:
-m3 = {k: v for d in [query, post, route] for k, v in d.items()}
+m3 = {
+    k: v
+    for d in [query, post, route]
+    for k, v in d.items()
+}
 
 # Python 3.5+ pythonic way, warning crashes on Python <= 3.4:
 m4 = {**query, **post, **route}
 
-# Python 3.10+ pythonic way, warning crashes on Python <= 3.9:
+# Python 3.9+ pythonic way, warning crashes on Python <= 3.8:
 m5 = query | post | route
 
 print(m1)
