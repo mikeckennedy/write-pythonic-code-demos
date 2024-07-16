@@ -9,14 +9,24 @@ movie_json = """
 }
 """
 
-movie_data = json.loads(movie_json)
-print(type(movie_data), movie_data)
+# Get movie data from string
 
-print(f"The title is {movie_data.get('Title')}")
+# What's the title?
 
-movie_json_text_2 = json.dumps(movie_data)
-print(type(movie_json_text_2), movie_json_text_2)
+# Back to JSON
 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 # print(type(movie_json), movie_json)
 # md = {
 #     "Title":"Johnny 5",
