@@ -41,42 +41,37 @@ data = []
 t0 = datetime.datetime.now()
 
 # Loop 1: Tuples
-print("tuple")
-for n in range(count):
-    data.append((1 + n, 2 + n, 3 + n, 4 + n))
+# print("tuple")
+# for n in range(count):
+#     data.append((1 + n, 2 + n, 3 + n, 4 + n))
 
-# # Loop 2: Named tuple
+# Loop 2: Named tuple
 # print("named tuple")
 # for n in range(count):
 #     data.append(ImmutableThingTuple(1 + n, 2 + n, 3 + n, 4 + n))
 #
-# # Loop 3: Standard mutable class
+# Loop 3: Standard mutable class
 # print("standard class")
 # for n in range(count):
 #     data.append(MutableThing(1 + n, 2 + n, 3 + n, 4 + n))
 #
-# # Loop 4: Slot based immutable class
+# Loop 4: Slot based immutable class
 # print("slot based class")
 # for n in range(count):
-#   data.append(ImmutableThing(1 + n, 2 + n, 3 + n, 4 + n))
+#     data.append(ImmutableThing(1 + n, 2 + n, 3 + n, 4 + n))
 
 t1 = datetime.datetime.now()
 
 input(f"Finished, waiting... done in {(t1 - t0).total_seconds():,} s")
 
-# Sample output on OS X + Python 3
-# Hardware: Macbook Pro 2013 edition
+# Sample output on macOS + Python 3.12
+# Hardware: Mac Mini M2 Pro
 
-# straight tuple:  207 MB, 0.528455 s
-# named tuple:     215 MB, 1.519358 s
-# class (dynamic): 370 MB, 1.680248 s
-# slot class:      120 MB, 1.438989 s
+# straight tuple:  208 MB, 0.143557 s
+# named tuple:     215 MB, 0.562398 s
+# class (dynamic): 230 MB, 0.557674 s
+# slot class:      199 MB, 0.488291 s
 
-# And on Windows 10 + Python 3, same hardware (memory is "working set")
-# tuple: 153 MB
-# named: 153 MB
-# class: 248 MB
-# slots: 145 MB
 
 # Interesting real-world story of benefits of slots:
 # http://tech.oyster.com/save-ram-with-python-slots/
