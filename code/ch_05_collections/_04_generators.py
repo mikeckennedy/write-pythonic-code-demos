@@ -38,6 +38,7 @@ def even_fib():
     for n in even_generator(generator_fibonacci()):
         yield n
 
+
 if __name__ == '__main__':
 
     print("Classic")

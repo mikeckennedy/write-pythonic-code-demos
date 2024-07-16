@@ -14,7 +14,6 @@ try:
 except Exception as x:
     print(f"Oops! {x}")
 
-
 print()
 print('safety first style')
 if 'year' in data:

@@ -4,6 +4,7 @@ def display_greeting(name, greeting='Hello', times=1):
     for _ in range(0, times):
         print(f"{greeting} {name}!")
 
+
 display_greeting("Jeff", 'Good morning', 3)
 display_greeting("Michael", "G'day", 1)
 
@@ -13,4 +14,3 @@ display_greeting("Mark", "Good afternoon", 2)
 
 display_greeting(greeting='Yo!', name='Michael', times=4)
 display_greeting('Michael', times=2)
-

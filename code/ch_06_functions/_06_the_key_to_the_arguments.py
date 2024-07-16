@@ -5,6 +5,7 @@ def display_greeting(name, greeting='Hello', times=1, **kwargs):
         print(f"{greeting} {name}!")
     print(f"kwargs = {kwargs}")
 
+
 display_greeting(greeting="Hey, you're out of order",
                  name="Michael", additional=2, mode=7)
 

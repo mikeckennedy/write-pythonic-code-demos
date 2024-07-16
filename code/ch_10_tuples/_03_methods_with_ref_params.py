@@ -18,6 +18,7 @@ def out_params(base: float):
 
     return r1, r2
 
+
 # non-pythonic!
 def out_params_bad(base: float, args: list):
     if len(args) == 0:

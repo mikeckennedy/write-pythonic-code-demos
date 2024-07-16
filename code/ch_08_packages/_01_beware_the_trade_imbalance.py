@@ -1,6 +1,6 @@
+import statistics as stats
 import sys
 from os import path
-import statistics as stats
 from statistics import median, mean
 
 # noinspection PyProtectedMember

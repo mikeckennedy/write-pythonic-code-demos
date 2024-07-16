@@ -18,7 +18,7 @@ def main():
 
     print("Last 3 nums (less good) with len")
     # print(nums[len(nums)-3:len(nums)])
-    print(nums[len(nums)-3:])
+    print(nums[len(nums) - 3:])
 
     print("Last 3 nums (pythonic)")
     print(nums[-3:])

@@ -11,7 +11,10 @@
 import collections
 import datetime
 
-ImmutableThingTuple = collections.namedtuple("ImmutableThingTuple", "a b c d")
+ImmutableThingTuple = collections.namedtuple(
+    "ImmutableThingTuple",
+    "a b c d"
+)
 
 
 class MutableThing:

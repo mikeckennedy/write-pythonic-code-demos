@@ -1,9 +1,6 @@
 import os
 import random
 
-import sqlalchemy
-import sqlalchemy.orm
-import sqlalchemy.ext
 import sqlalchemy.ext.declarative
 
 SqlAlchemyBase = sqlalchemy.ext.declarative.declarative_base()
@@ -17,16 +14,6 @@ class Measurement(SqlAlchemyBase):
     x = sqlalchemy.Column(sqlalchemy.Integer)
     y = sqlalchemy.Column(sqlalchemy.Integer)
     value = sqlalchemy.Column(sqlalchemy.Float)
-
-
-
-
-
-
-
-
-
-
 
 
 # run this code only once per process assuming 1 database

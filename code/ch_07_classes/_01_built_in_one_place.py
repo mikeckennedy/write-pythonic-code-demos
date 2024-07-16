@@ -4,7 +4,7 @@ class NotSoPythonicPet:
         self.name = name
 
     # self.name = None
-        # self.age = 0
+    # self.age = 0
 
     # def set_name(self, name):
     #     self.name = name
