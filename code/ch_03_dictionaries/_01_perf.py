@@ -39,8 +39,8 @@ def main():
     # let's try this with a dictionary...
     # 1. Create dictionary via comprehension, key = id
 
-    t0 = datetime.datetime.now()
     data_dict = {d.id: d for d in data_list}
+    t0 = datetime.datetime.now()
 
     # 2. locate the data in dictionary
     interesting_points.clear()
