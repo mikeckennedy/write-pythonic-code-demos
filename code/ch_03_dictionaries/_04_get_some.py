@@ -4,7 +4,7 @@ data = {"year": 2001, "country": "USA", "title": "Johnny 5", "duration": "119 mi
 
 print('optimistic style')
 print(data['year'])
-# print(data['rating']) # Crash!
+# print(data['rating'])  # Crash!
 
 print()
 print('pessimistic style')
@@ -31,11 +31,21 @@ print()
 
 print('Explicit alternate value style')
 print(data.get('year', 0))
-print(data.get('rating', '***'))
+print(data.get('rating', 'NO RATING'))
 print()
 
 data = defaultdict(lambda: "MISSING", data)
-print('accept default value instead style')
+print('defaultdict')
 print(data['year'])
 print(data['rating'])
+print()
+
+print()
+print('walrus style, 3.8+')
+if year := data.get('year'):
+    print(year)
+if rating := data.get('data'):
+    print(rating)
+else:
+    print("Oh we didn't find a rating...")
 print()
