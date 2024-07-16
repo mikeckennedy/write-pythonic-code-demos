@@ -10,6 +10,7 @@ def main():
     else:
         print("Error: DB not available")
 
+
 def find_accounts(search_text):
     # perform search...
     if not db_is_available:
