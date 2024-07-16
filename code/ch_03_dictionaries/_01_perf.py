@@ -8,34 +8,13 @@ DataPoint = collections.namedtuple("DataPoint", "id x y temp quality")
 
 
 def main():
-    # #############################
-    print("Creating data...", end=' ')
-    sys.stdout.flush()
-
-    data_list = []  # 500,000 DataPoint items
-    random.seed(0)
-    for d_id in range(500000):
-        x = random.randint(0, 1000)
-        y = random.randint(0, 1000)
-        temp = random.randint(-10, 50)
-        quality = random.random()
-        data_list.append(DataPoint(d_id, x, y, temp, quality))
-
-    print("done.")
-    sys.stdout.flush()
-
-    # Reordering data for random access
-    print("Reordering data for random access ...", end=' ')
-    sys.stdout.flush()
-
-    data_list.sort(key=lambda d: d.quality)
-
-    print("done.")
+    data_list = create_data()
 
     # Create a set of random IDs to locate without duplication
     interesting_ids = {random.randint(0, len(data_list)-1) for _ in range(0, 100)}
     print(f"Creating {len(interesting_ids)} interesting IDs to seek.")
 
+    ########################################################
     # Locating data in list
     print("Locating data in list...", end=' ')
     sys.stdout.flush()
@@ -52,11 +31,11 @@ def main():
     print("done.")
     sys.stdout.flush()
 
-    print(f"dt: {dt_list} sec")
+    print(f"dt: {dt_list*1000:,.0f} ms")
+
     print(f'Found {len(interesting_points):,} points')
 
-    # #############################
-
+    ########################################################
     # let's try this with a dictionary...
     # 1. Create dictionary via comprehension, key = id
 
@@ -75,10 +54,32 @@ def main():
     print("done.")
     sys.stdout.flush()
 
-    print(f"dt: {dt_dict} sec")
+    print(f"dt: {dt_dict*1000:,.0f} ms")
     print(f'Found {len(interesting_points):,} points')
     print()
     print(f"Speedup from dict: {round(dt_list / dt_dict):,.0f}x")
+
+
+def create_data():
+    # #############################
+    print("Creating data...", end=' ')
+    sys.stdout.flush()
+    data_list = []  # 500,000 DataPoint items
+    random.seed(0)
+    for d_id in range(500000):
+        x = random.randint(0, 1000)
+        y = random.randint(0, 1000)
+        temp = random.randint(-10, 50)
+        quality = random.random()
+        data_list.append(DataPoint(d_id, x, y, temp, quality))
+    print("done.")
+    sys.stdout.flush()
+    # Reordering data for random access
+    print("Reordering data for random access ...", end=' ')
+    sys.stdout.flush()
+    data_list.sort(key=lambda d: d.quality)
+    print("done.")
+    return data_list
 
 
 def find_point_by_id_in_list(data_list, i):
