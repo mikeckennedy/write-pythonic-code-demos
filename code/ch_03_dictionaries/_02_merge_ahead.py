@@ -28,6 +28,7 @@ for k in route:
 
 # Classic pythonic way:
 m2 = query.copy()
+# noinspection PyTypeChecker
 m2.update(post)
 m2.update(route)
 
@@ -37,18 +38,13 @@ m3 = {k: v for d in [query, post, route] for k, v in d.items()}
 # Python 3.5+ pythonic way, warning crashes on Python <= 3.4:
 m4 = {**query, **post, **route}
 
+# Python 3.10+ pythonic way, warning crashes on Python <= 3.9:
+m5 = query | post | route
+
 print(m1)
 print(m2)
 print(m3)
 print(m4)
+print(m5)
 
-print("Are the same? " + 'yes' if m1 == m2 and m2 == m3 and m3 == m4 else 'no')
-
-
-
-
-
-
-
-#  m3 = {k: v for d in [query, post, route] for k, v in d.items()}
-#  m4 = {**query, **post, **route}
+print("Are the same? " + 'yes' if m1 == m2 and m2 == m3 and m3 == m4 and m4 == m5 else 'no')
