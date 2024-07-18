@@ -26,23 +26,3 @@ print(movie_data.get('title', "NO_TITLE"))
 movie_json_generated = json.dumps(movie_data, indent=2)
 print(movie_json_generated)
 print(movie_json == movie_json_generated)
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-# print(type(movie_json), movie_json)
-# md = {
-#     "Title":"Johnny 5",
-#     "Year":"2001",
-#     "Runtime":"119 min",
-#     "Country":"USA"
-#     }
-# print(type(md), md)
