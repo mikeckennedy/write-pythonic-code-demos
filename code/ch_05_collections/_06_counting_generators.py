@@ -22,13 +22,8 @@ high_values = (
     if m.value >= 70
 )
 
-# crash! no len()
 # print(len(high_values))
 
 # could use a list, but expensive!
-# lst = list(high_values)
-# print(len(lst))
 
 # pythonic counting!
-count = sum(1 for _ in high_values)
-print(count)
