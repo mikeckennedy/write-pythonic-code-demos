@@ -5,15 +5,9 @@ class ShoppingCart:
     def add_item(self, it):
         self.items.append(it)
 
-    def __iter__(self):
-        sorted_items = sorted(self.items, key=lambda i: -i.price)
-        return sorted_items.__iter__()
-        # for i in sorted_items:
-        #     yield i
-
 
 class CartItem:
-    def __init__(self, name, price):
+    def __init__(self, name: str, price: float):
         self.price = price
         self.name = name
 

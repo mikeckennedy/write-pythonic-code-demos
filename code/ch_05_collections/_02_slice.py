@@ -1,5 +1,10 @@
-# noinspection PyProtectedMember
-from ch_04_collections._03_slice_support import session_factory, Measurement
+# region Fix up path, so it doesn't matter where/how you run this code
+import sys
+from pathlib import Path
+
+sys.path.insert(0, Path(__file__).parent.absolute().as_posix())
+# endregion
+from _02_slice_support import session_factory, Measurement  # noqa E402
 
 
 def main():
