@@ -1,0 +1,57 @@
+00:00 Last thing I want to do is I want to leave you with another song.
+00:03 So I already talked about the Zen of Python song, which is super fun.
+00:07 Over here we have the Pep8 song.
+00:10 And the Pep8 song is written by Leon Sandoy, who often goes by Lemon.
+00:15 He's the guy behind Python Discord.
+00:18 So you can check that out if you like.
+00:19 But really cool video, musical.
+00:23 He's a very good musician and singer.
+00:25 And this takes the ideas of Pep8 and turns them into a nice little melody.
+00:30 So I'll put this as the closing video for this chapter.
+00:34 If you don't want to watch that section, that's fine.
+00:36 Just skip ahead.
+00:38 There's nothing required here.
+00:39 But I think you'll enjoy it.
+00:41 So let's close things out with a little song about Pep8.
+00:56 You don't need any curly braces.
+01:01 Just four spaces.
+01:04 Just four spaces.
+01:06 Wildcard imports should be avoided.
+01:11 In most cases.
+01:14 In most cases.
+01:17 Try to make sure there's no trailing white space.
+01:23 It's confusing.
+01:26 It's confusing.
+01:28 Trailing commas go behind list items.
+01:35 Get blamed, titans.
+01:37 Get blamed, titans.
+01:39 And commons are important.
+01:44 As long as they're maintained.
+01:47 When commons are misleading.
+01:49 It will drive people insane.
+01:52 Just try to be empathic.
+01:55 Just try to be a friend.
+01:57 It's really not that hard.
+02:00 Just adhere to Pep8.
+02:06 Pep8.
+02:11 Constants should be named all capital letters.
+02:19 And live forever.
+02:21 Live forever.
+02:25 And camel case is not for Python.
+02:30 Never ever.
+02:34 And never use a bare exception.
+02:41 Be specific.
+02:45 No one likes the horizontal scroll bar.
+02:52 Keep it succinct.
+02:55 Keep it succinct.
+02:59 And commons are important.
+03:02 As long as they're maintained.
+03:04 When commons are misleading.
+03:07 It will drive people insane.
+03:10 Just try to be empathic.
+03:13 Just try to be a friend.
+03:16 It's really not that hard.
+03:18 Just adhere to...
+03:21 Pep8.
+03:23 Pep8.
+03:42 Pep8.

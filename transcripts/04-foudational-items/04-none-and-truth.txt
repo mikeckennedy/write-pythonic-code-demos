@@ -1,0 +1,76 @@
+00:00 Well, a perfect follow on from truthiness is working with none and testing for none.
+00:07 I have this really simple fake but somewhat realistic database based app here.
+00:13 Okay, so what it does is it has this main method that we run using the dunder name,
+00:18 dunder main convention.
+00:20 And we call find accounts that are maybe interested in this topic or whatever.
+00:24 So here we found some and we loop over for each account we're going to print their ID,
+00:28 let's say, and if the database is not available, then we can't do a search.
+00:34 But if there is one that we're going to run this DB search here that just returns some
+00:37 set values.
+00:39 So let's put this say it's available for a moment and run this look, we found accounts
+00:43 one and 11, whatever ID that is, where those map over to, they're interested in Python.
+00:50 Awesome.
+00:51 But if it's false, whack, we get the dreaded type error, none type object is not iterable
+00:58 or doesn't have attribute, whatever it is you're trying to do, right?
+01:01 You can't do that to none right there.
+01:04 Easy, right?
+01:06 Let's just test for it.
+01:07 We'll say, well, if the accounts comes back, and they're valid, well, let's keep going.
+01:13 So we'll say something like this, we'll say, if we already learned about truthiness, we'll
+01:19 say if if accounts, let's go ahead and do this.
+01:25 Let's print, no accounts found.
+01:29 Okay.
+01:30 All right, no accounts are found.
+01:33 But that's not really the same as saying there's nobody interested in Python, there are actually
+01:39 two people interested in Python.
+01:41 It's just that the database isn't available.
+01:44 So we'd like to say something like error, DB not available, something like that.
+01:52 Okay, that's great.
+01:54 But what if we ask for some esoteric topic like basket weaving?
+02:01 Is there really no database available?
+02:03 Or there's just nobody interested in basket weaving?
+02:05 I don't know.
+02:06 We need some way to test.
+02:07 So this truthiness of the value is not sufficient.
+02:11 We want to say basically, is it not equal, not equal to none.
+02:17 And now there's some problems here.
+02:21 First of all, notice this symbol here, this is called font ligatures.
+02:25 If I actually, if I write not an equal, then the editor re renders it like this.
+02:32 So just nothing fancy or unusual about that.
+02:35 Just font ligatures.
+02:36 PyCharm VS Code both support that.
+02:40 Anyway, so if we say it's not equal to none, notice there's some warnings.
+02:44 It'll work, but not in the way you expect, right?
+02:52 This technically gives us the behavior we want, but there's a convention, a Pythonic
+02:57 idea in Python that says when you are comparing against a singleton, so if there's one and
+03:04 only one instance of an object, you don't compare against it using equal, equal.
+03:09 Like we already saw that with true.
+03:10 If we say if DB is available, equal, equal, true, we also got an error for that, which
+03:15 is kind of weird, right?
+03:18 So expression can be simplified, sure.
+03:21 But what I was saying is, look, what you really want to ask is, does this thing literally
+03:27 point to the same object as that one singleton?
+03:31 So what it's suggesting here is that we use the word is.
+03:36 If a count is, well now PyCharm says, you said it's none, and then you're down here,
+03:40 you're going to crash.
+03:41 It's going to wreck it.
+03:43 So we want to negate this and say, if we wanted to test for none, we could do this, but we
+03:47 say is not none.
+03:50 And now everything works exactly like we were hoping.
+03:52 If we get none back, that means no database.
+03:55 Otherwise, truthy or falsy, empty or not, that's how many accounts we got back.
+04:02 So let's test it again.
+04:03 We found 11 accounts, and now if we put false, database is not available.
+04:09 And I guess the one other thing to test here, we go down to our FACO thing and we return
+04:16 that.
+04:17 Well, actually, if we just pass in nothing for the search text, right?
+04:22 So something falsy there, let's pass in nothing.
+04:26 Accounts found, empty.
+04:28 Not database, not available, just no accounts found.
+04:31 All right, perfect.
+04:33 So anytime you're working with none in particular, but the general rule is a singleton is equal
+04:39 to the word is.
+04:40 Like this says, does this object literally point to the same, this variable point to
+04:45 the same object as this thing?
+04:47 Yes or no?
+04:48 So is none, is not none, is the Pythonic way.

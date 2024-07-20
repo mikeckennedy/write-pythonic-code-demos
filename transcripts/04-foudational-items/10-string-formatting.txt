@@ -1,0 +1,89 @@
+00:00 Let's talk about string formatting.
+00:01 String formatting is one of those things that has just gone through version after version after version.
+00:06 It's very much out of sync with the Zen of Python.
+00:10 There should be one and only one way to do things, one obvious way.
+00:14 Do.
+00:14 String formatting gives you many equivalent options because they've just tried to improve it over time and improve it,
+00:21 but you can't take stuff away from languages, generally speaking.
+00:24 So here we go.
+00:26 Let's do some string formatting.
+00:27 I'm not going to do some demos on this.
+00:29 It's like a lot of writing of strings that doesn't really matter a lot.
+00:33 So let's just look at it in a sort of slide form here.
+00:36 First of all, you need to concatenate your strings entirely as strings.
+00:42 Some languages, you know, C#, JavaScript, you can take numbers and you can take strings and you can plus them together and it'll turn it back into more strings.
+00:52 Python doesn't accept that.
+00:53 So, for example, this is going to crash because age is an integer, not a string.
+00:57 So you'd have to call str of age and that's no.
+01:00 So if I wanted to print this out and actually have this work, I have to do str of age.
+01:05 While technically this will work, this is very, very much not Pythonic.
+01:09 Don't do it.
+01:10 But it does print out, ""Hi, I'm Michael and I'm 50 years old.
+01:13 Awesome.
+01:15 Closer, slightly closer, but still quite ancient is we could say, ""Hi, I'm %s and I'm %d years old.
+01:25 %s for string injection and %d for number injection.
+01:30 Yuck.
+01:31 Saw this a lot in Python 2.
+01:32 You'll see this in some code because it's left over from Python 2 styles.
+01:36 Don't do it.
+01:38 Let's look at some options.
+01:40 Like, ""So everything you saw on that page previously?
+01:42 No.
+01:43 This one, increasingly yes.
+01:45 So we can come over here and say, ""Hi, I'm curly brace and I'm curly brace years old.
+01:50 And say format and format these items in.
+01:54 You might say, ""Michael, Python has a new way to do this.
+01:56 Yes, technically.
+01:58 Well, you can do cool tricks with dictionaries and stuff in this style, which is still relevant.
+02:03 Okay.
+02:03 This prints out what you'd expect.
+02:05 So here, one of the advantages is we can repeat things by just putting it in a single place,
+02:11 kind of a dry type of thing.
+02:13 Don't repeat yourself.
+02:14 Hi, I'm curly one years old and my name is curly zero.
+02:17 Yeah, one years old.
+02:19 So you can see name appears in the zero place in the middle and the one indexes into the
+02:26 second argument of format.
+02:28 That I think is okay.
+02:29 I don't find myself doing this often, but it's decent.
+02:33 Here's some dictionary sort of things, which is what I was saying.
+02:37 This one actually still is pretty relevant.
+02:39 If I have a dictionary that has a day key and an office key and an other key, I can
+02:43 come in here and say format star star data.
+02:47 So basically just turn that into keyword arguments.
+02:50 Day equals the value of day, office equals the value of office and so on.
+02:54 So then we can refer to into this string curly day and curly office instead of going in and
+03:00 like data dot get, you know, parenthesis day and so on.
+03:04 So this one, pretty relevant.
+03:06 This is why I think the format one still makes sense these days.
+03:09 But generally, if you're writing new code, you want to go F string style.
+03:15 f-strings for interpolated or formatted strings.
+03:17 Here you can say on curly day, I was working in my curly office.
+03:23 So the blue day and blue office, these are actually the values that go right there.
+03:28 So on Saturday I was working in my home office.
+03:31 And even in this F string format, you can still apply string formatting escapes.
+03:36 So I could say like curly age colon comma point two or something like that.
+03:43 If I want to format it with two decimal places and comma separators and so on.
+03:48 So here we are.
+03:49 Strong recommendation to use f-strings.
+03:51 If that's at all a choice, this is Python three, six and beyond.
+03:54 Python three, six is already unsupported and so is everything before it.
+03:58 So if you're using a supported version of Python, you have f-strings as an option.
+04:03 I recommend you use them.
+04:06 One final thing.
+04:07 I told you the reason you might have janky old percent S percent D type stuff is it's
+04:11 left over from older code, not worth upgrading.
+04:15 Is it or is it so a project that I really like is something called Flint, F L Y N T.
+04:23 And what it does is it takes all of these older styles of formatting, the format one,
+04:27 the percent D one, all that kind of stuff automatically rewrites all of your string
+04:32 operations to be f-strings.
+04:35 So you just pip install Flint and then you just say Flint dot in a directory and it'll
+04:41 just traverse the entire directory and sub directory and it'll go rewrite all of your
+04:46 files on the Talk Python Training website.
+04:50 We of course started that before Python three, six and I wanted to upgrade it.
+04:54 I applied this to it.
+04:55 I think there was a one super, super minor bug it introduced.
+04:59 I might've reported that to Flint and had it fixed even, but it was really, really helpful
+05:05 to jumpstart it completely.
+05:07 Basically do almost all the string rewriting and upgrading for me.
+05:10 So check out Flint, it's pretty awesome.

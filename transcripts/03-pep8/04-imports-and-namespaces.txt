@@ -1,0 +1,153 @@
+00:00 Let's talk about imports and what pep8 has to say about them.
+00:04 So here we are in our code.
+00:06 You can see our virtual environment is active and it's 312.
+00:10 And we're going to work on this file, 01_hep8.
+00:15 You might wonder why I put this underscore here
+00:18 because if we want to import one of the other files,
+00:20 it can't import files that start with numbers.
+00:22 It's kind of a weird Python thing.
+00:24 Hence, that's why.
+00:26 So let's imagine I had a function,
+00:28 a standard little function.
+00:31 Doesn't do much, just goes like that.
+00:34 And it says there's...
+00:36 You don't want to name it like that.
+00:38 How about this, Michael? Much better.
+00:40 By the way, this is completely valid Python code.
+00:43 Like this dot dot dot actually is a thing.
+00:45 I could, you know, print out...
+00:47 I could come in and I could print
+00:49 type of dot dot dot.
+00:51 And if we'd run this, you'll see
+00:53 this is actually what's called an ellipsis.
+00:55 So some people write pass,
+00:57 but dot dot dot also works.
+00:59 Putting that aside, let's imagine I want to
+01:02 use the OS module. So I'll say import OS.
+01:05 And down here I could say
+01:07 print OS dot path dot
+01:10 current dir.
+01:13 Like this.
+01:15 It's going to run just fine.
+01:17 You can see the current dir is dot.
+01:21 Well, that's not super interesting.
+01:24 Let's do a little bit more with it.
+01:25 Let's just say OS dot path dot absolute path.
+01:27 This.
+01:29 There we go. Now it's got the current dir, not just dot.
+01:32 By the way, you should probably use pathlib
+01:34 rather than OS dot path,
+01:36 but I want to play with some of the items
+01:38 out of this module, so we'll just grab this one.
+01:40 Now notice there's squigglies here.
+01:43 Because what we should be able to do
+01:45 is we should be able to go to the top of our file
+01:48 and see what modules and external packages
+01:51 are being used
+01:53 by this part of our application.
+01:56 Well, what is up here right now?
+01:58 Nothing. Nothing.
+02:00 I don't know what's up here.
+02:01 Just a bunch of, well, there's a comment
+02:03 and there's a function and buried somewhere down,
+02:05 like in a real app, imagine
+02:07 a really complicated thing
+02:09 where you're not just going to immediately see it.
+02:11 There's some kind of import statement
+02:13 and you should know that more directly.
+02:16 So you can see there's actually,
+02:18 that PyCharm has already found this problem for us.
+02:21 Let's hover over this and it'll say
+02:24 error 402, module level import
+02:26 not at the top of the file.
+02:28 I can also click up here and you'll see
+02:31 this pep8 violation,
+02:33 which, this one, the 402,
+02:36 module level import not at top of the file.
+02:40 There's some stuff about blank lines here
+02:42 because I put a bunch of stuff down here,
+02:44 but we're going to get to later.
+02:46 So some of the time we can fix these things
+02:49 with PyCharm if I hit on Mac
+02:52 Command + Alt + L or Windows or Linux
+02:55 Control + Alt + L, you'll see that it fixes
+02:58 some of the problems.
+03:00 Here, I'll duplicate that off
+03:02 so we don't have to look at that right now.
+03:04 And now we see we have fewer errors.
+03:06 This module is not at the top.
+03:08 Now, notice there's actually two errors
+03:10 showing up here. There's the pep8 one.
+03:12 This comes from PyCharm directly.
+03:14 And this one comes from something called rough.
+03:17 So we're going to talk about rough later.
+03:19 Rough is an awesome, awesome tool.
+03:22 Way more rules and Pythonic things,
+03:26 it checks. So I'll just show you real quick.
+03:28 If we go over to Plugins, I've installed
+03:30 the rough plugin here, which shows
+03:34 a whole bunch more checks and it does
+03:35 a lot more fixes for us.
+03:37 Again, we'll dive into this later.
+03:39 I just want to show you where that message
+03:40 is coming from and you can configure it
+03:42 down here. So if I run reformat code,
+03:45 it also runs rough over it, for example.
+03:48 More on that later. But that's why there's
+03:50 two errors. There's the, this is the rough one
+03:52 and this is the Python one, I believe.
+03:54 But they're the same error.
+03:56 Alright, a lot of setting the stage there,
+03:59 but of course, what that tells us,
+04:01 we should just put these up here at the top,
+04:03 like that, and reformat the files a little bit.
+04:06 And notice, if I put it like this,
+04:08 I get more warnings about spaces, right?
+04:11 This thing doesn't have enough space.
+04:14 There should be two blank lines from
+04:16 the import to this. The comments don't count
+04:19 and then this thing is not, notice the lack
+04:21 of a number. This is like a view into
+04:23 source control sort of deal. It's not really
+04:25 a line. So I can reformat it and PyCharm
+04:28 says, ""PEP 8 says we should have these lines.
+04:31 We have fixed them for you.
+04:33 Okay, great. The next thing is namespaces.
+04:35 And we're already actually using namespaces.
+04:38 Sometimes you would see, let's rethink
+04:40 this for a moment. We could write
+04:41 from os import path. And then we could
+04:47 come down here and rewrite this as
+04:50 just path.abs, path.currenter.
+04:55 Well, this looks shorter. Maybe this is better
+04:58 because it's nice and concise, right?
+05:01 I just don't even have to worry about saying
+05:03 os other than above. Personally, I like
+05:06 this style and this is the namespaces
+05:09 are one honking great idea from the
+05:11 Zen of Python as well. While this is shorter,
+05:15 this gives you a couple of benefits.
+05:18 One, if you're just reading this code,
+05:19 notice it's in a comment so I can't
+05:21 hover over it and get auto-complete
+05:23 or highlights or anything like that.
+05:25 So imagine it's like on Stack Overflow
+05:27 or something. This tells you we're not just
+05:29 using something called path, but we're
+05:30 using the os.path, right? This is where
+05:33 it comes from. The other one is,
+05:35 if we have this, and I type os.
+05:40 Notice I, boom, get an instant completion
+05:43 of all of the things that are in here.
+05:46 If I do this, well, I get path stuff,
+05:51 but how do I know that there's a make dir
+05:56 or other types of things? What all that
+05:59 stuff you saw on the list? The only one
+06:01 that's accessible to us is path.
+06:02 So I think both auto-complete and the fact
+06:05 that you know for sure it's os.path,
+06:09 not some other path thing that's from
+06:11 some other library or you've created
+06:13 yourself or whatever. So I will put this
+06:16 as prefer, prefer namespaces like os.path
+06:21 over raw imports like that.

@@ -1,0 +1,8 @@
+00:00 Next up, foundational items beyond PEP 8.
+00:04 In this chapter, I'm going to cover a bunch of important topics that are small little
+00:09 things that are kind of disjointed.
+00:11 They don't all belong in the loops, they don't all belong in the functions, or things like
+00:15 that.
+00:16 So, we're going to cover a bunch of small things, but they are really important, that's
+00:20 why they're in here, and I think you're going to get some cool ideas to improve your code
+00:25 from this one.

@@ -1,0 +1,6 @@
+Start Timestamp;End Timestamp;Transcript
+00:00;00:06;"If we're testing for equality against multiple values, multiple conditions,"
+00:06;00:13;"we could do it like this, if m = = moves.north or m = = moves.south and so on."
+00:13;00:19;"However, if we're doing that against a single variable, the Pythonic way is to do set inclusion."
+00:19;00:24;"So if m is in the set of possibilities, then we do the thing."
+00:24;00:30;"Set containment testing is super fast, and this is a little bit clearer and more concise."

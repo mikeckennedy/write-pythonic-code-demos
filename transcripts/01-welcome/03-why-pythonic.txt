@@ -1,0 +1,82 @@
+00:00 So why does Pythonic code matter?
+00:02 Why do you care about this?
+00:03 Well, when you're writing Pythonic code,
+00:05 you're leveraging over 30 years of experience
+00:09 of millions of Python developers,
+00:12 and probably thousands of them
+00:14 who have contributed back to the language,
+00:16 to the runtime, to the core packages on package managers,
+00:21 such as pypi.org.
+00:23 So you're really taking all these ideas
+00:26 that have been polished to perfection.
+00:29 And near perfection over time,
+00:31 through all this work that people have been doing,
+00:34 and making that part of your style,
+00:36 right when you get into Python.
+00:38 The CPython runtime itself is built in a way
+00:42 that it expects to run code like you're writing
+00:46 when you write Pythonic code.
+00:47 And if you go against those idioms,
+00:49 you may well be going against performance optimizations
+00:52 of the CPython runtime.
+00:54 And of course, CPython is the most common way
+00:58 that people run Python by a huge margin.
+01:00 It's also easy for other people to read your code,
+01:05 or even as you evolve as a developer,
+01:07 to go back and read your own code.
+01:09 So if you work on a team,
+01:11 people on your team can say,
+01:13 I love working with your code because it's natural to me.
+01:17 And why is it natural?
+01:18 'Cause it's what they expect.
+01:20 It's Pythonic.
+01:21 It's often cleaner and simpler.
+01:24 When people come from other languages,
+01:26 they might bring those idioms
+01:27 or those styles of working from their language,
+01:30 learn just enough Python to get it to work,
+01:32 and then do that in Python.
+01:35 And often, Python has way, way simpler ways to do things.
+01:40 There's all sorts of examples
+01:43 we're gonna see through this course where you're like,
+01:45 Oh, is that only three lines of code?
+01:47 It seems like it would have been more.
+01:49 And that's because Python has built-in ways
+01:51 that make things simpler.
+01:52 But if you don't use them,
+01:53 if you don't use the idiomatic style for that thing,
+01:57 well, it's gonna be less simple.
+01:59 Also, just like making your code easy to read
+02:03 and be understood by your teammates,
+02:05 if you're working on open-source projects
+02:07 or contributing to open-source,
+02:09 people in that project are obviously gonna be more likely
+02:12 to appreciate your code and to understand what you've done
+02:16 and feel like it's natural to them,
+02:18 either when you're contributing a PR
+02:20 or if it's your project
+02:21 and people are contributing to it.
+02:24 Finally, it's easier to onboard new software developers
+02:28 who are already experienced with Python,
+02:30 but maybe not your company, your project, your app.
+02:33 When they come on, you don't have to explain to them,
+02:36 Well, in our world, these are the four things
+02:38 that we do around naming variables
+02:40 and doing this for loops,
+02:42 and we do that for classes,"" and so on.
+02:45 If you write the code that is Pythonic,
+02:47 people are already going to expect it to be that way,
+02:50 so they'll be super comfortable when they get in there.
+02:53 This is just some of the reasons
+02:55 that you might care about writing Pythonic code,
+02:58 and I think you'll just be a happier developer overall
+03:02 as you go through your Python journey
+03:05 because you're going to encounter code
+03:07 that is written in this way over and over and over again,
+03:10 and if you make it yours and you make it your primary way,
+03:12 you're gonna feel super natural,
+03:13 and if you fight against it,
+03:15 say, ""Oh, I don't wanna adopt this pattern or that pattern,
+03:18 you're gonna be kind of hitting those rough edges
+03:21 over and over again
+03:22 as you interact with different libraries.

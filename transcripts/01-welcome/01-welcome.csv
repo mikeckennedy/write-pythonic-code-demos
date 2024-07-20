@@ -1,0 +1,9 @@
+Start Timestamp;End Timestamp;Transcript
+00:00;00:07;"Hello and welcome to Write Pythonic Code Like a Seasoned Developer."
+00:07;00:12;"In this course, we're going to talk about how to write idiomatic Python code."
+00:12;00:16;"That is code that it looks like you've been in the Python community for a long time and"
+00:16;00:22;"you've written it in a way that other developers would already understand and expect to use"
+00:22;00:28;"it and really importantly, that the CPython runtime is most likely to gel well with."
+00:28;00:30;"So welcome to the course."
+00:30;00:34;"We're going to have an awesome time together writing a bunch of code and looking at both"
+00:34;00:36;"good and bad examples."

@@ -1,0 +1,66 @@
+00:00 Let's close out this chapter on typing with some typing patterns and typing guidance and
+00:04 Iconic ways of using typing really
+00:08 number one
+00:11 Boundaries are important. So if I've I've got some application, let's say it's
+00:16 20,000 lines of Python and I care about types
+00:19 Should I go in there and add typing to every single variable I define should I add typing to every single function?
+00:26 I would say no not at first at least maybe never because it does add that complexity
+00:32 Juggling all the types and seeing all the symbols
+00:34 but where you want to start at least put your most most your effort is
+00:39 If I've got like a data layer section and if I call into here, we're calling into database queries
+00:44 That part is kind of self-contained and used by a bunch of other parts in the application
+00:49 And you like to think of it as a black box. Like there's the seven things I can do to get data
+00:53 I don't care if it's a relational database
+00:56 No, sequel database and API from some microservice. I don't care. I want I give you the data
+01:02 I give you the parameters you give me the data and if you put types on those external those sort of boundary level functions
+01:08 Whoever uses it throughout your program will be able to look at it and go. Oh
+01:14 Awesome, and their editors will give them help and say you're using it wrong
+01:18 Or this is what it expects or what it returns and it'll really be super helpful. So boundaries
+01:23 Definitely definitely focus on the boundaries. Also if you're creating a public package something you're going to upload to pipey I and
+01:30 Share with the world or maybe even share within your company again. It has those boundaries sort of as the public
+01:37 Aspect the foot public API there might be internal functions. You may or may not care about typing there, but on the outside
+01:43 You don't want it to look
+01:45 Unprofessional and janky you're like hey, I made this it's beautiful, right? You're like, whoa
+01:49 I'm not using that. No
+01:52 You want to look pretty polished you wanted to look awesome
+01:55 I present to you my package and if it has types on its public API of that package well
+02:02 Editors will be able to just go boom. This is what you do. Here's what we expect
+02:06 You might not even have to go to the documentation to see how to use parts of it because the typing will be so clear
+02:12 Oh, I call this
+02:14 Fine customer it takes a string named email and the thing that's returned is an optional customer. I see
+02:20 Okay, it may or may not be there. So I got a chest yet
+02:22 But otherwise, I know what type it is typing will tell you that and if you're creating a public package keep that in mind
+02:28 Similarly I've said this many many times in this chapter the ability to power
+02:35 Autocomplete keeps you out of the documentation keeps you on the right track keeps you in flow
+02:40 You're not using an editor that has autocomplete
+02:43 Please do but
+02:46 typing information
+02:48 Gives the editors way more information so they can tell you exactly what you need here. Not just
+02:54 Hey, there's a Python object here or maybe it's a function. Hmm, maybe right now it really keeps you in the flow
+03:02 So I think this is a super important aspect to consider as well and should you use optional or should you not use optional?
+03:08 I'm a fan of optional when it's needed
+03:11 If we write this code
+03:14 Get user given an email it returns a user if there is a non zero
+03:20 Possibility that an email could be given that doesn't match to a user
+03:24 your only course of action will be for this function to raise an exception like user not found or
+03:30 Something like that bad email. I don't know whatever
+03:33 It's gonna have to raise an exception which means people consuming this get user must do it in a try/except block
+03:40 And you're basically when you write code like this where users returned without optional
+03:45 You are forcing all the clients that consume this function to be written with a bunch of try/except blocks
+03:52 That may be the way you want to roll or it may not I find it adds a lot of friction
+03:57 Unnecessarily to do it at really fine-grained levels like that, but
+04:01 That's what you mean
+04:03 If you write it like this
+04:04 You can check is it none if it comes back none that means it wasn't found. Otherwise if it is there
+04:10 Because it's optional if it is there then you've gotten the right user associated with the email and off you go
+04:16 It doesn't mean you can just have no try/except in your program
+04:20 You'll still need to try and accept but it can be on big blocks at high levels not step step step step step all along
+04:26 The way okay, so optional or not really means
+04:29 How do you want to force your users your consumers? I mean users developers who are consuming your code
+04:35 To do so right with try/except blocks in a fine-grained levels or with if statements
+04:42 And finally if this typing stuff is like, oh my gosh, it's so amazing. I can't believe I've been doing Python without it
+04:50 We've got a whole long course with like 10 chapters
+04:53 It goes way way deeper into this the tools how to test this and continuous integration and all kinds of amazing things
+05:00 So check this out if you want to but not needed for this course, although it's a super fun topic
+05:05 I think I think it's a really neat one
+05:07 So if you want to go deeper check out our Python typing rocks old Python with type hints course

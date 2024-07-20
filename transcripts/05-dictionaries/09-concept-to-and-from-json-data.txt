@@ -1,0 +1,19 @@
+00:00 All right, quick concept review on working with JSON and Python.
+00:03 It all starts with import JSON.
+00:05 This is built into the standard library.
+00:07 No dependencies.
+00:08 We've got some string.
+00:10 Notice the triple quotes.
+00:11 It looks like it's formatted like data, but it's actually a string.
+00:15 So we just say load S JSON dot load S give it the string.
+00:19 What we get back, assuming it's valid JSON that went in is we get a Python
+00:24 dictionary that looks incredibly similar to that and the reverse.
+00:29 You already have a Python dictionary you got from somewhere.
+00:31 You want to turn it into something like this.
+00:33 JSON.
+00:34 Well, JSON dot dump S put in the movie data outcomes of string.
+00:39 Remember if you want it pretty printed, you just set the indent to two, four,
+00:43 whatever, however many spaces you want it to indent to.
+00:45 And that tells it we want this thing formatted nicely.
+00:48 If not, it's kind of minified.
+00:50 Okay.

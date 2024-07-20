@@ -1,0 +1,13 @@
+00:00 Quick review of code layout
+00:02 conceptually here
+00:03 We've got a function we indent all the content each time with four spaces
+00:09 This is in practice, but in our actions in the way
+00:12 We work with it our editor doesn't treat blocks of four spaces ever as four separate spaces treats
+00:18 It kind of like a tab it auto creates it when you hit
+00:20 method colon enter it'll create it or if colon all blocks should be indented with four spaces and
+00:27 Function should be separated by two blank lines
+00:30 If our code is too long
+00:33 Pep 8 says too long as 80 characters because of hey don't we all code in 80 by
+00:38 24
+00:40 24 lines 80 columns
+00:42 terminals

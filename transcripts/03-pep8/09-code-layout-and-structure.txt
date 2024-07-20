@@ -1,0 +1,83 @@
+00:00 Let's talk about code layout.
+00:01 How do we position different blocks of code relative to each other?
+00:04 Here we have some method.
+00:06 And remember, whenever you're looking at spaces, this little get helper thing,
+00:11 or it says new, or it might have my name at some point.
+00:13 That's not, that doesn't count as line blank or otherwise that's like an IDE thing.
+00:17 Okay.
+00:18 So here we have this method and let's put some code in and we could have a
+00:22 variable and another variable, putting them line after line like this is perfectly good.
+00:28 The warning is just that we're not using these variables assigned, but never used.
+00:32 Now, maybe we want to test is X the same as Y or is it different?
+00:37 We can say, if X equal, equal Y print, they are the same else print.
+00:43 They are different.
+00:44 Okay.
+00:46 Now notice I have a line in between these, a gap to say, let's, let's have the
+00:51 variables sort of visually grouped and let's have this if statement visually
+00:56 grouped, but if we put too many spaces, notice now we get this warning and the
+01:00 warning is a PEP 8 violation.
+01:02 The PEP 8 is too many blank lines.
+01:05 So within a function.
+01:07 Or more broadly within a block of code, this could be just in the script itself.
+01:13 I suppose you want code, maybe one line or zero lines, no more than that.
+01:18 Right.
+01:19 And if we had a bunch of lines here and I say reformat, well, PyCharm says,
+01:22 you know what, too many lines.
+01:23 We know how to fix that.
+01:24 We're just going to turn that into one line there.
+01:26 The other thing to look at here is around defining these blocks of code.
+01:32 So I'll define another method.
+01:33 Here and notice when I hit colon and enter right here, I say colon enter.
+01:40 It automatically indents, but how does it indent in Python?
+01:46 The recommendation is you indent with four spaces.
+01:49 That sounds horrible.
+01:51 It sounds like, oh my gosh, you got to click, click, click, click.
+01:55 You got to like press, keep counting the spaces.
+01:57 Wow.
+01:58 That sounds rough, but notice I didn't do that.
+02:00 I just hit enter.
+02:01 Now, if I highlight, you can see there are in fact, four spaces there,
+02:06 but watch if I hit backspace.
+02:08 It goes away just as if that were a tab.
+02:11 So the modern editors treat blocks of four spaces as if they're tabs.
+02:16 If I hit tab again, it goes back out, but in fact, it's not a tab.
+02:21 It's four spaces.
+02:22 PyCharm as well as VS Code know this is how you do things.
+02:26 Okay.
+02:27 So we could have a X equals seven.
+02:29 We'll say if X equal equals zero colon enter again.
+02:34 Now we have another section here, right?
+02:37 Again, four spaces.
+02:39 So we have this ability to group our code with these blocks, but we also have to be
+02:44 really careful, at least conceptually, that these are always four, eight sets of
+02:51 spaces that are divisible by four, basically.
+02:53 Okay.
+02:53 But in practice, it's incredibly easy because you don't do anything.
+02:58 You just type, right?
+03:01 Like I want to have a block of code here.
+03:03 So I hit colon enter.
+03:04 Editor figures it out for us.
+03:06 You could have two spaces everywhere like this, but then when you reformat
+03:14 rough and PyCharm both go, you know what?
+03:17 No, that's not the way we're going to do it.
+03:19 All right.
+03:20 Two more really quick things before we call this section a wrap.
+03:23 Let's talk about having more methods and how they relate to each other.
+03:28 Here we have a bunch of other methods.
+03:30 You can see that they're too close.
+03:32 These are adjacent to each other.
+03:33 And if we put a new line, it's, let's put the, well, we can look at the
+03:39 difference between method and method two.
+03:40 Still a problem if we add yet another.
+03:42 Now this error goes away.
+03:44 I got a little space there for my copy and paste, but okay.
+03:49 Two spaces between methods.
+03:51 And if we just go here and say reformat code, you can see it's put two spaces,
+03:56 78, 79, 74, 75, and so on between each function.
+04:00 Now, the other thing we can look at real quick is a class.
+04:03 Let's suppose we have some class here and again, no spaces at all between these.
+04:07 But if I go here, hit enter.
+04:09 In fact, one space, two spaces is too many.
+04:14 Pep says one for within classes or methods, but functions outside of them
+04:21 get two spaces as well as classes.
+04:23 Like if you had two classes, you would have two spaces between their definitions.

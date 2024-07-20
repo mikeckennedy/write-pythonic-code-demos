@@ -1,0 +1,66 @@
+00:00 All right, last thing about import statements.
+00:02 I wanna talk about is positioning them
+00:05 relative to each other.
+00:07 So there's a hierarchy of these different things.
+00:11 We've got stuff that is built in,
+00:14 like OS and IterTools and Subprocess and Multiprocessing.
+00:19 And we've got our own modules.
+00:21 And if we had installed them,
+00:23 we could say import requests or SQLAlchemy
+00:26 or something like that.
+00:28 And that would be a third category.
+00:30 We don't have any for now.
+00:32 Let me go ahead and put...
+00:33 Let's go ahead and quick pip install requests,
+00:36 just so you can see the ordering here.
+00:40 Notice in PyCharm, when I bump into the terminal,
+00:42 it automatically has the environment activated.
+00:45 So that's great.
+00:45 Pip install requests.
+00:48 So there we have it.
+00:50 We've got them all and they're all in different orders.
+00:52 So we've got standard library stuff,
+00:54 more standard library stuff.
+00:56 We've got our own thing, more standard library stuff,
+00:59 external stuff.
+01:00 So the way it should go is it should be
+01:02 all the standard library stuff,
+01:04 then all the external stuff, then all of our stuff.
+01:07 And with PyCharm, if I just hit reformat,
+01:10 notice we get our built-ins,
+01:15 our stuff from the standard library.
+01:18 Then we get third-party stuff, and then we get ours.
+01:21 And if we had multiple ones of ours,
+01:22 it would be like this.
+01:25 If we had multiple external packages,
+01:26 it would be like that.
+01:27 They'd be grouped together, no spaces between them,
+01:30 but a space, a line rather,
+01:33 a line between each category.
+01:35 So it would be,
+01:36 then PyPI package imports.
+01:42 I'll comment those out just so we don't get errors.
+01:45 So this is the way they're expected to be grouped here.
+01:48 And it might seem like a hassle to think,
+01:50 okay, well, am I gonna order these
+01:51 and should I put them alphabetical?
+01:53 Probably, but sometimes the order matters.
+01:56 Just Command-Alt-L, Control-Alt-L.
+01:59 You're good to go.
+02:00 It'll fix it for you.
+02:02 You don't wanna use PyCharm?
+02:03 No problem.
+02:04 You just come down here,
+02:05 and you change directory into code,
+02:07 PEP8, and you just say rough format.
+02:10 Boom, there it goes.
+02:14 It even reformatted some of this.
+02:17 Here, this one.
+02:17 Actually, it just took away the parentheses.
+02:19 That's what rough wants.
+02:20 I'm gonna let rough have it.
+02:21 But you can change which rules are applied and which aren't.
+02:24 So many things about the import statement.
+02:28 They're right at the top of the file,
+02:29 so they're a pretty good place to start
+02:31 with our exploration of PEP8.

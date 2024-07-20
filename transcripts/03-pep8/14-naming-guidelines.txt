@@ -1,0 +1,119 @@
+00:00 Let's jump in and play with some of the ideas.
+00:02 I put these as comments through here
+00:04 because there's a bunch of different conditions
+00:05 and you can go back and look at them.
+00:07 So modules, modules like this thing,
+00:11 it should have a short and all lowercase names.
+00:14 Underscores can be used in the name
+00:16 if it improves readability.
+00:18 So for example, let's take some module.
+00:20 There we go.
+00:20 We could have import some module.
+00:24 And down here is some module dot.
+00:28 And we saw that there was the support, right?
+00:31 That, right?
+00:32 Now this is a warning
+00:34 because somewhere else when we talked about imports,
+00:37 we've already done it.
+00:38 And also this should be at the top of the file.
+00:41 I'm just going to comment this out.
+00:42 But short, separated with underscores.
+00:45 This style here is called snake case
+00:48 because it comes from Python.
+00:50 And it kind of looks like a snake with little bits to it.
+00:52 We should also have variables named that way.
+00:55 So like dice roll equals seven or something like that
+01:00 would also be something we might put in here, okay?
+01:03 Variables don't have to,
+01:05 I don't have this short concept as much as modules do.
+01:09 Next classes, we'll have a class called superhero.
+01:13 We'd write it like that.
+01:15 And that might derive from a person class,
+01:17 which would look like this.
+01:18 And then you would have details about it.
+01:22 All right, so cap words.
+01:24 Now exceptions, when you're creating your own exception type,
+01:26 which is recommended, you should, you know,
+01:29 because they're classes,
+01:30 they should have this kind of naming.
+01:33 However, even though they're exceptions,
+01:35 they typically end in error, right?
+01:38 So you might have something like class none error.
+01:45 If there's somebody tries to access something when it's none,
+01:48 this could derive from exception and so on, all right?
+01:54 So cap words ends in error.
+01:57 So somebody could down here and raise a none error.
+02:00 Right, don't ever have a none error.
+02:05 That would be bad.
+02:06 I'll comment that out so it doesn't run and crash something.
+02:09 But that's the idea of classes and exceptions with names.
+02:13 Functions again should be snake case,
+02:15 just as you've seen already def, yet another method.
+02:20 What's cool is that PyCharm actually knows about these things here.
+02:25 So for example, let's format whatever it's complaining about,
+02:29 but let's suppose I forgot the E.
+02:30 See how it has a spelling error and it says,
+02:34 look, I'm trying to check that each part of this,
+02:38 the symbol here works on all sorts of things is spelled right.
+02:42 So I can come up here and actually say alt enter
+02:44 and say rename to yet another method, right?
+02:49 So even tools like PyCharm know that you're using these underscores
+02:53 to separate meaningful things.
+02:55 Let's move our method down a little.
+02:58 So we'll say yet another method here.
+03:02 And if it takes arguments, it'll be a ram one
+03:05 and person, other person, et cetera, like this, right?
+03:11 Same thing, snake case for these types of things.
+03:13 If a function's name clashes with a keyword,
+03:17 so let's go move this down again.
+03:20 So for example, what would a keyword would be like list?
+03:24 List is a built-in, right?
+03:28 I can say list of one, two, three, for example, right?
+03:31 Or I can have a set or I can have print.
+03:35 All these things are built-ins.
+03:36 So if your parameter name is clashing with this,
+03:40 instead of saying, well, I was going to say list and name here,
+03:47 but because it's a clash, notice it'll say it's clashing,
+03:50 shadows the built-in, just use L.
+03:53 The recommendation is not to use L,
+03:56 but rather to do something like put an underscore at the end here
+04:01 to make it no longer clashing.
+04:04 But to say, look, this is what I want to call it,
+04:06 but I can't because that's already a built-in thing.
+04:09 So now we're going to call it this.
+04:11 For example, class underscore is better than CLSS
+04:15 or some weird thing where you drop the variables.
+04:19 All right, last thing, constants.
+04:23 There's not really such a thing as a constant
+04:27 that can't be changed in Python.
+04:29 There's two conventions around here.
+04:31 One focus on now, another we can do later.
+04:35 First of all, all caps with underscores potentially.
+04:40 So if we have max hourly rate, we would write it like that.
+04:44 And that was like 25 US dollars an hour.
+04:47 I don't know, something along those lines.
+04:48 Okay, this is how we would say it.
+04:50 Now, what we're supposed to do is never, ever set that to another value.
+04:56 This warning says we're just not messing with it.
+05:00 So print this, there we go.
+05:02 Right, PyCharm doesn't check this.
+05:05 A lot of tools don't check it.
+05:06 But the convention is if it looks like that,
+05:09 if you see something capitalized, it should never change its value.
+05:12 Another way that we could do this, let's say min is going to be 15.
+05:17 When we get to the typing section, we could do this.
+05:20 We could say typing.final.
+05:22 And this will tell the type checkers,
+05:25 in addition to this naming convention, that the typing of it,
+05:29 if you check with like mypy or pywrite, something like that,
+05:33 it'll tell you that it should never change.
+05:34 If we put this down as 16, trying to raise that up.
+05:41 And let's just print.
+05:43 Because we get these weird warnings.
+05:47 Here, PyCharm does say, look, this is never supposed to change.
+05:52 You're trying to change its value.
+05:54 It will still run.
+05:56 So there's no run time or compile time type of thing that says
+05:59 this is a constant and it can't change.
+06:02 But using typing, as we'll talk about later,
+06:04 it's kind of as close as you can get.

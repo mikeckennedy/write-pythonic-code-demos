@@ -1,0 +1,77 @@
+00:00 Now you'll see that Python types, Python typing, typing in your language is all about trade-offs
+00:06 as many things are in programming, as many things are in languages.
+00:10 So here's Python without any type information.
+00:14 It's a perfectly good chunk of Python syntax.
+00:18 So what are we doing here?
+00:19 It looks like we're defining a motorcycle class, something that models a motorcycle.
+00:23 There's no base vehicle, so this thing kind of stands on its own.
+00:27 It has a constructor or initializer here, takes the self, and then it takes four parameters.
+00:33 The model, which we're storing in the self.model field, the style, the engine size, and the
+00:38 off-road capabilities.
+00:41 There's a lot of unknowns looking at this code.
+00:43 The model, is that a string like KTM 690 Enduro or Yamaha Tenere, or is it something else?
+00:53 We don't, we're not sure.
+00:54 We're not sure.
+00:55 So let's maybe look at some examples of usage on how it's used.
+00:58 The style.
+00:59 Now what does a style mean?
+01:01 Is it like a naked motorcycle?
+01:04 It has no fairing and stuff.
+01:05 Is it an off-road?
+01:06 Is it a motocross bike?
+01:08 What kind of options can go in here?
+01:09 We don't know.
+01:10 Is that a string?
+01:11 Is that an enumeration?
+01:12 Is it a constant?
+01:13 Again, we don't know.
+01:14 Engine size.
+01:15 Now this one, I'm pretty sure I could guess that this probably is a number, like 700 CCs
+01:22 or 250 cubic centimeters CCs, but could it be fractional?
+01:28 Could it be like 249.8 CCs?
+01:32 So is this floating?
+01:33 Is it an integer?
+01:34 I'm not sure.
+01:36 And finally for off-road, is this a Boolean?
+01:38 Yes, it goes off-road.
+01:40 No, it does not go off-road.
+01:42 Maybe it has a percentage, like I mentioned the Yamaha Tenere, which is kind of a road
+01:47 bike, but also meant to be off-road.
+01:48 So maybe it's 0.6 as a percentage or a ratio of its off-roadness.
+01:53 I don't know.
+01:54 All of these things here are unknowns.
+01:58 We have to look at how it's being used or look at the documentation where they explain
+02:02 to us somewhere away from the code what this is.
+02:06 So that's a negative.
+02:08 What is a positive?
+02:09 I told you there's trade-offs.
+02:10 A positive here is there's none of that type information and all these extra symbols like
+02:15 integers, strings, et cetera, to busy this up.
+02:18 We can just look at the code and it's as clean, as simple as possible.
+02:23 Remember, readability counts.
+02:25 It's one of the zins of Python.
+02:27 So trade-offs, right?
+02:30 We'll see Python types are optional, so you use them when that trade-off is in your favor
+02:34 and you avoid them when it's not.
+02:37 That said, how would this look if we used Python type information on it?
+02:41 Well, clearly it's more.
+02:42 You can see it, boom, took over the screen.
+02:44 Of course, we could wrap it, but then it would be just wrapped complexity.
+02:49 So we can go through our thought process again.
+02:51 The model is a string.
+02:52 Okay, Yamaha, Tenere, that might be what we put there.
+02:55 Style, oh, it's an enumeration and the enumeration is a motorcycle type.
+02:59 So if I were to type motorcycle type dot, my editor would give me the list or I could
+03:03 look up that definition and see what available set fixed types there are.
+03:09 Engine size, okay, it's an integer, can't be a float.
+03:11 And bool offroad.
+03:13 So not a ratio, it's either onroad only or offroad only.
+03:19 It's still confusing.
+03:21 And you can also see our can jump property now is expressing that it returns a bool,
+03:26 which is pretty obvious given the code that was there.
+03:28 But from the outside, you don't see the code.
+03:31 You just see the type information in the fields and so on.
+03:35 So the intent of this code is much cleaner.
+03:36 The tooling can reason much more about it.
+03:39 But like I said before, there's more stuff on the screen.
+03:42 That's one of the tradeoffs.

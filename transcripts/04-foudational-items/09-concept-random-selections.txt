@@ -1,0 +1,6 @@
+00:00 How do we choose a random item in Python?
+00:02 Not the bad C style where we go randomly pick an index and then we index into the thing.
+00:07 No, we can just say random.choice on a collection.
+00:10 Boom, we have the item.
+00:12 Off we go.
+00:13 So given a choice, random.choice.

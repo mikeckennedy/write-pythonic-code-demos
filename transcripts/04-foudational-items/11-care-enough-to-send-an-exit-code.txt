@@ -1,0 +1,25 @@
+00:00 One of the things that people do with Python a lot is automate things or create CLI applications that you can call from the terminal or continuous integration, all sorts of things like that, right?
+00:11 Well, if you're going to even consider writing an app like this, you need to consider sending an exit code.
+00:18 What do I mean?
+00:19 Well, let's write some code here.
+00:21 We have a little confirm.
+00:22 It says, are you sure you want to format drive C?
+00:25 Yes or no.
+00:28 And it says, if not confirm, and basically confirm is not equal to yes, then we cancel it.
+00:33 Otherwise, we format the drive and say, good job.
+00:36 All your data is gone.
+00:37 If we call this from the outside, right in a in a shell script, or from another Python application that uses sub process to run it, any other types of integrations like that continuous integration, it's always going to think everything is perfect.
+00:54 Exit code zero, exit code zero means success, usually get a non zero exit code or something goes wrong.
+00:59 So regardless of whether the hard drive was formatted, or it was canceled, the app acts like it ended in success.
+01:07 So it's really easy to fix this actually by sending an exit code.
+01:11 So here we have the same code.
+01:14 Do you want to format drive C?
+01:15 Yes or no.
+01:16 And if you say no or anything other than yes, and you want to cancel it, then we're going to send the exit code of one and that'll tell whoever called this thing, whoever called this application, the process will return to the operating system.
+01:30 Exit code one, something went wrong.
+01:32 If you do end up formatting the drive, exit code zero, full success.
+01:37 So by sending an exit code here, we're communicating to the shell, to other things that integrate with our application here, the result.
+01:46 Now, one thing you might have noticed is we're not saying return after sys.exit.
+01:50 sys.exit basically raises an exception when you call it.
+01:55 So if I say exit one, we're done executing, it's like returning that and we're exiting the process.
+02:00 So it doesn't continue on to format the drive, even though it might look like that's what's going to happen.

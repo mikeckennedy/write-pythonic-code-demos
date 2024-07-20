@@ -1,0 +1,13 @@
+00:00 Now that you know about the course, let me tell you just super quickly about me.
+00:04 Hey there, I'm Michael Kennedy. Awesome to meet you.
+00:08 Super excellent to have you in this course with me. We're going to have a lot of fun together.
+00:12 If you want to know more about me in particular, my website, my sort of
+00:16 hub on the internet is at mkennedy.codes. You can check that out. It's got links
+00:20 to many places over there, like my GitHub for example.
+00:24 I'm the founder and host of Talk Python to Me, the co-host of the Python Bytes podcast,
+00:28 the founder and one of the principal authors here at Talk Python Training,
+00:32 and I'm also a Python Software Foundation fellow
+00:36 or a PSF fellow. The best place to talk to me online is
+00:40 over on Mastodon, where I'm this address, this account name
+00:44 at fossadon.org, but you can also find me on X, where I'm
+00:48 also at mkennedy there.

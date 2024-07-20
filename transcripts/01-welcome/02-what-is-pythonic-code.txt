@@ -1,0 +1,9 @@
+00:00 When I first got into Python, I wondered, what is Pythonic code?
+00:05 You'd hear people say, ""This code is Pythonic.
+00:08 That code, oh, that is not Pythonic.
+00:09 Don't do that.
+00:10 And you're like, ""What is this Pythonic idea?
+00:13 Well, every language has common idioms or ways of doing things within that language
+00:20 that the community agrees on, best practices or stylistic things and so on.
+00:26 So the idea of writing idiomatic code that is aligned with the language features and
+00:31 ideals, well, this is what we call Pythonic code, and it's super important in Python.
