@@ -1,0 +1,169 @@
+00:00 Now let's talk about merging dictionaries.
+00:03 Why would you want to do this?
+00:04 Because you have data coming from different sources,
+00:08 but it's kind of the same shape,
+00:09 at least has a related set of keys,
+00:12 and then you want to ask questions
+00:13 about that data in aggregate.
+00:16 Here's an example.
+00:17 So maybe we're working with Flask or Pyramid
+00:21 or some other web framework,
+00:22 and they've got different dictionaries
+00:24 that specify parts of the request.
+00:27 So you might have route data.
+00:30 This is like products/27/fastapps, right?
+00:35 So 271, that comes, that /271,
+00:40 that comes to us as part of a variable in a URL
+00:45 through Flask or Pyramid, as well as this, okay?
+00:48 So maybe that's coming from the one place.
+00:50 And we also have question mark, something else,
+00:53 like id=1 and renderfast=true.
+00:57 So here's more data about the request,
+00:58 but it's not part of the route.
+01:00 It's a query string that's kind of arbitrary.
+01:02 And maybe all of this is being done
+01:05 as part of a form post to that URL with that query string.
+01:10 So here's yet more data,
+01:11 and these were elements of the form.
+01:13 But we don't care about where they come from.
+01:15 We just say, all right, I want to know,
+01:18 what is all this data that's submitted altogether?
+01:21 Now, notice we even have some duplication
+01:24 that I put in here,
+01:25 and whether you want to do this in a web app
+01:27 and accept it out of the query string is one thing,
+01:29 but from a dictionary merging perspective,
+01:32 it's interesting, okay?
+01:34 So we're going to print out these three dictionaries.
+01:37 And as I said in the opening,
+01:39 they look a whole lot like this,
+01:41 but with double quotes instead of single quotes, okay?
+01:44 And then there's a couple of ways,
+01:46 like maybe you're just thinking back to C,
+01:49 and like, I'm going to loop over some stuff
+01:51 or something like that.
+01:52 And like, okay, well, what I can do with the dictionary
+01:54 is I can create an empty one,
+01:56 and then I can loop over these.
+01:58 And what you get back when you loop over a dictionary
+02:00 is its key, its set of keys, each key here,
+02:03 I can say, well, that key in this case,
+02:05 an email or a name,
+02:08 we're going to set it to the value
+02:10 of whatever's in this set.
+02:11 And then we're going to do it for the next one
+02:13 and for the next one.
+02:15 And it's just going to build up this dictionary M1.
+02:18 Now notice there's an order of operations.
+02:20 This is the least priority query.
+02:24 This is intermediate priority,
+02:25 and this is top priority,
+02:26 because if we have ID here, it gets put in there,
+02:29 but then later the ID gets set to a new value
+02:33 from the post or from the route.
+02:35 Okay, so this is absolutely going to work.
+02:37 We're going to end up with a dictionary without duplicates,
+02:40 with a priority that we get to specify.
+02:42 But look at all this stuff.
+02:45 Yuck, okay.
+02:46 Plus slow, 'cause we're looping in Python.
+02:48 Here's maybe a more classical way.
+02:51 These dictionaries have functions,
+02:53 like I could create a copy of the query
+02:55 and then update takes all the elements of the post
+02:58 and sticks it into M2
+03:00 and overriding potentially exist ones,
+03:02 and existing ones, and then same here.
+03:04 So M2 will be the same.
+03:06 I'll end up with this type checker,
+03:08 'cause PyCharm's freaked out about post,
+03:11 even though it's the same as the other things.
+03:13 Anyway, we could also do this
+03:16 as a cool dictionary comprehension on one line.
+03:18 I'll break it out for you,
+03:19 so you can kind of see it in action
+03:21 a little bit better here, right?
+03:23 So we want KV for all the things in,
+03:27 so for each dictionary,
+03:28 and then going through the dictionary,
+03:30 get the key and value,
+03:31 and then we're going to pull them back.
+03:32 Ooh, interesting.
+03:34 Not the best way.
+03:35 In Python 3.5, we have this way
+03:37 where you can explode a dictionary,
+03:40 star, star, query, star, star, post,
+03:42 and this will create the dictionary
+03:44 exactly in the same way as I described here
+03:46 and also the others,
+03:48 where if there's a duplicate key,
+03:50 the more on the right,
+03:52 that gets like the last right
+03:54 or the last setting of the value,
+03:56 in which case the farther,
+03:58 you know, you have the lowest
+03:59 to the highest priority in order.
+04:01 In Python 3.10 though,
+04:02 they've taken this pipe
+04:04 or this kind of or operator,
+04:06 which I believe used to be only applicable to sets.
+04:09 Oh, sorry, this is nine,
+04:11 and this is eight, came out in 3.9.
+04:13 And we can just or them together.
+04:18 So just like the very first one,
+04:21 the M1 example,
+04:22 it's going to take a dictionary of these,
+04:24 and then it's going to say for all the keys,
+04:27 either overwrite the old ones or create new ones,
+04:30 and then they're going to have a dictionary here,
+04:32 apply to the or,
+04:33 and you'll get it route.
+04:34 So again, lowest to highest priority,
+04:36 we'll print them all out.
+04:37 And just to be super duper sure
+04:39 we don't miss something,
+04:40 we'll say, are they the same?
+04:41 And we have this crazy expression here.
+04:44 Are they all equal?
+04:46 Yes, otherwise no.
+04:48 Let's go.
+04:49 Boom, here's the individual dictionary.
+04:52 It's as I said,
+04:54 printed out,
+04:55 and I guess we're not printing them as JSON,
+04:56 so we won't have double quotes,
+04:57 but anyway, print them out,
+04:59 they look like this.
+05:00 And then you can see,
+05:01 this is the one we got from the three loops.
+05:03 This is the one that we got from the copy,
+05:05 update, update, update.
+05:07 Here's the one from,
+05:09 well, that one is three.
+05:10 This is the dictionary comprehension.
+05:13 This is the star star exploding style from three, five,
+05:15 above, this is the new pipe merging style from Python 3.9.
+05:20 All right, so you wanna do this
+05:24 because you have three related pieces of data
+05:27 and you wanna put them all together,
+05:29 potentially with a priority of this one.
+05:31 If there's duplicate keys,
+05:32 the route is more important
+05:34 and less influenceable than the query string, for example.
+05:37 So we're gonna take that data from route,
+05:38 and you can see they all have the route ID,
+05:41 not the query string ID, for example.
+05:45 Awesome, awesome, awesome, awesome.
+05:47 That's pretty cool, huh?
+05:48 So if you're in the new Python,
+05:50 I say that this is pretty much the way to go.
+05:53 The one time that you might do something different like this
+05:57 or probably just this one really,
+06:00 is if there's some kind of,
+06:02 if use M2, then we also do this.
+06:05 Like there's some condition in here
+06:07 where you sometimes bring in the other pieces,
+06:09 sometimes you don't, then maybe this makes sense.
+06:11 But I'm gonna say modern Python,
+06:14 This is the Pythonic way.
+06:15 They added it to the language, after all.

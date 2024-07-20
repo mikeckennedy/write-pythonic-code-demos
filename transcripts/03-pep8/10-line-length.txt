@@ -1,0 +1,51 @@
+00:00 Pepe8 has a lot to say about line length.
+00:02 It says that your code should always fit in an 80-column terminal window.
+00:09 Remember, this is based on ideas from the '90s, and it's codified in the year 2000.
+00:17 While I agree that your code shouldn't...
+00:19 You basically should never use horizontal scroll bars in your code, in practice, I feel
+00:25 like 79 lines of code is a little bit short.
+00:29 So let's just look real quick what Pepe8 says.
+00:32 We could say, if we're typing away...
+00:37 Now I have...
+00:38 See, this is 104 lines.
+00:39 I have mine set to be longer, but let's make it...
+00:42 Here we go.
+00:43 Now here's the error I was looking for, and we can talk about it.
+00:47 It says, ""Error.
+00:48 Pepe8, line is too long.
+00:51 156 columns,"" or 156 characters, ""is greater than 120.
+00:56 So I do think you want to avoid this, avoid this scrolling.
+01:00 But I have a 32-inch monitor, and my fonts are usually smaller than what you see on the
+01:05 screen relative to the whole window, because it's just me.
+01:09 I'm not trying to record it with large fonts so everyone can see, right?
+01:12 If I write it so it's 79 lines or shorter, it's like a third of the screen, and that
+01:18 seems really useless.
+01:19 It's really weird to say, ""I have this great canvas on which I can write code,"" and then
+01:23 we're just going to blindly stick into the spot.
+01:26 So I think this number should be 100, or for my own self, I put 120, right?
+01:32 Because that's what I think a reasonable setup is.
+01:36 Maybe on my laptop it's a bit tight, but 100 would still be totally fine.
+01:40 Now if that's the case, it's easy to fix, especially with PyCharm.
+01:43 You just go here and hit Enter.
+01:45 Boom.
+01:46 Look what that did.
+01:47 It converted it to two strings, and it put the parentheses there.
+01:51 Python's a little bit weird with strings.
+01:53 If you just have two strings next to each other, it's as if there's a concatenation
+01:57 plus and you can have it or not have it.
+02:00 There's no harm.
+02:01 These green squigglies are just misspellings.
+02:04 No worries.
+02:05 But it's easy if these are not the right...
+02:07 If they're too big, you just go in here and go, ""Okay, we're just going to...
+02:10 Let's say we'll wrap it even more.
+02:11 Just go click, click, right?
+02:15 That's what I would do if it were too long.
+02:17 However, you all decide on your team or your project or whatever what the number is.
+02:22 There should be a number.
+02:23 Python and PEP 8 say 79.
+02:26 I think that's too constraining in the 2020s and beyond.
+02:31 You pick whatever works for you and make sure that you stick with it.
+02:34 You can see you can configure your editor and rough and those kinds of things to specifically
+02:41 state what your number is.
+02:44 Mine was 120, and you saw we only got an error after column 120.

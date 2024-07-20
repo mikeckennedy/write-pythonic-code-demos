@@ -1,0 +1,25 @@
+00:00 Now I recommend you use PyCharm for this course and in fact, there's two versions
+00:05 There's a paid version and a free version of PyCharm the free version
+00:09 The community open source version is plenty good for what you're gonna need
+00:13 So if you don't have PyCharm, I recommend getting it and in fact at least for a while a year or so
+00:19 Maybe maybe later. We'll see you'll find out in a second at the end of this chapter
+00:24 I may have a special PyCharm Pro offer to get you guys free access to that as well
+00:30 So check out the end of this chapter to see what the deal is there if the video is gone
+00:34 It means the offer expired
+00:35 But I might be able to get you the pro version so you can play with it and do even more cool things
+00:39 But PyCharm free is plenty for this course
+00:41 Now I know many of you will rather use VS Code because that's one of the most popular editors as well
+00:48 You're completely welcome to use VS Code. There's only two caveats one
+00:53 Make sure you click on this the extensions menu and you go in there and you install the Python
+00:59 extension because without the Python extension
+01:01 Things like PEP 8 checks and all sorts of other stuff and even some of the completions just don't work
+01:07 So you really really must set it up for Python, but it's just an extension or two away
+01:12 All right. The other caveat is I'm not demoing how to run this stuff in VS Code
+01:19 So if you know how to run Python code and work with Python code in VS Code
+01:23 Awesome, go for it. We even have a whole VS Code course here at talk Python, but in this course
+01:28 I've got to pick one or the other I can't just you know cycle through or present everything twice
+01:33 So I'm going with PyCharm because it's my true love
+01:36 It really is an awesome Python editor and because it checks many many of these things that we talked about in
+01:43 This course like it'll show errors for non Pythonic code some of the time
+01:50 All right editors you're gonna need an editor any Python 3
+01:53 more.

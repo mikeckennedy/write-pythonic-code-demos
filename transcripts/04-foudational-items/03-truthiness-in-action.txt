@@ -1,0 +1,131 @@
+00:00 Let's explore these ideas a little bit in code and have some fun with them.
+00:05 So we moved on to this chapter here, Foundations, and we're in the Truthiness section.
+00:11 I got this function called PrintTruthiness, and we can just give it a value, any sort of expression that we want to test.
+00:20 It'll use a ternary expression right there that says, ""True if the value of the expression evaluates to something truthful.
+00:29 Otherwise, if it's falsy, it'll evaluate to false.
+00:34 And then, just so we can see what's happening, we're doing this little f-string here to represent,
+00:39 just echo out the value or the expression or whatever it was that we passed in.
+00:44 So, for example, let's just go down here and print ""Truthiness of false.
+00:53 Run that, you can see that it is false if you pass the value false.
+00:58 No, you're super surprised.
+01:00 And similarly, if we pass in ""True,"" I'll put a little print statement down there as well.
+01:06 True is true, false is false. This is obvious.
+01:09 You know what a boolean value is. Nothing needs to be explained here.
+01:13 But it gets more interesting as we get down here for sequences and collections.
+01:20 Now, notice I can hit P-T, by the way, in PyCharm and use the snake case we talked about naming.
+01:26 Here's how that comes back to help us.
+01:28 P-T, and you can see the P and the T are highlighted.
+01:31 I can kind of just say the first characters of both those things.
+01:34 So, you'll see me taking shortcuts like that.
+01:37 Try when I do these things for the first time to point them out to you,
+01:40 and then we'll just roll with them and keep the code flowing.
+01:43 All right, so if I put in an empty list or, let's say, an empty set, for example, let's see what we get.
+01:52 The empty list is false. The empty set is false.
+01:56 However, let's put in totally random numbers. I'm just making that up.
+02:03 If we have a set, a list here that is not empty, guess what? That's truthful.
+02:07 And let's make a little more room here.
+02:10 Similarly for the set, if we go down and have a set like this.
+02:21 The set, of course, has values without duplication, so it should remove the one, but it'll still be non-empty.
+02:27 Here you can see that that set is, in fact, truthful. Excellent, huh?
+02:34 Let's print truthiness for an object.
+02:38 We could put in a string, or we could put in some string like that.
+02:42 Those are objects.
+02:45 Nothing, we don't really... we're not getting a great representation of it.
+02:49 I guess I could maybe change this so it puts the prepper of that.
+02:54 Let's try and see what we get there.
+02:58 There we go. Now we got our quotes on there.
+03:01 I don't know if that's better or not, but we can run with it.
+03:04 Empty string, false. Non-empty string, truthful.
+03:09 We could also put the number 7, the number... I don't know how big that is, but if we put digit grouping into it, it's a million apparently.
+03:17 We put 7 and a million. Both 7 and a million are true.
+03:22 But if we put 0, 0 is false.
+03:25 But if we put a float, also false, but if it's 10 to the negative 10, a bunch of 0s there.
+03:33 That's truthful, right? It doesn't matter how small it is, but if it's truly 0.0, then it's false.
+03:43 We could also put one final thing here in this object section.
+03:47 We could put all sorts of interesting weird things.
+03:49 If we want to use pathlib from pathlib, we just put the current directory like this.
+03:57 We'll put it like that.
+03:59 Here we can get this, the posit path. Let's even get something like... let's do the file.
+04:04 We'll check the truthiness of the directory that contains this file.
+04:09 A parent like that. And a path like this.
+04:13 It's a path object that goes to here, and in fact, that is true. Very interesting.
+04:19 You can see most things are true.
+04:22 Last one, we'll print something like none.
+04:25 Down here, we'll put a little spacing, grouping.
+04:29 None is false. Not none. There's not really a way to express that other than any of these types of things.
+04:35 None is also false.
+04:39 Finally, if we want to create some type that is kind of like a list or a string,
+04:45 and it exhibits its own definition of truthiness, just not none, but if it's empty, for example.
+04:50 We could have a class that we create.
+04:57 Down here, maybe we're going to give it some kind of thing where we give it, I don't know, some data.
+05:05 We'll say maybe the data is the list.
+05:08 And we'll have a way to add a function or add a value.
+05:13 Self.data.append. Notice PyCharm is trying to write that for us using its local LLM. Thank you, PyCharm.
+05:20 And what we want to do is we want to have this thing say it's true if it has data inside of it,
+05:26 but false if it does not have data inside of it.
+05:29 So let's have t equals truthful object.
+05:33 t, add one is fine.
+05:36 We'll have f equals truthful object, but we won't put anything into it.
+05:41 Okay?
+05:43 Then we just print truthiness of these things.
+05:46 And t and f.
+05:48 Now, notice this is not helpful, this repper, and neither would the string.
+05:53 So let's go and just add a defs repper, I guess, is what we really need to add here.
+05:59 And what we're going to do is we're going to return something that looks like this.
+06:06 Truthful object with the representation of the data.
+06:09 Wow, look at that. Thank you, PyCharm.
+06:11 Here we go. Now we've got a truthful object with that and that.
+06:14 So if it has data in it, it's truthful.
+06:16 But if it has no data in it, it's truthful.
+06:20 Sad face.
+06:22 All right, so why is that the case?
+06:24 Well, it's the case because this thing in here is not none.
+06:28 It's not an empty list. It's not an empty string.
+06:30 It's not any of those six or seven things I listed at the beginning.
+06:34 So we've got to override that.
+06:38 So we've got to define a way that says, look, this thing knows about its truthfulness.
+06:44 So define a bool here.
+06:46 And we'll just return--I think this is pretty good--
+06:51 the bool of data.
+06:52 So if the data evaluates to true, that means it's nonempty, then that's true.
+06:57 If it evaluates to false--if it is empty, it's going to evaluate to false.
+07:02 This is an option. That's what PyCharm suggested.
+07:04 We could also go return true if self.data else false.
+07:10 But you know what? I like the bottom one.
+07:13 Let's try that. Run it. And look at this.
+07:16 When we have items in it, it is true.
+07:18 When we have no items in it, we can add some more--2, 3, 5, etc.
+07:26 Still true. Right?
+07:28 But if it's empty, it's false.
+07:31 Awesome. So there you have it.
+07:33 Truthiness in a nutshell in Python.
+07:37 Let me just give you one more closing piece of advice on this.
+07:41 This is true for if statements, while loops.
+07:44 This is basically an if statement.
+07:45 So what you do not want to do--you don't want to do it like this.
+07:48 You want to say if this equals true.
+07:50 Because if we put that--I've got to put it in parentheses to make Python happy.
+07:55 But if we do this, first of all--there's some warnings here.
+07:59 What do they say?
+08:00 Comparison to true should be if condition is true or if condition.
+08:05 So they're saying don't do this.
+08:07 But why? Right? Again.
+08:10 Let's run it.
+08:11 And look, all these things that we had before is like false is false, true is true.
+08:16 Yes, that's awesome.
+08:17 But everything else is false.
+08:19 Weird.
+08:20 Even the thing that implements truthfulness in Python.
+08:23 Why is it false?
+08:25 It is false because this is not the true object.
+08:29 True, this thing, is a singleton object in Python.
+08:33 And this is not it except for when you literally say the word true again.
+08:37 So some languages you test like this, right?
+08:41 But not here.
+08:42 You just embrace the truthiness or the falsiness of the object or the expression.
+08:48 And that's how you do stuff in Python.
+08:50 For loops like while expression rather than while expression equal equal true.
+08:55 Or things like that.
+08:56 You might check while a value greater than 10 or something, right?
+09:01 You might have an expression.
+09:02 But equal equal true is really, really rare.

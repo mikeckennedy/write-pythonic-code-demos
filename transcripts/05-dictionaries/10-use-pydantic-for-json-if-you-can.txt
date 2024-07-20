@@ -1,0 +1,33 @@
+00:00 While we're on the topic of JSON, I do want to close out with a recommendation.
+00:04 If your project allows third-party dependencies, that is, you're not trying to create a script
+00:09 that's so simple you don't need a virtual environment, you can just hand it out and
+00:13 people can run it, which is most Python things have external dependencies, seriously consider
+00:19 working with Pydantic to do your JSON work.
+00:23 Pydantic is super easy to use.
+00:25 It's been downloaded billions of times.
+00:28 It's the foundation for something incredible like 480,000 other projects on GitHub are
+00:36 used Pydantic as a building block, as a dependency.
+00:39 So if you're working with JSON in Python, I'm pointing out that there's no validation,
+00:44 it just parses what's there as long as the structure's right, you get something dictionary-ish
+00:50 like back.
+00:52 With Pydantic, you can express more information about it and get validation and type conversions
+00:56 automatically.
+00:57 Awesome.
+00:58 So all we've got to do is create a class like we've got here.
+01:02 So we have movie that derives from Pydantic.baseModel.
+01:05 We're going to talk about typing later, but specify the type information.
+01:09 So title is a string, year is an integer, runtime is an optional string that may or
+01:13 may not be there, and so on.
+01:16 From this, we've got the same JSON data we've been playing with.
+01:19 You say movie.modelValidateJSON.
+01:20 I'm not a big fan of this naming here, but that is like parse with JSON.
+01:29 I don't know why parsing stuff is hard, but modelValidateJSON, give it the string.
+01:36 What you get back is the movie data object, which is this class we just defined here on
+01:41 the left.
+01:42 Awesome.
+01:43 Not only that, it's guaranteed that it has all those four values and that the values
+01:49 where it says it's an integer, it's an integer.
+01:51 Where it says it's a string, it's a string, and so on.
+01:54 Super cool.
+01:55 And then, of course, to turn that back into JSON, you say m.modelDumpJSON, and boom, you're
+02:01 back to JSON like we have been.

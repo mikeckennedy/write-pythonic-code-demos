@@ -1,0 +1,44 @@
+00:00 While I'm busy chastising myself of doing bad imports,
+00:04 here's another one.
+00:05 Let's suppose I'm going to work with a couple of modules.
+00:08 I'm going to import IterTools.
+00:12 I'm going to work with OS, that's already imported.
+00:16 Let's say I'm going to work with SubProcess,
+00:18 and I want to work with Multiprocessing.
+00:20 And I don't want to have a bunch of lines,
+00:22 so I'm just going to write it all right here.
+00:25 Hover over this, it says ""Multiple imports on one line.
+00:29 Don't do that.
+00:30 Again, let me put these into our list,
+00:32 just so PyCharm will not show additional errors,
+00:36 but we can see the real errors.
+00:37 This one, ""Too many imports on one line.
+00:40 Don't do this, okay?
+00:42 So this also is considered bad form.
+00:45 What do we do to fix it?
+00:47 How do we make it good?
+00:48 We import IterTools, import SubProcess,
+00:53 and we import Multiprocessing, like so.
+00:55 Comment that one out so we don't have it imported twice.
+00:58 Okay, so this is good.
+00:59 Now, you might wonder, Michael, why,
+01:03 if in a real project, you'll see some of the projects I work on,
+01:06 probably won't show you the code,
+01:08 but the entire screen is just import statements like this.
+01:11 It's a little out of control,
+01:12 but the good editors have things like this
+01:14 where you can collapse them up,
+01:17 all the import statements, all of them,
+01:18 if you hover over it,
+01:20 all of that stuff got compressed to import.
+01:23 In PyCharm, you can go a little farther.
+01:25 If you really, really want to,
+01:26 you can say #region and say import statements OS,
+01:31 and then down here, you can say #endregion,
+01:36 and when you collapse it,
+01:38 then it actually has a little more statement of that.
+01:39 I find myself rarely, sometimes, but rarely doing that,
+01:43 but because the editors already know
+01:45 about collapsing the import statements when you open them,
+01:47 when you open the files and stuff,
+01:49 you don't really need this.

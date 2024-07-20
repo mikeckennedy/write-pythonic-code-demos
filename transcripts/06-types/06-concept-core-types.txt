@@ -1,0 +1,22 @@
+00:00 Alright, let's review our core types as well as collections.
+00:03 So we've got different kinds of numbers.
+00:06 Int, remember it goes variable name colon type equals value,
+00:10 not type variable, which a lot of languages have,
+00:13 but it's a little bit versed.
+00:14 We've got our floats and we have our complex numbers here.
+00:19 Remember the numeric tower, if you want something that can be
+00:22 complex float and integer, say it's complex.
+00:26 If you want just floats and ints, say it's float.
+00:28 That's how the numeric tower is set to be.
+00:30 We have some text, it's a string, and remember it can't be set to none.
+00:35 In this case, it has to be an optional string if it's going to be set to none.
+00:39 We also have bytes, which is the bytes value instead of the string itself,
+00:44 even though they look similar, the B makes a big difference.
+00:47 If we've got a boolean value, true or false, we can express that as just colon bool.
+00:52 And then if we have a list, we just say list bracket type.
+00:57 This implies it basically has to be a homogeneous type,
+01:02 all numbers, all strings, or whatever in the list.
+01:04 That's generally good.
+01:06 If it's not, well, it's a list of bracket any, which we already talked about any,
+01:12 or you just don't put the bracket and it's a list that kind of implies it's a list of
+01:16 unspecified things or any similar with sets and other collections, dictionaries, tuples, and so on.

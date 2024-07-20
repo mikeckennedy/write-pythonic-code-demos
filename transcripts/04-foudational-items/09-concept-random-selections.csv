@@ -1,0 +1,7 @@
+Start Timestamp;End Timestamp;Transcript
+00:00;00:02;"How do we choose a random item in Python?"
+00:02;00:07;"Not the bad C style where we go randomly pick an index and then we index into the thing."
+00:07;00:10;"No, we can just say random.choice on a collection."
+00:10;00:12;"Boom, we have the item."
+00:12;00:13;"Off we go."
+00:13;00:15;"So given a choice, random.choice."

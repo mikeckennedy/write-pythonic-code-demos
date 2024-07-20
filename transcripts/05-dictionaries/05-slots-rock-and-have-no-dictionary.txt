@@ -1,0 +1,110 @@
+00:00 Here's an ironic example or ironic point to cover in this course, especially this chapter about dictionaries, is to avoid using dictionaries.
+00:09 Huh. Well, we started this chapter by talking about, ""Oh, you should really use dictionaries when they're important and you're doing that kind of lookup.
+00:16 And I also mentioned that dictionaries are the back-end storage for classes.
+00:22 Here's a thing, we'll call it ""MutableThing.
+00:24 And look at this, we're creating four variables when we create this object.
+00:29 Okay. And under here it has a self.dunderDict.
+00:33 And do you know what that dictionary looks like?
+00:35 A thing with ""A"" as a key, and then whatever the value of ""A"" is, ""B"" is a key.
+00:41 And it has one of these every single object you create.
+00:45 So if I had a list with a hundred mutable things, it would have a hundred dictionaries of all these items and keys in it.
+00:53 Not great.
+00:55 So there's this technique in Python, this technique for object-oriented programming and classes called ""slots.
+01:03 Now, here's your regular class, and what's interesting, maybe useful, is you can say ""MutableThing,"" and then you can say ""MutableThing.newValue = 7.
+01:15 And guess what? Now that one object, ""mt,"" it has five things in its dictionary, ""a,"" ""b,"" ""c,"" ""d,"" and ""newValue.
+01:24 And the entry there is seven.
+01:27 So, you know, Python is a dynamic language, and this is like part of that.
+01:32 However, how often do you create classes and then just arbitrarily start sticking values on them?
+01:39 I'd say one out of ten, one out of a hundred times.
+01:43 Most of the time, you specify what the values are in the constructor or at the type level, and you just set those values.
+01:52 You just set them.
+01:54 You don't change new ones.
+01:55 Actually, it's recommended that you don't do those kinds of things most of the time if you're not doing funky dynamic programming or metaprogramming.
+02:03 So what we can do is with this slots idea here is we can pre-declare these are the only things, the only fields you're allowed to add, and then from there on, it's the same.
+02:15 Here we're going to set them.
+02:17 If I go to self., there's those things, right?
+02:22 However, what is not there once you do this is dictionary with its keys and its creation.
+02:28 It just says, ""Look, if you want C, that's the third element, third piece of data in a list or some backing story that holds the four values here.
+02:38 You can no longer dynamically add things to it.
+02:40 It'll crash if you try to do that.
+02:41 You can't access the underdict.
+02:43 Most of the time, you don't.
+02:45 So what I want to show you here is how we might go about using this both to gain performance and to save memory.
+02:54 This originally comes from this place called the Oyster, Oyster.com, TechOyster.
+02:59 And they said, ""Look, we have this,"" I think it was a Redis cache or something like that, some kind of cache, in-memory cache.
+03:07 And they were storing their Python objects.
+03:10 And they were storing them as classes like the mutable thing I just showed you here.
+03:16 And they said if they entered this one line here, their server memory usage went from 16 gigs to 9.
+03:24 That's the one thing they changed in the entire program, nothing else.
+03:27 Made a tremendous difference.
+03:28 It turns out also that accessing the values, ABC and so on, are also way faster if you have slots than if you don't.
+03:35 So you get both the runtime performance and memory improvement.
+03:39 So this little example is going to explore that.
+03:41 What we're going to do is we're going to use four ways of storing these four values and then holding on to them and asking questions.
+03:49 So we're going to use plain tuples, things like that for the values of A, B, C, and D.
+03:58 And then we're going to have a named tuple which has a much nicer thing like that where you actually get dot access to the values.
+04:08 So it's a better programming model, but we'll see it's a little slower, a little more memory intensive.
+04:14 And then we're going to work with regular classes and then our classes with slots.
+04:18 So what we're going to do is we're going to come up with, let's put dividers for our sanity, come up with a million entries in this list of each type.
+04:26 Now I've got them all commented out here, which is weird.
+04:29 There's a reason for this.
+04:31 So what I want to do is run it and both measure the time and how much memory it takes.
+04:37 So I'll run each one of these separately and we'll look at them.
+04:40 And on macOS, I'm going to use activity monitor and I'm searching for Python right here.
+04:46 See that?
+04:47 There's no Python processes running, so you see nothing.
+04:52 If you're on Windows, I encourage you to use System Explorer.
+04:55 That's a really, really nice tool.
+04:57 Okay, let's run it.
+04:59 And look at that, it takes .16 seconds to create and load those things all up into that list of plain basic tuples.
+05:09 And importantly, look, it's 207, 208 really megabytes of memory consumed.
+05:15 Great.
+05:16 If we hit enter, it exits.
+05:18 I'm writing these numbers down for you at the bottom, so we'll come back to them.
+05:21 But if we use a named tuple, let's see.
+05:26 It took three times longer or something.
+05:29 And the memory went from 208 to 215.
+05:33 Okay, interesting, interesting to see.
+05:36 What if we use our regular basic traditional vanilla Python class?
+05:42 Nothing with the slots, just like I created the class keyword and I start typing.
+05:46 What do I get?
+05:48 Okay, it takes about the same time as a named tuple.
+05:51 Again, I have that written down.
+05:53 And 230 megs.
+05:55 This is the most of all of them.
+05:57 No surprise as we add capabilities like functions and dynamic behaviors, it takes more memory.
+06:04 All right, or with named tuples, names rather than just positions, takes more memory.
+06:09 Let's look at the last one.
+06:13 One with slots.
+06:16 Run it, and it's a little bit faster but not much.
+06:20 Look at this, 200.4.
+06:22 Earlier on it was 199 point something.
+06:26 Incredible.
+06:27 Okay, so these numbers, at least for one of the runs of them, using tuples, it was 208 megs.
+06:33 Named tuples 215.
+06:35 Classes, 230.
+06:37 So you go down this path, you're like, ""Oh, it's only getting worse and worse as we use these more advanced data structures.
+06:42 Wait, we can get full object-oriented programming?
+06:46 And we save, in this case, not too much memory, but we save some memory.
+06:51 Save 9 megs.
+06:53 That's pretty ridiculous.
+06:55 And look at how long it takes to create the dynamic class version, traditional, versus the slots one.
+07:02 All we did is put dunder slots.
+07:04 And it's something, I don't know, 10% faster, 8% faster.
+07:08 This is even faster than named tuples, faster than classes.
+07:12 The only thing that is much faster, and this is a recent Python 3 performance improvement,
+07:18 is the regular tuples got really fast, but still not less, more memory efficient.
+07:23 You think, like, ""This is doing, what is this? It's nothing. It's like a group of four things.
+07:27 It should be as bare bones as it gets.
+07:29 No.
+07:30 Classes with slots, i.e., classes without dunder dicks, are actually pretty excellent.
+07:37 Only sad thing about this story here is this no longer exists.
+07:42 I don't know what happened to that website, but it's a goner.
+07:44 Sad face.
+07:46 But there it is. I'm going to put this back.
+07:48 So it's like this, this tuple one.
+07:51 Remember, the way it works is you run it, it waits for you, you check out the memory.
+07:57 That's mostly what we're looking at, is memory performance.
+08:01 All right. There it is. Slots. Highly recommend these.
+08:05 If you have no intention of doing dynamic programming, you're creating a bunch of them,
+08:11 you're going to be really well off.

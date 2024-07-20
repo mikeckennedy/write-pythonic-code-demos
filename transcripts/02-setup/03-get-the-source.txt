@@ -1,0 +1,6 @@
+00:00 Everything I create in this course that you see me create online and even stuff that you don't see me create is going to be
+00:05 Available to you over on the github repository here github.com slash Mike C. Kennedy slash right by sonic
+00:11 Code demos just be sure before you move on you'll pause this video go over there and
+00:18 Star this at least and consider forking it that way you have everything I've created in the course
+00:24 So be sure to go star and potentially fork this at least download the code from it so that you can follow along and play around
+00:31 yourself

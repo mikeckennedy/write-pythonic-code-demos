@@ -1,0 +1,40 @@
+00:00 One of the challenges you run into with all these rules with the PEP 8 ones and all the stuff beyond that we're gonna spend
+00:06 the rest of the course on is
+00:08 You can debate them
+00:10 Endlessly, I think I should have it on one line. No, it should be on two lines and you know a lot of times
+00:16 It's just six of these or half a dozen of those and it's pretty much a wash
+00:20 so there's a couple of tools you can use that will apply these rules to your code base globally and
+00:29 They have slightly different philosophies
+00:31 The first one of these to come along was called black at least the first popular one and it's called the uncompromising
+00:38 Code formatter and it's uncompromising because it just does what it does and it has that old
+00:43 Model T Ford quote you can have it in any color you like long as the color you like is black
+00:49 That means it's gonna do what it's gonna do format your code
+00:53 Your list elements are gonna be arranged in this way and so on right your strings are gonna have double quotes
+01:00 Period not single quotes, which could also be an option so you can run this. This is a great one
+01:06 It's very widely used. You can see it's coming up on almost a billion with a B and downloads, which is insane
+01:13 So check this out a new one on the block here is rough rough is
+01:19 from the astral folks Charlie Martian team and this is
+01:23 Incredibly powerful and fast
+01:25 It's based on rust and it's supposed to replace
+01:28 Autoflake flake 8 pi flakes pi code style pilot all these things and it is
+01:34 Super fast. I've run it on a bunch of my projects one with about 20,000 lines of code. It seemed like it just
+01:41 Opened and finished instantly. I'm like did it actually work do anything it did
+01:46 You already saw that we can get rough built into pi charm as well
+01:49 I'm sure you can do the same with black but I have rough built in because this is what I like
+01:53 It's a little bit more configurable
+01:55 One final thing that's awesome from the rough folks. Even if you don't use rough
+01:59 this is awesome is if you go over here to docs dot astral dot sh slash rough slash rules, there's
+02:05 800 rules like for example the naming ones but many many many more and
+02:12 If you go down here, you can say like you should break outside the loop or continue
+02:18 Not properly in a loop yield outside of function. Let's say if tuple. Let's check this out
+02:22 So it says if statements that use non empty tuples as test conditions, right? Why is this bad?
+02:29 It was really cool as it gives you not just
+02:31 What the rule is but why is it bad? They're always true
+02:35 So that doesn't mean so if false comma right that looks like it's false
+02:39 But that actually turns out to always be true instead test it like this
+02:43 Let's just do one more spin spin spin
+02:48 Start us a process with a shell. Why is this bad? Here's all the details. Here's some examples
+02:53 So definitely definitely bookmark this box astral sh rough rules
+02:58 So bookmark that if you see one of these rules and you want to know why is it here?
+03:03 Why is it being enforced and suggested to me?
+03:05 These guys did a ton of work to put this together for everyone

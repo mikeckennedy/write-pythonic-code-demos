@@ -1,0 +1,124 @@
+00:00 JSON is incredibly important as a data structure.
+00:04 It's usually the exchange format of modern HTTP APIs,
+00:09 and even REST APIs,
+00:11 but especially HTTP APIs in the broader sense.
+00:14 Very common file format for configuration and other things.
+00:18 They're basically isomorphic with dictionary.
+00:22 They can be exchanged one to the other,
+00:24 except for things that can't be serialized into JSON,
+00:26 like date, time, objects, and a running thread,
+00:30 and other stuff like that.
+00:32 We're going to look at how we access JSON from files,
+00:37 strings, and so on.
+00:38 Here we are with our data.
+00:40 Now, notice this is a multi-line string with the triple quotes.
+00:45 This is not a dictionary.
+00:46 See how it's all green, even that?
+00:48 That's a string. Imagine this is a file.
+00:50 I just want to keep it super simple for us and so on.
+00:54 If we're going to get data from this,
+00:57 I can't go to movie JSON and say, ""What's the year?
+01:01 Actually, let's make these lowercase here.
+01:03 Makes it feel a little more Python friendly,
+01:05 but what is the title?
+01:07 Let's print that bad boy out.
+01:09 Sure. Let's run that.
+01:12 Now, notice PyCharm is like,
+01:15 This is not going to work well.
+01:17 But let's find out.
+01:19 Oh, you know what? They were right.
+01:20 It didn't work well. String must be integers.
+01:23 I see. This is not a dictionary.
+01:24 This is a string. It just looks like one.
+01:27 What we can do is we can say movie data equals.
+01:31 Now, PyCharm, don't get ahead of yourself.
+01:34 PyCharm is trying to write the code.
+01:35 We'll say import JSON.
+01:36 Now, this is built into Python.
+01:38 We don't need to use any external things for this.
+01:40 From this, we can just say JSON.load.
+01:44 Now, let me show you, you would do this for a file.
+01:47 I would say with open some file for reading.
+01:52 Maybe the encoding is UTF-8 as fin file input stream.
+01:58 Then I would say movie data equals JSON.load of fin.
+02:04 If it were a file, I'll just leave this here.
+02:08 If it were a file, but it's not.
+02:13 It's a string. It might be coming off the Internet,
+02:16 out of memory, whatever, out of a database.
+02:18 We'll say load S. I hate the naming of this.
+02:21 Can it just be load string instead of load S versus load?
+02:26 Should be like load stream, load from file, load string,
+02:32 or whatever.
+02:33 They didn't ask me when they created Python.
+02:36 They just made it and then gave it to us.
+02:38 Thank you, people.
+02:39 All right, so we're going to give it
+02:40 the string, the movie JSON.
+02:42 And now, what do we get down here?
+02:44 Let's go ahead and print this out.
+02:46 And before, I'll go and print out what is the type of this.
+02:51 And we'll also print out the type of movie string
+02:55 or movie JSON.
+02:58 There we go.
+02:59 So I'm going to get the data by parsing it using JSON.
+03:03 Super, super easy and straightforward.
+03:06 And once it's like this, it's a dictionary, as we'll see,
+03:08 which we access to it like this.
+03:10 If we're not sure, we could do it like get a title.
+03:15 We could do it like get a title, no title, et cetera.
+03:19 We run that.
+03:20 Johnny 5, Johnny 5, Johnny 5 is alive.
+03:23 All right, movie data is a dictionary.
+03:26 Movie JSON is the JSON string right there.
+03:30 Excellent.
+03:33 Well, what if it's the other way?
+03:35 What if we have our movie data and we
+03:37 want to turn it into JSON?
+03:40 Well, we can say movie JSON generated.
+03:45 And just in reverse, JSON dot-- now,
+03:49 if I made fun of the name on load, this is even worse.
+03:52 JSON dot dump.
+03:53 What goes in here would be the data in a file stream,
+03:57 a file output stream, a writable stream.
+04:01 Or we can dump it to a string and we'll say movie data.
+04:05 Now, let's just change something about that data.
+04:08 Let's look up here.
+04:10 So the runtime here, let's change the year.
+04:11 In fact, let's put that--
+04:13 not as quotes even.
+04:16 But let's go and make a change.
+04:17 Movie data of year equals 2012.
+04:22 It was remastered a while ago or something like that.
+04:25 So when we dump this out, we should see that in our string.
+04:30 Movie generated JSON.
+04:31 This is not going to be as amazing as you might think.
+04:35 Here we go.
+04:36 So we've got this out.
+04:37 And look, the year was updated because right there.
+04:42 Amazing.
+04:43 And it comes out looking like this.
+04:45 But this is effectively minified.
+04:47 If you had a huge bit of data, it's all in one line.
+04:50 Here's a cool trick if you want it to be pretty printed.
+04:54 All you have to do is say indent.
+04:56 No, not there, sorry.
+04:57 In JSON dump S, you say indent.
+04:59 It's four or two.
+05:01 It's often two in this world.
+05:03 And check it out.
+05:04 Boom.
+05:05 Instantly, it's back.
+05:07 So working with JSON in Python is incredibly easy.
+05:13 Now what this doesn't do for us is validate.
+05:16 So what if we expected this to be a number,
+05:20 but in fact, what it was was in quotes?
+05:23 Well, it came in as a string.
+05:26 And then when we changed it, it went into that.
+05:28 Or maybe it starts out as a number,
+05:32 but then we set it to a string.
+05:34 Well, now it's a string.
+05:35 You can see the quotes.
+05:37 The JSON library doesn't really do that for us.
+05:39 Not the best for sure.
+05:40 But still a really awesome zero dependency
+05:43 built into the Python standard library way to work with JSON.

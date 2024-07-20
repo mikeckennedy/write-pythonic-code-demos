@@ -1,0 +1,21 @@
+00:00 Let's take just a couple of moments and talk about setup to make sure we're all on the
+00:06 same page, everyone's code's running.
+00:09 It's not as straightforward as you would think because of Python versions.
+00:13 So first of all, we're going to need Python 3.
+00:16 And I would recommend for some of the code that we're going to run to say that you will
+00:20 actually need Python 3.10 or above.
+00:24 We're on the verge of Python 3.13 just about coming out.
+00:28 So I recommend you use the latest Python 3 if you have to install it and your version
+00:32 is out of date.
+00:33 There's no harm in getting the latest.
+00:35 Python's super stable in that way.
+00:37 But we're going to need 3.10.
+00:38 And if you don't have Python 3.10 or above, or you're not sure if you do, check this out
+00:44 over at training.docpython.fm/installing-python.
+00:45 I have a whole guide.
+00:49 It's like a choose your own adventure.
+00:50 What operating system are you on?
+00:52 Try this.
+00:53 Which path do you follow here?
+00:55 So it's really meant to kind of guide you through making sure that you have Python set
+00:58 up and working the way you need.

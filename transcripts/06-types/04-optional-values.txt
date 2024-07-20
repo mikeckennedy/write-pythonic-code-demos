@@ -1,0 +1,157 @@
+00:00 Python types are a little interesting.
+00:03 Many, many static languages assume that if you express a type,
+00:08 like some class or a string or something along those lines,
+00:13 it can either be the type it's described to be or it can be marked as not assigned or nothing.
+00:19 That shows up as null in a lot of languages,
+00:22 capital N-U-L-L in C and C++,
+00:26 lowercase N-U-L-L in JavaScript and C# and NIL and Swift, lots of them.
+00:34 But a lot of those languages,
+00:35 putting Swift aside actually,
+00:37 allow you to say like,
+00:39 okay, we had our TXT which could be some string.
+00:43 Again, I'm just going to print these out a lot to get these silly warnings to go away.
+00:47 It's some string like this,
+00:50 but if I said it's equal to none,
+00:52 oh no, no, no, no.
+00:55 Python tries to be a little bit more expressive
+00:58 and indicating when you need to worry about if it could be none.
+01:02 When you use the type system right, you'll know.
+01:04 So for example, right here it says,
+01:06 expected a string and we got none.
+01:08 Well, string is like a pointer,
+01:10 everything in Python is a pointer.
+01:12 It's like a pointer and this is like null,
+01:14 so I expect I should be able to just set it to be,
+01:16 look, it's not assigned right now.
+01:18 No, Python doesn't work that way.
+01:20 If you want to be able to work with a type and you can say,
+01:23 it can be maybe unset in this none state
+01:27 or it can have a value like some string,
+01:30 you have to explicitly say that in the type.
+01:32 So let's go over here and say this is text two.
+01:35 Oh, maybe, text maybe, oh, maybe.
+01:38 Okay, what type?
+01:40 Did we say string?
+01:41 Well, we're going to get the same problem right here, okay?
+01:46 Still can't be none.
+01:47 So what we need to do is we need to express whether,
+01:50 we need to tell the type system that it can be string
+01:53 or it can be not anything.
+01:55 So the way we do that, there's different points in time
+01:58 have allowed us to do different ways
+02:00 and I'm going to be a bit of a contrarian
+02:02 and say this is the way of Michael.
+02:05 This is the way Michael likes to do this.
+02:07 Maybe you want to do it differently
+02:09 because there's a more modern way,
+02:11 but it's way less good in my opinion.
+02:14 Okay, so let's go over here and I'm going to say from typing,
+02:17 just so it can be a little shorter,
+02:18 import optional and I'm also going to import union.
+02:24 These are some of the ways in which we can express this.
+02:26 All right, so instead of saying it's a string,
+02:29 which means it has to be a concrete string
+02:31 and can never ever be none ever,
+02:34 except for that the runtime ignores it
+02:35 and there's no compiler really, not in the type sense.
+02:39 So it's not super concrete,
+02:42 but if it's following the type system
+02:43 and there are tools to measure this,
+02:45 then you would never be able to set this to none.
+02:47 If you want to be able to set it to none
+02:49 and then maybe set a string,
+02:50 what we can do is we can say this is an optional bracket string.
+02:54 So it could be an optional int or an optional bool
+02:58 or what it really is an optional string.
+03:00 So now that makes sense, right?
+03:02 Still valid. It's got a value now
+03:04 and then later when we print it out here,
+03:08 it doesn't have a value, but that's okay
+03:10 because we said it can either be a string
+03:12 or it can have no value.
+03:14 We run this just so you have the bottom,
+03:16 some string and none exactly as you would expect.
+03:20 But if you get this wrong and you say this is a bool,
+03:22 there'll be warnings, but it still runs.
+03:24 Okay, just that's the ignored part.
+03:27 It still runs in Python.
+03:28 Other things might not like it so much like FastAPI.
+03:32 Okay, so we have this ability
+03:34 and not just an ability, a requirement to set these things
+03:37 to be optional if they might be set to none
+03:40 and that tells you whether or not you need to write code
+03:42 like if TXT is none or is not none or something, right?
+03:48 To check these things.
+03:49 Usually you can get away with just if TXT maybe like this,
+03:54 but maybe empty is still counts as a valid value, right?
+03:57 Then you want to check is none.
+03:59 Now I said I'm a little bit contrarian
+04:02 as there are three ways to express this.
+04:05 TXT one is equal to union.
+04:08 This is maybe the most old-school or kind of on par.
+04:12 It's a generalization.
+04:14 If optional of str is a square,
+04:18 union of what I'm about to show you is like a rectangle.
+04:21 Potentially with the right parameters and constraints,
+04:24 it is also a square.
+04:26 So we could say it's a union which is like this or that.
+04:29 Could be that or none with colon.
+04:36 Style one and just for completeness,
+04:38 I'll put style two here which is optional str.
+04:46 Michael's fav.
+04:49 Say why in a minute and we could do what's the newer,
+04:53 the new hotness.
+04:54 This I think is Python 310.
+04:56 You can say if it's an or and you want to do a union,
+05:01 we can come over here and use the or thing.
+05:03 So we can say it's a str pipe none.
+05:07 That means it's a string or it's none.
+05:11 This is style three, not my fav.
+05:13 Now if I were going to do a union,
+05:14 like if I were going to say something was an integer
+05:20 or a string right now is equal to one,
+05:25 I would be all about this pipe as the union.
+05:28 I think that's great.
+05:30 But what I think if you put it like this
+05:32 or it could be none pipe str,
+05:34 you kind of got to parse it.
+05:35 You got to think, okay, well,
+05:37 if it's this or that, what is it?
+05:38 Okay, that means it could be set to a string
+05:41 or it could be none.
+05:43 So really what it's saying is it is a string
+05:47 that sometimes is not set.
+05:49 And to me, in my mind, this is saying it's a string
+05:53 but it might not have a value.
+05:55 Whereas this is like, well, it could be this
+05:57 or it could be an int or a str or a list.
+06:01 It could be three of those things.
+06:02 I don't know.
+06:03 So like this stuff I have to go and read and understand.
+06:07 I have to analyze it.
+06:08 Okay, if it's these three things
+06:09 and then I take the intersection of their capabilities,
+06:11 what does that mean I can do with it?
+06:13 I kind of what I'm feeling here
+06:15 where this explicitly says I'm trying to say it's a string
+06:18 but it might not have a value.
+06:19 So you got to check it for none.
+06:21 To me, this is Michael's Pythonic way of using optional.
+06:27 You can use whatever you want.
+06:29 They all work.
+06:30 Okay, you can use whatever you want.
+06:32 But a specialization of this is not my favorite
+06:34 because it doesn't speak exactly to the, it's this type,
+06:38 but maybe it's not set.
+06:40 Anyway, optional typing, super duper important.
+06:43 If you have a function that returns an optional,
+06:47 that means if you call that function
+06:48 and you get a value, you need to check it for none.
+06:51 It could be set to be none.
+06:53 So if not thing, then deal with it not being there,
+06:56 something along those lines, right?
+06:58 That's what this optional is trying to communicate
+07:01 and Python is extra strong in its type system.
+07:03 Whereas if you don't say it's optional,
+07:05 it cannot be set to be none.
+07:08 Very interesting.

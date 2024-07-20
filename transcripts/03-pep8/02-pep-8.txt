@@ -1,0 +1,18 @@
+00:00 In this chapter, we're going to focus on the guidance provided by PEP 8, the Python Enhancement Proposal #8.
+00:09 This was put together by Guido van Rossum, Barry Warsaw, and Alyssa Koglin.
+00:14 It was first created back in 2001.
+00:17 Now, that date is notable because Python was released in 1991.
+00:21 So this is a full 10 years into Python that the style guide came out.
+00:26 It's not like Python and its style guide came out at the same time.
+00:31 This evolved after people got a bunch of real-world usage with Python and said,
+00:36 All right, now we think we know what works and what doesn't work.
+00:40 Let's put that into a document and suggest that as the way that we do things.
+00:44 And in fact, put it into tools and linters and formatters and other things like that
+00:48 that will actually either suggest error or find errors and suggest we fix them
+00:53 or many of them will even fix them themselves.
+00:57 PEP 8 is this document here.
+00:59 You can go check it out and read through it.
+01:01 It's pretty comprehensive.
+01:03 It's pretty long even though it doesn't try to cover everything.
+01:05 There's still a lot to go through here if you like.
+01:08 And we'll take some of the ideas and explore them in code next.

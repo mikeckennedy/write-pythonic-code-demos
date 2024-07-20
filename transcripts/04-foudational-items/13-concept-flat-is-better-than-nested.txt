@@ -1,0 +1,20 @@
+00:00 Quick review of flat is better than nested.
+00:02 Look at this code.
+00:03 It is gnarly and without the editor even helping you align stuff.
+00:07 Are you sure that you got all these pieces?
+00:09 Like is the else down below where it says no DNS?
+00:12 Is it lined up right?
+00:13 Remember, it's usually not just one line at each one of these.
+00:16 There's like stuff making it harder to read all over.
+00:19 This, no.
+00:21 This is just something I wouldn't want to work on.
+00:23 Instead, we can use guarding clauses and early returns
+00:28 to go through and put all the tests and the messages locally together
+00:32 and have zero indentation along the way.
+00:35 It works for loops.
+00:36 It works for functions.
+00:37 It works for functions with loops.
+00:39 You can even look up this concept of guarding clauses on Wikipedia.
+00:45 Here, they have an example in Python.
+00:47 They show how to do it without and how to do it with.
+00:50 Basically, negate all the if statements, do early returns.

@@ -1,0 +1,54 @@
+00:00 All right, let's explore that example that I just talked you through in this graphical format in PyCharm in code.
+00:08 Now, if you've seen this before, awesome. I'm sure you're going to appreciate seeing it shortly in just a moment here.
+00:16 If you've not seen how much better dictionaries can be at this type of thing, I think your mind is going to be blown.
+00:24 Okay, so we've got this function called createData. Let's check it out real quick. It's down here at the bottom.
+00:30 And it just randomly creates half a million data point objects. They've got an ID, an XY, temperature, quality.
+00:38 I think we're doing like meteorological stuff or atmospheric type of things. Not super relevant.
+00:45 We're going to create that ahead of time, and then we want to ask questions about it.
+00:49 So we're going to do this in two ways. Up here at the beginning, we're going to say, let's go and create those IDs.
+00:56 And then we're going to snapshot the time. Remember, we have the IDs, but not the actual measurements.
+01:04 We want to get the measurements. So we're going to say, find a point by ID in the list.
+01:08 And if we go down to that, it's just go through things in the list. If the ID matches, return it.
+01:14 Okay, just as straightforward as you expect. And then if we find one, when we find the one,
+01:20 we're going to put it into our list, measure how long that takes, and then we're going to print that out as milliseconds right here.
+01:28 It's a super straightforward algorithm using one of the most natural data structures, a list.
+01:33 We have a bunch of data, and we're doing it in memory. Let's just put it in a list, okay?
+01:37 Or we could use a dictionary. So down here, we could say, let's try it with a dictionary.
+01:43 And because we have started with this list, but we haven't yet created this lookup,
+01:48 say we're really interested in giving an ID what is the data point, we can use what's called a dictionary comprehension,
+01:55 kind of like a for loop where you add to it, but way better.
+01:58 So here's the key colon value, and here we're looping over the data list and creating it.
+02:04 If you haven't seen dictionary comprehensions before, super sweet.
+02:07 So now we have a dictionary, start the time before, so we're counting the time it takes to create this dictionary.
+02:14 We're going to come back to that, and we'll start over.
+02:17 And we'll go through and said now, given an ID, we're going to use the dictionary's ability to look up things by its key.
+02:25 Its key is the ID. Okay, then we put it in there. Print it out just the same as before.
+02:29 Let's run it and see what the difference is.
+02:35 So we're looking through. It took us 2.7 seconds or 2,700 milliseconds to find the points using the list search style,
+02:43 and 79 milliseconds for the dictionary. That's 35 times faster. Awesome, right?
+02:53 Oh, but this is just scratching the surface.
+02:56 Imagine I told you that creating this dictionary of a half a million items can take some time. Yes?
+03:02 Well, how about this? Imagine what we wanted to do is we wanted to have this data, and the data doesn't change,
+03:10 but the questions we ask, i.e. the points that are interesting, the IDs that are interesting that we want to look up by,
+03:16 change over time, but the data doesn't change.
+03:20 So what if we take the computation time of the dictionary out, and we say, we're going to do that once in our process,
+03:26 and then we'll ask this question in different ways, slice and dice it.
+03:29 It's a window of time that changes things. Who knows, right? User input, whatever.
+03:35 Data doesn't change. Questions we ask change. Run it again.
+03:39 List, 2.7 seconds, something like that.
+03:43 Zero milliseconds, i.e. less than one millisecond.
+03:47 36,000 times faster. Let's run it again.
+03:51 I'm doing screen recording. That puts a bad hurt on the computer.
+03:55 47,000 times faster.
+03:59 Okay, I told you you'd be impressed. This is what's impressive.
+04:04 The code we write, if you look at it, this bit right here,
+04:09 and this bit right here, it's about the same.
+04:16 We're just embracing the dictionary, but 47,000 times faster.
+04:22 In totally reasonable situations, we have the same data, we ask different questions.
+04:26 Or a meager 35 times faster if we have to start from scratch every time we want to answer this question.
+04:34 Ridiculous.
+04:36 Here's the first part, the first Pythonic thing for dictionaries.
+04:40 If you have data, and you want to look it up by some pre-known or some aspect of that data,
+04:47 an email, an ID, or whatever, create a dictionary. You can do that with this dictionary comprehension in one line,
+04:54 and then you can answer questions about that thousands of times faster.
+05:00 Amazing. Amazing.

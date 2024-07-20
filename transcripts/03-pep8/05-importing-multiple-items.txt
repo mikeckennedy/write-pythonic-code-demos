@@ -1,0 +1,56 @@
+00:00 Another thing you'll see real often in imports is you'll see something like this.
+00:04 From OS, import, change dir, change mod, change arm.
+00:12 Now PyCharm is trying to help us here saying, look, you're not using change dir.
+00:17 You're not using change mod.
+00:20 So let me just make that go away.
+00:26 So we see the real errors and other things we may be working with here.
+00:30 So I'm just going to refer to these variables somewhere.
+00:33 And I'll just put all these things into a list.
+00:35 There we go. Now they're being ""used"".
+00:38 And this goes away. So that was not a problem.
+00:40 It's just you're importing stuff you don't need.
+00:43 So we can write this. And this is good.
+00:46 And you might say, look, but this is a lot of effort, folks.
+00:51 We've got a list. If we're importing six or seven things, we've got to list them out.
+00:55 What a hassle.
+00:56 Sometimes when you see people listing them out, if there's many of them,
+00:59 they want to separate them across lines, you can do this in Python.
+01:03 And it sort of is like curly braces, right?
+01:07 You can sort of continue it on if you want to have a different kind of formatting.
+01:11 I'll let you decide if that's good or not.
+01:13 It's pretty common. I see stuff like that in some places.
+01:17 But you could also say, hey, what if we just wanted to say from OS, I want everything.
+01:24 I could import star.
+01:26 Unable to detect undefined names.
+01:31 And that also overwrites this above because it reassigns all the imports.
+01:38 But imagine you had done this.
+01:39 Imagine we had from some module.
+01:44 Maybe there's something that we've done.
+01:47 We're going to import just one thing in a good way, right?
+01:52 Like from OS import path, we're saying from our module, import abort.
+01:57 Make it stop complaining.
+01:58 Well, actually, it doesn't exist. That's the problem.
+02:01 But imagine this worked just fine, okay?
+02:04 And then we write this code.
+02:06 Did you know that OS has an abort?
+02:10 And because this imports abort, that actually erases this.
+02:16 So silently, unless you completely know everything about this,
+02:20 it would be completely invisible to you that you just broke this line of code right there
+02:25 and erased whatever that was and put a totally different behavior in there.
+02:29 And maybe this aborts the program and just shuts it down.
+02:33 And that's not what this intended to do.
+02:35 It could be really bad.
+02:36 And changing this out was very likely not a good outcome.
+02:40 So this is-- I'm going to just go so far as say bad.
+02:44 Don't do this, okay?
+02:46 Don't import this way.
+02:48 It will blow away stuff like this.
+02:50 Let's go ahead and make this not have errors.
+02:53 So I'll go quick, create, Python file, call that, and abort equals false.
+03:01 There we go.
+03:02 Don't do these complete star import everythings.
+03:05 It's rarely good.
+03:06 It's a shortcut that's going to shoot you in the foot at some point.
+03:10 If you've got a bunch of things to import, maybe consider wrapping them around like that
+03:14 or putting them on multiple lines or whatever you'd like to do.
+03:16 like to do but this is a much better way to do things than this import star. Don't do that.

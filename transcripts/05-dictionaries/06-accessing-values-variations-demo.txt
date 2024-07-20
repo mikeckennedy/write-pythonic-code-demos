@@ -1,0 +1,154 @@
+00:00 Back to some dictionary basics,
+00:02 but these are really valuable.
+00:03 So we have this data here.
+00:05 We're in 2001 in the country, US.
+00:09 Johnny Five, Johnny Five is alive from a short circuit
+00:12 or something like that.
+00:14 Some movie title, how long it is.
+00:15 We wanna ask questions about it.
+00:17 We have these different styles.
+00:19 Are we optimistic?
+00:20 And by optimistic, do we know that these values exist?
+00:24 If you're 100% sure,
+00:26 there's a real easy way to access data out of a dictionary.
+00:30 Here we're gonna say data bracket key.
+00:32 So year, year, and it's gonna give us the 2000.
+00:36 However, if we ask for something that isn't there,
+00:40 well, what's gonna happen?
+00:42 Hint, there's a comment that says crash.
+00:45 I bet it crashes.
+00:46 It crashes with a error
+00:48 you're probably likely seen before.
+00:50 Key error.
+00:51 Yikes, what is this?
+00:55 Well, we can click here and it'll take us.
+00:56 Yeah, sure enough, that crashes.
+00:58 Well, why is it crashing?
+00:59 It's crashing because Python says
+01:01 you asked for something not in here.
+01:03 Er, key error, crash, crash, crash.
+01:06 Yikes, okay.
+01:07 And because it comes out as a warning,
+01:08 it outran the print of the year, which was 2001.
+01:12 So I'll comment this back out.
+01:15 So sometimes you're 100% sure the data's there
+01:19 and you can write code like this.
+01:20 I find myself rarely writing code like this
+01:23 unless I want a key error if it's not there.
+01:27 We could do the try, accept style,
+01:32 easier to ask for forgiveness than permission.
+01:34 Just try it if it fails.
+01:35 Whoopsie, something went wrong.
+01:38 Okay, so we should see 2001 again,
+01:41 but then not this.
+01:43 Instead, we'll see key error or something like that.
+01:44 Let's run it.
+01:46 And pessimistic style.
+01:49 What did we call this one?
+01:51 Yeah, pessimistic style.
+01:53 2001, oops, rating.
+01:56 Okay, that's the problem, exception is the rating.
+01:59 Okay, we could be super safety conscious
+02:04 and do the look before you leap style.
+02:06 Please stop.
+02:08 We could do the look before you leap style of programming.
+02:10 We could say if this key year is in the data,
+02:14 ooh, go get it.
+02:15 If the rating is in here, ooh, go get it.
+02:18 Otherwise, oh, we didn't find a rating.
+02:21 Let's see what that looks like here.
+02:23 Safety first, 2001, perfect.
+02:26 Oh, we didn't find a rating.
+02:28 Well, that sure is a lot more code
+02:29 than just these two lines, right?
+02:32 Down here, this is a hassle.
+02:34 Don't necessarily recommend it.
+02:37 Let's keep going.
+02:39 One thing we can do is say we're willing to accept none
+02:44 as a value for a missing value.
+02:46 So here I could say, instead of bracket, say get.
+02:49 And this is my favorite way of working.
+02:51 Because I don't have to have try accepts everywhere.
+02:55 And I can just check if it's none
+02:56 or you can specify alternative values.
+02:59 You'll see.
+03:00 So here in this accept none down here,
+03:03 we got 2001.
+03:05 And when we said get rating, it's not there.
+03:06 So it gave us none.
+03:08 But we can also specify a value like here.
+03:11 Let's just say, I'll say no rating like this.
+03:16 Let's put it that way.
+03:17 A little more obvious what's happening.
+03:19 So here we can say, give us the year.
+03:21 And if we don't have a year, give us zero instead of none.
+03:25 At least it's a number.
+03:26 And for the rating, give us three star, five stars,
+03:30 or I want this string if it doesn't exist.
+03:32 Here you can see right there, 2001, because it's there.
+03:37 So we didn't use the default,
+03:38 but we did no rating for when there was no rating.
+03:41 Okay, finally, another thing we can do
+03:45 is we can use a default dict.
+03:47 You notice at the top, we import from collections,
+03:51 default dict.
+03:52 And the way this works is you do this bracket style
+03:57 all day long, and you can specify a function to call
+04:01 when the value is missing, all right?
+04:02 And creation sort of things,
+04:04 'cause it could be something complicated
+04:05 and you want a new one each time,
+04:07 like a list or something, right?
+04:09 So I could put list, or rather,
+04:11 I could put list like this
+04:13 and get an empty list every single time.
+04:15 All right, but we'll do it like this.
+04:17 Here we go.
+04:19 If we run this one, notice down here,
+04:23 I'll put, let's say, make it a little more obvious.
+04:28 So if we use the default dictionary,
+04:30 we just program it standard old like that,
+04:33 and when one's missing, it calls this function
+04:35 to provide the missing object.
+04:37 And like I had with list, we can put that there.
+04:39 So it will create a new list every time it's missing.
+04:43 So this is really handy for like looping over
+04:45 and putting values into a list,
+04:47 and if the key is new,
+04:49 then you're just gonna get a new list
+04:50 created automatically, right?
+04:52 And you know what, PyCharm, that is actually spelled okay.
+04:56 Let me show you one more thing.
+04:59 Okay, this is new in Python 3.8,
+05:01 so this safety first type combined with this get here.
+05:06 Let's try this.
+05:11 I'll call this walrus style
+05:13 because we're gonna use the walrus operator.
+05:19 So what we can do is we can come over here and say year
+05:22 colon equals data.get of year.
+05:29 And same thing here, rating.
+05:35 So what this does, if you haven't seen this,
+05:37 is this runs this expression
+05:42 and then it assigns the value to rating.
+05:46 So this colon equals create rating and assign to it,
+05:49 but then turn around and test the equality here.
+05:53 Okay, and so then we don't have to do this.
+05:55 We can just say, we already have the rating
+05:56 and we already have the year.
+05:58 Okay, so it'd be 3.8.
+06:05 It'll be 3.8 or above, Python 3.8 or above.
+06:09 Run it again.
+06:10 Walrus operator 2001, don't need that at all, do you?
+06:14 So we've assigned it, we've got the value,
+06:17 assigned it and we tested 2001 is true.
+06:20 So we print out year, get this.
+06:22 We run this, we get none.
+06:24 We assign it to rating and test it.
+06:27 Rating is false, so we print,
+06:28 oh, we didn't get it in rating.
+06:30 How about that?
+06:31 Pretty cool, I really like this walrus operator.
+06:33 So if you wanna do this test style
+06:35 and you wanna already have the value, I recommend this.
+06:38 But I also really very much like this
+06:43 where you get a new value automatically if it's missing.

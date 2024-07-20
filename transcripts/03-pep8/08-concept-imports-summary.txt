@@ -1,0 +1,18 @@
+00:00 Alright, let's summarize this whole import thing with PEP 8.
+00:02 There should be one line per package,
+00:07 and you should almost always avoid wildcards.
+00:10 Import sys, OS, and multiprocessing? No.
+00:13 From statistics, import star? No.
+00:17 Good is import sys, import OS, import multiprocessing.
+00:21 You can also import individual items
+00:23 if you don't want to use them in the namespace style.
+00:27 I talked a bit about namespaces and the value that they bring,
+00:30 but sometimes it's better to just have a nice, clear,
+00:33 and simple way of working with a class or something like that.
+00:36 We also want to group the imports by their type.
+00:40 First of all, standard library imports go at the top top,
+00:44 then a new line, then third-party imports,
+00:47 stuff you got from PyPI and stuff like that's installed locally,
+00:50 but generally pip installed.
+00:52 And third, you want to have your application
+00:55 or library-specific imports.

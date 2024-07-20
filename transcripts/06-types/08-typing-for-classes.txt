@@ -1,0 +1,180 @@
+00:00 Okay, last thing in these down in the weeds coding demos
+00:05 for types is classes.
+00:06 So what if I have a class over here
+00:09 and I'm gonna have, let's go with a motorcycle example.
+00:12 And we can create some constructor here.
+00:17 I guess we don't really need a type,
+00:18 but PyCharm's thinking we're all about types.
+00:20 It started putting types on everything.
+00:22 So we'll have engine size and we can accept the float
+00:27 and let's say model, which is a string.
+00:30 And let's let PyCharm add that as a field
+00:33 so I don't have to worry about it.
+00:35 Great, so we could go and create a motorcycle.
+00:39 And what goes in here, the string,
+00:43 let's say there's a KTM Enduro,
+00:45 which is gonna be a fun one and 690 for the engine size.
+00:49 Let's print out M.
+00:53 And let's just take a super quick,
+00:56 super quick shortcut here.
+00:57 And we're gonna return the string of self.dunderdict.
+01:02 So we're just gonna print the raw dictionary.
+01:08 Now we can express that this returns a string.
+01:10 That's straightforward and let's run it.
+01:12 Yeah, it's not great,
+01:14 but it's kind of like a JSONified version.
+01:17 Actually not terrible.
+01:18 So just like all the other things
+01:22 that happen with functions, with classes,
+01:24 they can have a type.
+01:25 You don't usually say the type of the self
+01:27 as you'll see that's weird,
+01:29 but you just set the types just like any other function.
+01:32 And same thing for the return values.
+01:34 But let's get a little bit weird.
+01:35 Let's suppose I would like to create
+01:37 another motorcycle here.
+01:41 Let's say M2 equals,
+01:43 maybe we want just some random sized motorcycle.
+01:47 So we'll just say create random.
+01:51 And this can be like a factory method.
+01:53 I know it's not that common in Python,
+01:55 but static and class level functions certainly are.
+01:58 And we'll give it a name, Amazon bike.
+02:02 Just some random thing you bought on Amazon.
+02:04 And it's gonna return you one of these,
+02:07 but you don't know what you're gonna get.
+02:11 So let's go down here and say,
+02:16 well, we're gonna have this,
+02:18 but what we want is actually a class method.
+02:22 And for that, we're gonna have the CLS,
+02:24 which is the type motorcycle,
+02:26 not actually an instance, the self.
+02:29 And we'll have, what is this model, which is a string.
+02:32 So let's just create some random engine size.
+02:35 Size equals rand int.
+02:38 Oh, that's a little small.
+02:43 I think maybe 50 up to 700.
+02:48 Let's say that these are decent.
+02:49 And then we'll just return motorcycle of model we passed in
+02:53 and this new size we've created.
+02:56 There's no type, well, the model has a type,
+02:58 but the return type doesn't have a type.
+03:00 Notice we've got an Amazon bike of 684,
+03:04 and now it's 98, and now it's 552, okay?
+03:08 Interesting.
+03:09 I wanna say what type this returns.
+03:11 Well, obviously, Michael, it returns a motorcycle, duh.
+03:17 Oh, what?
+03:18 What do you mean motorcycle is not defined?
+03:22 I mean, it is auto-completed, right?
+03:23 Typed M, Enter, okay, Enter.
+03:27 And I'm in the motorcycle class.
+03:31 So let me give you a bit of red pill for how Python works
+03:35 so you appreciate how this works,
+03:37 and then we'll talk about it, okay?
+03:38 Some languages have compilers that go through
+03:44 and look at the types,
+03:45 and they build this up piece by piece over time,
+03:48 and they look at the type things and how they fit together,
+03:51 and they say, okay, I see here using this,
+03:53 and earlier I did a pass and I learned about,
+03:55 there's a class called motorcycle,
+03:57 so we're gonna put that here.
+03:59 This is not how Python works.
+04:00 When you do an import statement,
+04:01 it literally runs every line of code here.
+04:05 So when this executes, what happens is it says,
+04:08 begin creating a class called motorcycle, def int.
+04:11 Oh, we're gonna write a function called under init,
+04:14 and then it's gonna look like this,
+04:16 and then we're gonna add this line to it,
+04:17 add that line to it, out of our block,
+04:19 so we're creating a new function, execute, define,
+04:23 new block, class method, okay, execute.
+04:26 Oh, there's something called motorcycle,
+04:28 but remember, it's in the process
+04:29 of creating the motorcycle type,
+04:31 and so until line 38, motorcycle doesn't exist as a type.
+04:35 That's a problem with Python, I believe.
+04:38 There should be ways to do multi-pass parsing of these files
+04:41 and understand this,
+04:42 but whether we want that to be the way or not,
+04:45 that's not how it works.
+04:46 Python executes line 25 to 37
+04:50 to define what a motorcycle class is,
+04:53 and then it exists from line 38 onward.
+04:56 So I can't do this.
+04:57 There was a hack.
+04:58 You would put it in a quote like that,
+05:00 and then up here, when you hit this,
+05:04 it still knows it creates a motorcycle, okay,
+05:06 but that's a little sketch, right?
+05:08 It's a little, it's just a string.
+05:10 It's a little suspect on like, well,
+05:13 if we refactor this, will this get refactored and so on.
+05:17 So they've recently introduced something,
+05:19 and this is the idiomatic way, the Pythonic way to do it.
+05:23 If we use typing, which we import,
+05:27 there's a thing called self.
+05:29 Self is like this.
+05:31 This means an object, an instance of one of these,
+05:37 and in the typing world,
+05:38 what this means is whatever class I'm being defined on,
+05:43 when it says class method,
+05:46 what class does that belong to?
+05:47 Motorcycle.
+05:48 I can't say its name yet.
+05:49 It's like Voldemort at this moment.
+05:51 Can't say it, but whatever its name is, that, okay?
+05:55 When you figure out its name, it's one of them.
+05:58 So this is how you say it returns a motorcycle
+06:01 or some kind of base class that it is self or drive,
+06:05 it's something like that, right?
+06:06 Something involving its own definition.
+06:09 You can also say that if you're saying,
+06:10 I'm comparing me, self, against another one, right?
+06:15 So I'm def compare things.
+06:18 There's real compares,
+06:19 but I don't wanna mess with their signatures.
+06:21 So this could be a bool, and this could be other,
+06:24 which is typing.self.
+06:27 Return self.model
+06:32 equals other.model.
+06:36 Oops, I need typing.
+06:38 Thought, see, it knows it's a model.
+06:42 So you can use it in this case,
+06:46 and you can use typing.self there.
+06:47 That's the really, the one real weird thing about classes
+06:50 is like I said, it starts defining a line 26,
+06:54 and it's not until this case, now I added more code,
+06:56 until line 42, that motorcycle exists.
+06:59 So in between, you can't say it.
+07:02 Now you might say, well, but Michael,
+07:03 how can you do line 38?
+07:05 That's weird.
+07:07 Yes, but remember, this doesn't execute
+07:10 until you create one of these, and you call this function,
+07:12 or you use it on the type.
+07:13 You call this function,
+07:14 which happens after the whole thing is defined.
+07:16 It's just that the top level thing.
+07:19 So you should kind of think of it as like,
+07:20 this is where the typing,
+07:22 you can't see the word motorcycle
+07:24 when you visually look at it like this, all right?
+07:27 Hence, typing.self for inbound parameters and return types.
+07:31 Let's run it for all its glory.
+07:33 We got an Amazon bike into size 668.
+07:36 Let's go over here and just test our little compare.
+07:39 M3, and we'll print m2.compare.
+07:48 Maybe it was parentheses.
+07:49 M2.compare.
+07:50 M3, and because they have the same name,
+07:56 same model, should be true,
+07:59 but not against M1, or just, I call it M1, or just M.
+08:02 M.
+08:04 False, because one's a KTM, another's an Amazon bike.
+08:08 Whatever that is.
+08:09 All right, there you have it,
+08:10 typing for functions and classes.

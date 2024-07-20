@@ -1,0 +1,36 @@
+00:00 It's time to talk about naming things.
+00:02 Naming things is hard in programming, isn't it?
+00:05 There are some conventions and some rules,
+00:08 and for Python, as there are for many languages,
+00:10 before we get to the specific rules,
+00:12 just want to throw out there that I believe
+00:14 names should be descriptive.
+00:16 So here's a rule of thumb that I go with a lot of times.
+00:21 It gives me pause, makes me think,
+00:23 maybe I should slow down and do something slightly different.
+00:26 If you need to comment to describe what a function does,
+00:31 if you need a comment to describe what a variable is about,
+00:35 maybe you should just give it a better name, right?
+00:38 If it's xu and you have a comment that says,
+00:42 well, xu means this is the x-axis
+00:46 of the universal measurement,
+00:49 maybe you should just give it a name
+00:51 something closer to that,
+00:52 even if it's a little bit longer.
+00:54 Descriptive goes a long ways.
+00:55 There's a really cool concept
+00:57 from the whole refactoring world.
+00:58 There's all these different refactorings,
+01:01 and so they have this idea of code smells,
+01:03 like if you do something wrong, if it's not broken,
+01:05 but it kind of smells bad,
+01:06 there's a little bit not great,
+01:09 maybe you need to refactor it to something better.
+01:12 Well, one of the concepts from that place
+01:14 is that code comments are often attempting
+01:18 to be deodorant for code smells.
+01:21 And I totally agree.
+01:22 If you see some description,
+01:23 like here's a thing that says,
+01:26 this isn't very clear, here's why.
+01:30 Often a better name will fix it.

@@ -1,0 +1,61 @@
+00:00 Here we are in the course and it's time for our first code demo.
+00:04 So I'm not going to do this for every demo, but let's walk through just getting the source code real quick
+00:09 and getting everything set up to run correctly.
+00:12 So I'm going to go over to the repo and grab the URL there.
+00:19 I'm going to jump over to my terminal.
+00:21 I'm using warp.
+00:22 Warp is somewhat of a new terminal.
+00:24 It's super cool.
+00:25 Of course, it's not about terminals or warp, but if you're frustrated with what you got,
+00:30 give this a look.
+00:31 It's super, super neat.
+00:32 All right, so I'm just going to git clone this and we could give it a shorter name like
+00:38 Pythonic course instead of right, Pythonic code dash demos.
+00:42 Name it whatever you want.
+00:43 I'll do this.
+00:46 And then we can head on over here.
+00:48 You can see that we've got the code checked out.
+00:51 The code will be there and so on.
+00:54 So what we're going to do is we're going to create a virtual environment.
+00:57 So we could say Python dash m venv venv and you can put this --prompt on here.
+01:07 We do.
+01:10 Python three for macOS.
+01:14 Python for Windows.
+01:15 And then we need to activate it.
+01:18 You should see we now have a virtual environment here.
+01:21 Let's go ahead and activate it.
+01:23 So I'll say a dot vnv slash bin slash activate.
+01:29 And notice my prompt changes and it says Pythonic dash course.
+01:32 That's because the folder is named Pythonic dash course.
+01:35 And when I said --prompt, instead of just saying venv, which is what it normally
+01:41 does, it adopts the name of the folder, which I find to be really nice.
+01:45 It usually corresponds to the project that you're working on.
+01:48 So awesome.
+01:50 And then warp shows us the version as well.
+01:54 Your default terminal will just say that the environment is active and put its name probably
+01:58 at the beginning.
+01:59 Very, very cool.
+02:01 Now you might say, hey, Michael, love it, but I'm on Windows.
+02:05 So if you were on Windows, what you would write is you would say venv backslash.
+02:09 Yeah, I'll get it right.
+02:12 Scripts activate dot bat.
+02:15 You would say that.
+02:16 Okay.
+02:17 Now, why these are different, I don't know.
+02:21 I have no idea why they're different, but they are.
+02:24 And it seems like a thing that could be unified on Windows.
+02:28 You don't do the dot, but I think this, this could be unified anyway.
+02:32 Maybe that could be a PEP someday that somebody puts together.
+02:35 So here we have this all set up and ready to go.
+02:39 So I'm going to open it up in our editor in PyCharm.
+02:43 Just drop it.
+02:44 And it goes and opens up on the rest of the operating systems.
+02:49 You have to say file, open, and then browse over there.
+02:53 Okay.
+02:54 And notice PyCharm has automatically found the Python at course virtual environment that
+03:00 we've already, that we created right there.
+03:02 So that's super cool.
+03:04 If we open up the terminal, you can say which Python on Windows you say where Python.
+03:11 And it says, yes, indeed.
+03:12 It's this one that we just created.
+03:14 So it looks like everything is set up and ready to go.

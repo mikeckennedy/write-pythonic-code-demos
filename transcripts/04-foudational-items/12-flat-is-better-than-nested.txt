@@ -1,0 +1,48 @@
+00:00 Remember our Xenopython. Let's go over here to our
+00:03 Interpreted shell and we say import this
+00:08 Flat is better than nested. This is not just a good thing for Python. This is a good thing for programming in general, but sometimes
+00:18 Can it be avoided?
+00:21 Generally, yes. Generally, you just have to be a little bit creative. Generally, the answer is yes
+00:25 So let's look at this little program here. I run this
+00:28 It says we're gonna try to download a file
+00:31 It does a bunch of tests and in the end it concludes all these things passed
+00:35 So in order to download a file
+00:37 We have to make sure that the URL is okay that the network is online that DNS
+00:41 The DNS resolution of the wherever we're getting the file from works that we have
+00:46 Permissions to access it all of those things. Oh, we can download it correctly. Otherwise
+00:50 No DNS, but like look how hard it is to figure out, you know, these lines help a little bit like okay
+00:57 Do I have something off like and then that most important bit of code runs here and dented all the way to?
+01:04 Column 16 before we even know column 21 before we even start writing code and normally it's not one line, right?
+01:12 It's a bunch. So let's see if we can rewrite this in a way better way
+01:17 And I call this download flat
+01:22 And what we're gonna use is something called a guarding clause where you basically turn everything around and exit early it's so nice so
+01:30 Instead of doing this and saying well way at the end. We're gonna print bad URL
+01:35 I'm gonna get rid of this part here. I'm gonna say if not
+01:40 As stop check return. We'll do this then return
+01:47 Now all of these have to go in one hey one less level one a little bit less indentation, which is good
+01:54 again negate this
+01:57 I'll do a return and on and dent those and this is the one that we
+02:02 Should print no network. Look at the locality here instead of having all that stuff as separated as it could be
+02:11 No URL, okay bad URL ever out no network. No network. We tell the people bad or out again
+02:18 Let's just finish this up. Not this. What are we gonna do? We're gonna print no DNS
+02:22 Wow, I was pretty clever tried to guess that final one not this
+02:30 Reverse it and finally unintended. Whoo. We made it to the line of code. We wanted to run but look at this
+02:39 Going through every little bit is self-contained. It's localized and in the end we start writing code on column 5
+02:47 Column 5 instead of
+02:51 Way and we're worried 21 or something ridiculous like that
+02:55 So this is a way way better than this if you have this sawtooth shape code
+03:01 And think of ways to not do that and guarding clauses like this is one of them
+03:05 So let's didn't have that function yet. So I
+03:08 Couldn't run it. Let's run it and says let's try to download a file sweet
+03:12 We can and if you look over here
+03:14 You can see that I've all these checks so I can like trigger a check like let's suppose you don't have access
+03:20 So I'll say false
+03:22 If we run the right file, it will say no access no access right same
+03:27 Same check same outcome true. Let's say the DNS is broken
+03:35 And we run the right file no DNS no DNS perfect, okay, so
+03:41 This may be old hat to some of you this might be totally new to others
+03:46 The contrary to this is a lot of people say there should be one and only one way to exit through a given function
+03:54 This is called an early return or a guarding clause look
+03:57 having just one returns point from here and really from the end after it drops out is
+04:04 Vastly not worth writing your code with a scroll bar to the right. This is way way cleaner in my opinion
+04:09 And if you listen to the xenopython as well
