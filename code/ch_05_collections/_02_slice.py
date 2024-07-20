@@ -2,6 +2,8 @@
 import sys
 from pathlib import Path
 
+from sqlalchemy.orm import Session
+
 sys.path.insert(0, Path(__file__).parent.absolute().as_posix())
 # endregion
 from _02_slice_support import session_factory, Measurement  # noqa E402
@@ -29,12 +31,13 @@ def main():
     print(nums[-3:])
 
     print("Top measurements from the database")
-    session = session_factory()
-    query = session.query(Measurement). \
+    session: Session = session_factory()
+    # noinspection PyUnresolvedReferences
+    results = session.query(Measurement). \
         filter(Measurement.value > .9). \
         order_by(Measurement.value.desc())
 
-    print([m.value for m in query[:3]])
+    print([m.value for m in results[:3]])
 
     session.close()
 

@@ -2,8 +2,10 @@ import os
 import random
 
 import sqlalchemy.ext.declarative
+import sqlalchemy
+import sqlalchemy.orm
 
-SqlAlchemyBase = sqlalchemy.ext.declarative.declarative_base()
+SqlAlchemyBase = sqlalchemy.orm.declarative_base()
 
 
 class Measurement(SqlAlchemyBase):

@@ -1,2 +1,8 @@
+# No need to mess with this if you don't want to.
+# BUT, you can upgrade the packages in requirements.txt with th uv package
+# pipx install uv (if you don't have it)
+# Then with the venv active, run
+# uv pip compile requirements.piptools --upgrade --output-file requirements.txt
+#
 sqlalchemy
 pydantic
