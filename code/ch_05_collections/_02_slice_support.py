@@ -17,6 +17,9 @@ class Measurement(SqlAlchemyBase):
     y = sqlalchemy.Column(sqlalchemy.Integer)
     value = sqlalchemy.Column(sqlalchemy.Float)
 
+    def __repr__(self):
+        return f'Measurement: {self.value:.2f}, {self.x:.2f}, {self.y:.2f}'
+
 
 # run this code only once per process assuming 1 database
 db_file = os.path.join(
