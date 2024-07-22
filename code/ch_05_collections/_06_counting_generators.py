@@ -22,8 +22,20 @@ high_values = (
     if m.value >= 70
 )
 
-# print(len(high_values))
+# print("First time")
+# for m in high_values:
+#     print(m, end=',')
+#
+#
+# print("Second time")
+# for m in high_values:
+#     print(m, end=',')
+
+# print(len(high_values)) # crash
 
 # could use a list, but expensive!
+# print(len(list(high_values)))
 
 # pythonic counting!
+# print(sum(high_values))
+print(sum(1 for _ in high_values))
