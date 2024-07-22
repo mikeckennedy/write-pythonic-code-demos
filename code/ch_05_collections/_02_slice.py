@@ -26,16 +26,8 @@ def main():
     print("Last 3 nums (pythonic)")
     ...
 
-    # print("Top measurements from the database")
-    # session: Session = session_factory()
-    # # noinspection PyUnresolvedReferences
-    # results = session.query(Measurement). \
-    #     filter(Measurement.value > .9). \
-    #     order_by(Measurement.value.desc())
-    # 
-    # print([m.value for m in results])
-    # 
-    # session.close()
+    print("Top measurements from the database")
+    ...
 
 
 if __name__ == '__main__':
