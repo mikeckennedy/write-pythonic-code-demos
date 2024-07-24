@@ -1,17 +1,19 @@
 # ############ lambda expressions #############
 # Create by Michael Kennedy (@mkennedy)
 
+import collections
+import uuid
+
+Measurement = collections.namedtuple('Measurement', 'id x y value')
+
 
 def main():
-    print(type(check_for_odd), check_for_odd)
     print("Find odd numbers via method:")
-    for n in find_special_numbers(check_for_odd, 25):
-        print(n, end=',')
+    # TODO: Use find_special_numbers() for 25 odds
     print()
 
     print("Find divisible by 6 via lambda:")
-    for n in find_special_numbers(lambda i: i % 6 == 0, 25):
-        print(n, end=',')
+    # TODO: Use find_special_numbers() for 25 n*6 numbers via Lambdas
     print()
 
     print("Sorted list of words: ")
@@ -19,9 +21,15 @@ def main():
                      'user-facing', 'of', 'other', 'for', 'smaller', 'deprecations,', 'a', 'optimizations,', 'changes,',
                      'including', 'and', 'Please', 'many', 'list']
 
-    # list_of_words.sort()  # ? ;)
-    list_of_words.sort(key=lambda w: w.lower())
-    print(list_of_words)
+    # Can we just call sort on the list?
+    # TODO: Sort list
+    # More control here.
+    # TODO: Sort better
+    print()
+
+    # More complex sort of measurements
+    # TODO: Sort by value
+    # TODO: Sort by value and distance
 
     print("Done")
 
@@ -36,9 +44,17 @@ def find_special_numbers(special_selector, limit=10):
     return found
 
 
-def check_for_odd(n):
-    return n % 2 == 1
-
+measurements = [
+    Measurement(str(uuid.uuid4()), 1, 1, 72),
+    Measurement(str(uuid.uuid4()), 2, 1, 40),
+    Measurement(str(uuid.uuid4()), 3, 1, 11),
+    Measurement(str(uuid.uuid4()), 2, 1, 90),
+    Measurement(str(uuid.uuid4()), 2, 2, 60),
+    Measurement(str(uuid.uuid4()), 2, 3, 73),
+    Measurement(str(uuid.uuid4()), 3, 1, 40),
+    Measurement(str(uuid.uuid4()), 3, 2, 44),
+    Measurement(str(uuid.uuid4()), 3, 3, 90)
+]
 
 if __name__ == '__main__':
     main()

@@ -1,46 +1,31 @@
-# noinspection PyProtectedMember
-import ch_05_functions._02_lets_play_catch_support as s
+# region Fix up path, so it doesn't matter where/how you run this code
+import sys
+from pathlib import Path
+
+sys.path.insert(0, Path(__file__).parent.absolute().as_posix())
+# endregion
+import _02_lets_play_catch_support as s  # noqa: F401
 
 
 def main():
-    # run_with_checks()
-    # run_with_handling()
+    run_with_checks()
+    run_with_handling()
     run_with_handling_separate_errors()
 
 
 def run_with_checks():
-    if not s.check_network():
-        print("Cannot download, no network")
-        return
-    if not s.check_dns():
-        print("Cannot download, no dns")
-        return
-    if not s.check_download_url():
-        print("Cannot download, no url set")
-        return
-
-    data = s.download_file()
-    print(f"downloaded data -> {data}")
+    ...
+    # TODO: We should check it's all OK network, dns, url, and then download it.
 
 
 def run_with_handling():
-    try:
-        data = s.download_file()
-        print(f"downloaded data -> {data}")
-    except Exception as x:
-        print(f"Cannot download: {type(x)} -> {x}")
+    ...
+    # TODO: We should catch errors!
 
 
 def run_with_handling_separate_errors():
-    try:
-        data = s.download_file()
-        print(f"downloaded data -> {data}")
-    except PermissionError:
-        print("Cannot download, you don't have permission...")
-    except ConnectionError as ce:
-        print(f"Cannot download, problem with network: {ce}")
-    except Exception as x:
-        print(f"Cannot download: {type(x)} -> {x}")
+    ...
+    # TODO: We should consider PermissionError, ConnectionError, ValueError, and others
 
 
 if __name__ == '__main__':

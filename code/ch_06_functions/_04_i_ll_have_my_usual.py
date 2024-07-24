@@ -5,12 +5,8 @@ def display_greeting(name, greeting='Hello', times=1):
         print(f"{greeting} {name}!")
 
 
-display_greeting("Jeff", 'Good morning', 3)
-display_greeting("Michael", "G'day", 1)
+# TODO: display_greeting with some variations
 
-display_greeting("Mark")
-display_greeting("Mark", "Good afternoon")
-display_greeting("Mark", "Good afternoon", 2)
+# TODO: display_greeting with one param and more
 
-display_greeting(greeting='Yo!', name='Michael', times=4)
-display_greeting('Michael', times=2)
+# TODO: display_greeting with keywords only
