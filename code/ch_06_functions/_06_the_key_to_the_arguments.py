@@ -1,14 +1,18 @@
 # add arbitrary additional kw arguments
-def display_greeting(name, greeting='Hello', times=1):
-    times = max(1, times)
-    for _ in range(0, times):
-        print(f"{greeting} {name}!")
-    print(f"kwargs = {kwargs}")
+def display_greeting(name='', greeting="Hello", **kwargs):
+    # print(type(kwargs), kwargs)
+    text = f"{greeting} {name}"
+    if 'additional' in kwargs:
+        text += f" additionally, {kwargs['additional']}!"
+    print(text.strip())
+    # print(f'You also said: {kwargs}')
 
 
-# TODO: Can this work?
+display_greeting(name='Michael', greeting='Whazzzup')
+
+# Can this work?
 display_greeting(greeting="Hey, you're out of order",
-                 name="Michael", additional=2, mode=7)
+                 name="Michael", additional="remember the milk", mode=7)
 
 print()
 
@@ -16,7 +20,19 @@ print()
 data = {
     'name': 'Ted',
     'greeting': 'Long time no see bro!',
-    'times': 6
+    'additional': "More stuff",
+    'still_other': 7,
 }
 
-# TODO: And what about this one? ^^^^
+# And what about this one? ^^^^
+
+# NOT the way!
+display_greeting(
+    name=data.get('name'),
+    greeting=data.get('greeting'),
+    additional=data.get('additional'),
+    still_other=data.get('still_other'),
+)
+
+# The way!
+display_greeting(**data)
