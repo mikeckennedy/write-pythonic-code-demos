@@ -11,7 +11,7 @@ def check_access_allowed():
 
 
 def check_dns():
-    return False
+    return True
 
 
 def download_file():
