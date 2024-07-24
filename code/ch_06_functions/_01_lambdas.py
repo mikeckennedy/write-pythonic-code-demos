@@ -14,12 +14,19 @@ def main():
     print(find_special_numbers(is_odd, limit=25))
     print()
 
-    print("Find divisible by 6 via lambda:")
+    print("Find divisible by 6 via lambda")
     # Use find_special_numbers() for 25 n*6 numbers via Lambdas
     print(find_special_numbers(lambda n: n % 6 == 0, limit=25))
     print()
 
     # df.do_thing(lambda n: n).do_thing2(lambda x: x)
+
+    print("Find divisible by 7 via lambda and greater than x")
+    x_text = 90  # input("What is the min size of the numbers to find? ")
+    x = int(x_text)
+
+    print(find_special_numbers(lambda n: n % 7 == 0 and n > x, limit=25))
+    print()
 
     print("Sorted list of words: ")
     list_of_words = ['CPython', 'read', 'improvements,', 'issues.', 'on', 'comprehensive', 'porting', 'potential',
@@ -44,7 +51,7 @@ def main():
     m2 = sorted(measurements, key=lambda m: m.value, reverse=True)
     print("sorted by value", m2)
     # Sort by value and distance
-    m3 = sorted(measurements, key=lambda m: (m.value, m.x*m.x + m.y+m.y), reverse=True)
+    m3 = sorted(measurements, key=lambda m: (m.value, m.x * m.x + m.y + m.y), reverse=True)
     print("sorted by value and distance", m3)
 
     print("Done")
