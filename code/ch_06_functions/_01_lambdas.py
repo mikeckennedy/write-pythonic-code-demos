@@ -51,7 +51,7 @@ def main():
     m2 = sorted(measurements, key=lambda m: m.value, reverse=True)
     print("sorted by value", m2)
     # Sort by value and distance
-    m3 = sorted(measurements, key=lambda m: (m.value, m.x * m.x + m.y + m.y), reverse=True)
+    m3 = sorted(measurements, key=lambda m: (m.value, m.x * m.x + m.y * m.y), reverse=True)
     print("sorted by value and distance", m3)
 
     print("Done")
