@@ -1,13 +1,13 @@
 class NotSoPythonicPet:
     def __init__(self, name, age):
-        self.age = age
-        self.name = name
+        self.__age = age
+        self.__name = name
 
     def get_name(self):
-        return self.name
+        return self.__name
 
     def get_age(self):
-        return self.age
+        return self.__age
 
 
 print("Here is my pet cow:")
