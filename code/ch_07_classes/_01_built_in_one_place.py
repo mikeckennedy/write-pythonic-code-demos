@@ -19,6 +19,6 @@ class PythonicPet:
 
 
 cow = PythonicPet('Betsy')
-# cow.age = 11 # No!
+# cow.age = 11 # No! Not if it's not present on the type already
 # cow.set_age(7)
 print(cow)
