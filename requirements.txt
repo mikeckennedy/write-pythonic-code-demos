@@ -6,7 +6,7 @@ pydantic==2.8.2
     # via -r requirements.piptools
 pydantic-core==2.20.1
     # via pydantic
-sqlalchemy==2.0.31
+sqlalchemy==2.0.32
     # via -r requirements.piptools
 typing-extensions==4.12.2
     # via
