@@ -22,21 +22,3 @@ print(py.name)
 # print(py.__pvt) # bang, crash, pow, **! # Never access this outside of the class.
 print(py)
 print(dir(py))
-
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-
-
-# # py.__name = py.__name.upper()
-# print(dir(py))
-# # print("She is named {} and {} years old.".format(py.__name, py.__age))
-# print(py._protected_val)
