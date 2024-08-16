@@ -4,7 +4,7 @@ from os import path
 from statistics import median, mean
 
 # noinspection PyProtectedMember
-from ch_06_packages._01_beware_the_trade_imbalance_support import mode
+from _01_beware_the_trade_imbalance_support import mode
 
 print(f"Current version: {sys.version_info.major}")
 print(path.abspath('.'))
